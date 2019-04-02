@@ -71,3 +71,7 @@ var myFullpage = new fullpage('#fullpage', {
 	afterSlideLoad: function(section, origin, destination, direction){},
 	onSlideLeave: function(section, origin, destination, direction){}
 });
+
+$("#nav-btn").on("click", function(){
+	$("#sidebar").toggleClass("expanded")
+})
