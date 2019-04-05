@@ -46,7 +46,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//Design
 	controlArrows: true,
 	verticalCentered: true,
-	sectionsColor : ['#ccc', '#eee'],
+	sectionsColor : ['#EEF5DB', '#FF7F51', "#720026", "#C7EFCF", "#333745"],
 	paddingTop: '3em',
 	paddingBottom: '10px',
 	fixedElements: '#header, .footer',
