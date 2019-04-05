@@ -46,7 +46,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//Design
 	controlArrows: true,
 	verticalCentered: true,
-	sectionsColor : ['#EEF5DB', '#FF7F51', "#720026", "#C7EFCF", "#333745"],
+	sectionsColor : ['#333', '#FF7F51', "#720026", "#C7EFCF", "#333745"],
 	paddingTop: '3em',
 	paddingBottom: '10px',
 	fixedElements: '#header, .footer',
@@ -75,3 +75,72 @@ var myFullpage = new fullpage('#fullpage', {
 $("#nav-btn").on("click", function(){
 	$("#sidebar").toggleClass("expanded")
 })
+
+
+
+
+
+////matter js stuff
+var mwidth = document.getElementById("svg-container").offsetWidth
+var mheight = document.getElementById("svg-container").offsetHeight
+console.log(mwidth, mheight)
+// module aliases
+var Engine = Matter.Engine,
+    Render = Matter.Render,
+    World = Matter.World,
+    Bodies = Matter.Bodies;
+
+// create an engine
+var engine = Engine.create();
+var myelement = document.getElementById('matter-js-1');
+console.log(myelement)
+// create a renderer
+var render = Render.create({
+    element: myelement,
+    engine: engine,
+    options: {
+        width: 1116,
+        height: 730,
+        pixelRatio: 1,
+        background: '#fff',
+        wireframeBackground: '#111',
+        hasBounds: false,
+        enabled: true,
+        wireframes: true,
+        showSleeping: true,
+        showDebug: true,
+        showBroadphase: false,
+        showBounds: false,
+        showVelocity: true,
+        showCollisions: true,
+        showSeparations: false,
+        showAxes: false,
+        showPositions: false,
+        showAngleIndicator: false,
+        showIds: false,
+        showShadows: false,
+        showVertexNumbers: false,
+        showConvexHulls: false,
+        showInternalEdges: false,
+        showMousePosition: false
+    }
+}
+);
+
+// create two boxes and a ground
+var boxA = Bodies.rectangle(400, 200, 80, 80);
+var boxB = Bodies.rectangle(450, 50, 80, 80);
+var ground = Bodies.rectangle(300, 410, 510, 60, { isStatic: true });
+var pill = Bodies.polygon(200, 200, 4, 500, { isStatic: true });
+//var pill2 = Bodies.fromVertices(100,100, ['L 0 0 L 40 0 L 40 40 L 0 40'])
+
+
+
+// add all of the bodies to the world
+World.add(engine.world, [boxA, boxB, ground, pill]);
+
+// run the engine
+Engine.run(engine);
+
+// run the renderer
+Render.run(render);

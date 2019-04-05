@@ -5,8 +5,11 @@
 h1{
     font-family: "benton-sans", sans-serif;
     font-weight: 1000;
-    font-size: 80px;
+    font-size: 120px;
     width:500px;
+    z-index: 4;
+    position: relative;
+    color: white;
 }
 
 .fp-tableCell{
@@ -51,4 +54,30 @@ h1{
     height: 100vh;
     background: rgb(4, 77, 95);
     width: 300px;
+}
+
+
+
+.graphic-container{
+    width:70%;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    /* z-index: 1; */
+}
+svg{
+    width: 100%;
+}
+
+canvas{
+    width:100%;
+}
+
+.svgAndCanvas{
+    position: absolute;
+    width: 100%;
+}
+
+#svg-container{
+    z-index: 1;
 }
