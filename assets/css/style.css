@@ -10,6 +10,7 @@ h1{
     z-index: 4;
     position: relative;
     color: white;
+    
 }
 
 .fp-tableCell{
@@ -23,6 +24,7 @@ h1{
 #intro{
     margin-left: 100px;
     margin-top: 50px;
+    pointer-events:none;
 }
 
 #nav-btn{
@@ -67,6 +69,7 @@ h1{
 }
 svg{
     width: 100%;
+    pointer-events:none;
 }
 
 canvas{
@@ -80,4 +83,5 @@ canvas{
 
 #svg-container{
     z-index: 1;
+    pointer-events:none;
 }
