@@ -161,8 +161,8 @@ var ver = [
 	{x: 100, y:50},
 ]
 // create two boxes and a ground
-var boxA = Bodies.rectangle(400, 350, 80, 80);
-var boxB = Bodies.rectangle(450, 350, 80, 80);
+var boxA = Bodies.circle(400, 350, 80);
+var boxB = Bodies.circle(450, 350, 50);
 var ceiling = Bodies.rectangle(1116/2,40,1110,86, {
 	isStatic:true,
 	render:{
@@ -191,7 +191,7 @@ var mouse = Mouse.create(render.canvas),
         mouseConstraint = MouseConstraint.create(engine, {
             mouse: mouse,
             constraint: {
-                stiffness: 0.1,
+                stiffness: 0.01,
                 render: {
                     visible: false
                 }
