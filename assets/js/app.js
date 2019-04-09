@@ -113,8 +113,8 @@ var render = Render.create({
         showDebug: true,
         showBroadphase: false,
         showBounds: false,
-        showVelocity: true,
-        showCollisions: true,
+        showVelocity: false,
+        showCollisions: false,
         showSeparations: false,
         showAxes: false,
         showPositions: false,
@@ -160,6 +160,19 @@ var ver = [
 	{x: 100, y:200},
 	{x: 100, y:50},
 ]
+
+var colors=["rgba(247,147,30,1)", "rgba(102,166,196,1)", "rgba(252,115,117,1)"]
+var circlesArr = []
+for(var i=0; i<25; i++){
+	var pickedColor = getRandom(0,2);
+	circlesArr.push(Bodies.circle(getRandom(155,890), getRandom(150,345),getRandom(45,75), {
+		render:{
+			fillStyle: colors[pickedColor]
+		}
+	}));
+	World.add(engine.world, circlesArr[i]);
+	// console.log("YAY", circlesArr)
+}
 // create two boxes and a ground
 var boxA = Bodies.circle(400, 350, 80);
 var boxB = Bodies.circle(450, 350, 50);
@@ -172,7 +185,6 @@ var ceiling = Bodies.rectangle(1116/2,40,1110,86, {
 // var floor = Bodies.rectangle(1116/2,40,1110,86, {isStatic:true})
 // var ground = Bodies.rectangle(300, 410, 510, 60, { isStatic: true });
 // var pill = Bodies.polygon(200, 200, 4, 500, { isStatic: true });
-console.log("HHHERRRRE")
 var pillShell = Bodies.fromVertices(1110/2,730/2, vertices , {
 	isStatic : true,
 	render: {
@@ -181,11 +193,14 @@ var pillShell = Bodies.fromVertices(1110/2,730/2, vertices , {
    }
 })
 
-
+function getRandom(min,max){
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
 
 // add all of the bodies to the world
-World.add(engine.world, [boxA, boxB, pillShell, ceiling]);
-
+World.add(engine.world, [ pillShell, ceiling]);
+// World.add(engine.world, circlesArr);
+console.log(circlesArr)
 
 var mouse = Mouse.create(render.canvas),
         mouseConstraint = MouseConstraint.create(engine, {
