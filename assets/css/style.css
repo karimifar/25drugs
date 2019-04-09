@@ -61,10 +61,10 @@ h1{
 
 
 .graphic-container{
-    width:60%;
+    width:56%;
     position: absolute;
-    top: 5%;
-    left: 20%;
+    top: 50px;
+    left: 22%;
     /* z-index: 1; */
 }
 svg{

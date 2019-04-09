@@ -91,9 +91,11 @@ var Engine = Matter.Engine,
 	Bodies = Matter.Bodies;
 	MouseConstraint = Matter.MouseConstraint,
 	Mouse = Matter.Mouse;
+	Body = Matter.Body;
 
 // create an engine
 var engine = Engine.create();
+engine.world.gravity.y = 0.2;
 var myelement = document.getElementById('matter-js-1');
 console.log(myelement)
 // create a renderer
@@ -165,7 +167,7 @@ var colors=["rgba(247,147,30,1)", "rgba(102,166,196,1)", "rgba(252,115,117,1)"]
 var circlesArr = []
 for(var i=0; i<25; i++){
 	var pickedColor = getRandom(0,2);
-	circlesArr.push(Bodies.circle(getRandom(155,890), getRandom(150,345),getRandom(45,75), {
+	circlesArr.push(Bodies.circle(getRandom(155,890), getRandom(150,345),getRandom(40,70), {
 		render:{
 			fillStyle: colors[pickedColor]
 		}
@@ -224,3 +226,11 @@ Engine.run(engine);
 // run the renderer
 Render.run(render);
 
+
+function applyForce(){
+	for(var i=0; i<circlesArr.length; i++){
+		Body.applyForce(circlesArr[i], {x: circlesArr[i].position.x, y: circlesArr[i].position.y}, {x: getRandom(-0.02,0.02), y: getRandom(-0.02,-0.01)})
+	}
+}
+
+window.setInterval(applyForce, 6000);
