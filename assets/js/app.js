@@ -1,3 +1,5 @@
+// ***** fullpage JS *****
+
 var myFullpage = new fullpage('#fullpage', {
 	//Navigation
 	menu: '#menu',
@@ -46,7 +48,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//Design
 	controlArrows: true,
 	verticalCentered: true,
-	sectionsColor : ['#111', '#FF7F51', "#720026", "#C7EFCF", "#333745"],
+	sectionsColor : ['#000', '#FF7F51', "#720026", "#C7EFCF", "#333745"],
 	paddingTop: '3em',
 	paddingBottom: '10px',
 	fixedElements: '#header, .footer',
@@ -72,18 +74,21 @@ var myFullpage = new fullpage('#fullpage', {
 	onSlideLeave: function(section, origin, destination, direction){}
 });
 
+
+// ***** Sidebar *****
 $("#nav-btn").on("click", function(){
 	$("#sidebar").toggleClass("expanded")
 })
 
 
 
-
-
-////matter js stuff
+//seting the height of the graphic so that it's centered vertically
 var mwidth = document.getElementById("svg-container").offsetWidth
 var mheight = document.getElementById("svg-container").offsetHeight
-console.log(mwidth, mheight)
+$("#graphic-container").css("height", mheight)
+
+// ***** Matter JS physics engine *****
+
 // module aliases
 var Engine = Matter.Engine,
     Render = Matter.Render,
@@ -107,42 +112,43 @@ var render = Render.create({
         height: 730,
         pixelRatio: 1,
         background: 'none',
-        wireframeBackground: '#111',
-        hasBounds: false,
-        enabled: false,
-        wireframes: false,
-        showSleeping: true,
-        showDebug: true,
-        showBroadphase: false,
-        showBounds: false,
-        showVelocity: false,
-        showCollisions: false,
-        showSeparations: false,
-        showAxes: false,
-        showPositions: false,
-        showAngleIndicator: false,
-        showIds: false,
-        showShadows: false,
-        showVertexNumbers: false,
-        showConvexHulls: false,
-        showInternalEdges: false,
-        showMousePosition: false
+		wireframeBackground: '#111',
+		wireframes: false,
+
+        // hasBounds: false,
+        // enabled: false,
+        
+        // showSleeping: true,
+        // showDebug: true,
+        // showBroadphase: false,
+        // showBounds: false,
+        // showVelocity: false,
+        // showCollisions: false,
+        // showSeparations: false,
+        // showAxes: false,
+        // showPositions: false,
+        // showAngleIndicator: false,
+        // showIds: false,
+        // showShadows: false,
+        // showVertexNumbers: false,
+        // showConvexHulls: false,
+        // showInternalEdges: false,
+        // showMousePosition: false
     }
 }
 );
 
 
-var path= "330.6,0 1116,0 1116,730 0,730 0,0 330.6,0 332.1,86.2 310.1,86.3 242.3,102.5 181.1,140.9 128.3,191.7 97,271.9 97,415.2 117.9,488.8 175.9,565.1 241,613.9 336.8,639.4 827.7,639.4 871.2,632.4 927.4,603.3 982.7,546 1024.9,447.8 1031.4,390.5 1031.4,308.4 994.3,208.7 927.1,136.3 804,86.2 332.1,86.2 330.6,0";
+var pillpath= "330.6,0 1116,0 1116,730 0,730 0,0 330.6,0 332.1,86.2 310.1,86.3 242.3,102.5 181.1,140.9 128.3,191.7 97,271.9 97,415.2 117.9,488.8 175.9,565.1 241,613.9 336.8,639.4 827.7,639.4 871.2,632.4 927.4,603.3 982.7,546 1024.9,447.8 1031.4,390.5 1031.4,308.4 994.3,208.7 927.1,136.3 804,86.2 332.1,86.2 330.6,0";
 
 
-// var vertices = Matter.Svg.pathToVertices(path, 15);
- 
-// console.log(splitted);
-var vertices = [];
-var splitted = path.split(" ")
-createVert();
-console.log(splitted, "<<")
-function createVert(){
+var pillVertices = [];
+parsePath(pillpath, pillVertices);
+
+// a custom function to parse illustrator paths into arrays of verticies
+//Get's a path sting and an empty array and posh point coordinates into the array
+function parsePath(path, vertices){
+	var splitted = path.split(" ")
 	for(var i =0; i< splitted.length; i++){
 		var xyArray = splitted[i].split(",")
 		var point = {
@@ -153,15 +159,6 @@ function createVert(){
 		console.log(vertices)
 	}
 }
-
-
-var ver = [
-	{x: 100, y:100},
-	{x: 800, y:150.7},
-	{x: 800, y:200},
-	{x: 100, y:200},
-	{x: 100, y:50},
-]
 
 var colors=["rgba(247,147,30,1)", "rgba(102,166,196,1)", "rgba(252,115,117,1)"]
 var circlesArr = []
@@ -176,8 +173,7 @@ for(var i=0; i<25; i++){
 	// console.log("YAY", circlesArr)
 }
 // create two boxes and a ground
-var boxA = Bodies.circle(400, 350, 80);
-var boxB = Bodies.circle(450, 350, 50);
+
 var ceiling = Bodies.rectangle(1116/2,40,1110,86, {
 	isStatic:true,
 	render:{
@@ -187,7 +183,7 @@ var ceiling = Bodies.rectangle(1116/2,40,1110,86, {
 // var floor = Bodies.rectangle(1116/2,40,1110,86, {isStatic:true})
 // var ground = Bodies.rectangle(300, 410, 510, 60, { isStatic: true });
 // var pill = Bodies.polygon(200, 200, 4, 500, { isStatic: true });
-var pillShell = Bodies.fromVertices(1110/2,730/2, vertices , {
+var pillShell = Bodies.fromVertices(1110/2,730/2, pillVertices , {
 	isStatic : true,
 	render: {
 		fillStyle: 'rgba(200,200,0,0)',
@@ -229,8 +225,8 @@ Render.run(render);
 
 function applyForce(){
 	for(var i=0; i<circlesArr.length; i++){
-		Body.applyForce(circlesArr[i], {x: circlesArr[i].position.x, y: circlesArr[i].position.y}, {x: getRandom(-0.02,0.02), y: getRandom(-0.02,-0.01)})
+		Body.applyForce(circlesArr[i], {x: circlesArr[i].position.x, y: circlesArr[i].position.y}, {x: getRandom(-0.005,0.005), y: getRandom(-0.001,-0.0001)})
 	}
 }
 
-window.setInterval(applyForce, 6000);
+window.setInterval(applyForce, 3000);
