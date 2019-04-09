@@ -10,6 +10,9 @@ h1{
     /* z-index: 4; */
     position: relative;
     color: white;
+    border-left: #fff 2px solid;
+    padding-left: 15px;
+    height: 1.9em;
     
 }
 
@@ -48,7 +51,8 @@ h1{
     color: white;
     font-family: "benton-sans", sans-serif;
     /* background: rgba(0,0,0,0.4); */
-    /* padding: 20px; */
+    padding-left: 20px;
+    margin-top:15px;
 
 }
 .intro p{
