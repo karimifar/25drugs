@@ -98,6 +98,8 @@ var Engine = Matter.Engine,
 	Mouse = Matter.Mouse;
 	Body = Matter.Body;
 
+var Constraint = Matter.Constraint;
+
 // create an engine
 var engine1 = Engine.create();
 engine1.world.gravity.y = 0.2;
@@ -211,6 +213,7 @@ var mouse = Mouse.create(render1.canvas),
 
 World.add(engine1.world, mouseConstraint);
 
+
 // keep the mouse in sync with rendering
 render1.mouse = mouse;
 
@@ -249,12 +252,62 @@ var render2 = Render.create({
 }
 );
 
+
+
+
+var gland = Bodies.circle(315, 285,30, {
+	render:{
+		fillStyle: "rgba(252,115,117,1)",
+	}
+})
+// var gladPoint = Bodies.circle(300, 290,1, {
+// 	isStatic: true,
+// })
+var glandConnection = Constraint.create({
+	pointA: {x: 315, y: 285},
+	bodyB: gland,
+	// pointB: {x:300, y: 280},
+	stiffness: 0.02,
+	render:{
+		visible: false,
+	}
+})
+World.add(engine2.world, [gland, glandConnection]);
+
+var mouse2 = Mouse.create(render2.canvas),
+        mouseConstraint = MouseConstraint.create(engine2, {
+            mouse: mouse2,
+            constraint: {
+                stiffness: 0.1,
+                render: {
+					visible: false,
+                }
+			}
+        });
+
+World.add(engine2.world, mouseConstraint);
+
+
+// keep the mouse in sync with rendering
+render2.mouse = mouse2;
 // run the engine1
 Engine.run(engine2);
 
 // run the renderer
 Render.run(render2);
+function applyForce2(){
+
+	Body.applyForce(gland, {x: gland.position.x, y: gland.position.y}, {x: randomPosNeg()*Math.random()*0.1, y: randomPosNeg()*Math.random()*0.1})
+
+}
+
+window.setInterval(applyForce2, 4500);
 
 
-var gland = Bodies.circle(300, 290,40)
-World.add(engine2.world, [gland]);
+function randomPosNeg(){
+	if(Math.random()>0.5){
+		return -1;
+	}else{
+		return 1;
+	}
+}
