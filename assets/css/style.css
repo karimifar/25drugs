@@ -20,9 +20,11 @@ h1{
     vertical-align: unset;
 }
 
-#first-sec{
+.section{
     position: relative;
-    /* padding: 0 50px; */
+    padding-top: 0 !important;
+    z-index: 2;
+    background: black;
 
 }
 #home-wrap{
@@ -149,3 +151,40 @@ canvas{
     pointer-events:none;
 }
 
+.d-graphicCol{
+    height: 100vh;
+    position: relative;
+    /* background: red; */
+    width: 50%;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.d-graphic-container{
+    /* background: blue; */
+    position: relative;
+    height: auto;
+}
+.pngAndCanvas{
+    width: 100%;
+    max-width: 640px;
+    z-index: 2;
+    position: relative;
+    /* background: #ddd; */
+}
+.pngAndCanvas img{
+    width:100%;
+   
+}
+
+.png-container{
+    pointer-events:none;
+}
+.d-canvas{
+    position: absolute;
+    top:0;
+    left:0;
+    /* background: red; */
+    z-index: 0;
+}

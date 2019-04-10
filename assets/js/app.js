@@ -48,7 +48,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//Design
 	controlArrows: true,
 	verticalCentered: true,
-	sectionsColor : ['#000', '#FF7F51', "#720026", "#C7EFCF", "#333745"],
+	// sectionsColor : ['#000', '#FF7F51', "#720026", "#C7EFCF", "#333745"],
 	paddingTop: '3em',
 	paddingBottom: '10px',
 	fixedElements: '#header, .footer',
@@ -99,14 +99,14 @@ var Engine = Matter.Engine,
 	Body = Matter.Body;
 
 // create an engine
-var engine = Engine.create();
-engine.world.gravity.y = 0.2;
-var myelement = document.getElementById('matter-js-1');
-console.log(myelement)
+var engine1 = Engine.create();
+engine1.world.gravity.y = 0.2;
+var homeMatter = document.getElementById('home-matter');
+console.log(homeMatter)
 // create a renderer
-var render = Render.create({
-    element: myelement,
-    engine: engine,
+var render1 = Render.create({
+    element: homeMatter,
+    engine: engine1,
     options: {
         width: 1116,
         height: 730,
@@ -164,12 +164,12 @@ var colors=["rgba(247,147,30,1)", "rgba(102,166,196,1)", "rgba(252,115,117,1)"]
 var circlesArr = []
 for(var i=0; i<25; i++){
 	var pickedColor = getRandom(0,2);
-	circlesArr.push(Bodies.circle(getRandom(155,890), getRandom(150,345),getRandom(40,70), {
+	circlesArr.push(Bodies.circle(getRandom(155,890), getRandom(150,345),getRandom(50,70), {
 		render:{
 			fillStyle: colors[pickedColor]
 		}
 	}));
-	World.add(engine.world, circlesArr[i]);
+	World.add(engine1.world, circlesArr[i]);
 	// console.log("YAY", circlesArr)
 }
 // create two boxes and a ground
@@ -180,9 +180,7 @@ var ceiling = Bodies.rectangle(1116/2,40,1110,86, {
 		fillStyle: 'rgba(200,200,0,0)'
 	}
 })
-// var floor = Bodies.rectangle(1116/2,40,1110,86, {isStatic:true})
-// var ground = Bodies.rectangle(300, 410, 510, 60, { isStatic: true });
-// var pill = Bodies.polygon(200, 200, 4, 500, { isStatic: true });
+
 var pillShell = Bodies.fromVertices(1110/2,730/2, pillVertices , {
 	isStatic : true,
 	render: {
@@ -196,12 +194,12 @@ function getRandom(min,max){
 }
 
 // add all of the bodies to the world
-World.add(engine.world, [ pillShell, ceiling]);
+World.add(engine1.world, [ pillShell, ceiling]);
 // World.add(engine.world, circlesArr);
 console.log(circlesArr)
 
-var mouse = Mouse.create(render.canvas),
-        mouseConstraint = MouseConstraint.create(engine, {
+var mouse = Mouse.create(render1.canvas),
+        mouseConstraint = MouseConstraint.create(engine1, {
             mouse: mouse,
             constraint: {
                 stiffness: 0.01,
@@ -211,16 +209,16 @@ var mouse = Mouse.create(render.canvas),
             }
         });
 
-World.add(engine.world, mouseConstraint);
+World.add(engine1.world, mouseConstraint);
 
 // keep the mouse in sync with rendering
-render.mouse = mouse;
+render1.mouse = mouse;
 
-// run the engine
-Engine.run(engine);
+// run the engine1
+Engine.run(engine1);
 
 // run the renderer
-Render.run(render);
+Render.run(render1);
 
 
 function applyForce(){
@@ -229,4 +227,34 @@ function applyForce(){
 	}
 }
 
-window.setInterval(applyForce, 3000);
+window.setInterval(applyForce, 2000);
+
+
+
+
+///Matter JS for section 2
+var engine2 = Engine.create();
+var sec2Matter = document.getElementById("sec2-matter")
+var render2 = Render.create({
+    element: sec2Matter,
+    engine: engine2,
+    options: {
+        width: 640,
+        height: 800,
+        pixelRatio: 1,
+        background: 'rgba(200,200,0,0)',
+		wireframeBackground: '#eee',
+		wireframes: false,
+    }
+}
+);
+
+// run the engine1
+Engine.run(engine2);
+
+// run the renderer
+Render.run(render2);
+
+
+var gland = Bodies.circle(300, 290,40)
+World.add(engine2.world, [gland]);
