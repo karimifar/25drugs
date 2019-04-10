@@ -267,7 +267,8 @@ var glandConnection = Constraint.create({
 	pointA: {x: 315, y: 285},
 	bodyB: gland,
 	// pointB: {x:300, y: 280},
-	stiffness: 0.02,
+	stiffness: 0.05,
+	length: 1,
 	render:{
 		visible: false,
 	}
@@ -278,7 +279,7 @@ var mouse2 = Mouse.create(render2.canvas),
         mouseConstraint = MouseConstraint.create(engine2, {
             mouse: mouse2,
             constraint: {
-                stiffness: 0.1,
+				stiffness: 0.05,
                 render: {
 					visible: false,
                 }

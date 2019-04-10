@@ -27,7 +27,7 @@
     background: black;
 
 }
-.section:nth-child(2){
+.section:nth-child(even){
     background: #222
 }
 #home-wrap{
