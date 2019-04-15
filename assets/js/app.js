@@ -4,7 +4,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//Navigation
 	menu: '#menu',
 	lockAnchors: false,
-	anchors:['firstPage', 'secondPage'],
+	anchors:['firstPage', 'sec2', 'sec3'],
 	navigation: true,
 	navigationPosition: 'right',
 	navigationTooltips: [' ', 'secondSlide'],
@@ -93,12 +93,14 @@ $("#graphic-container").css("height", mheight)
 var Engine = Matter.Engine,
     Render = Matter.Render,
     World = Matter.World,
-	Bodies = Matter.Bodies;
+	Bodies = Matter.Bodies,
 	MouseConstraint = Matter.MouseConstraint,
-	Mouse = Matter.Mouse;
-	Body = Matter.Body;
-
-var Constraint = Matter.Constraint;
+	Mouse = Matter.Mouse,
+	Body = Matter.Body,
+	Svg = Matter.Svg,
+    Vertices = Matter.Vertices,
+	Constraint = Matter.Constraint,
+	Events = Matter.Events;
 
 // create an engine
 var engine1 = Engine.create();
@@ -296,10 +298,9 @@ Engine.run(engine2);
 
 // run the renderer
 Render.run(render2);
+
 function applyForce2(){
-
 	Body.applyForce(gland, {x: gland.position.x, y: gland.position.y}, {x: randomPosNeg()*Math.random()*0.1, y: randomPosNeg()*Math.random()*0.1})
-
 }
 
 window.setInterval(applyForce2, 4500);
@@ -312,3 +313,74 @@ function randomPosNeg(){
 		return 1;
 	}
 }
+
+
+
+///Matter JS for section 3
+var engine3 = Engine.create();
+var sec3Matter = document.getElementById("sec3-matter")
+var render3 = Render.create({
+    element: sec3Matter,
+    engine: engine3,
+    options: {
+        width: 640,
+        height: 800,
+        pixelRatio: 1,
+        background: 'rgba(200,200,0,0)',
+		wireframeBackground: '#eee',
+		wireframes: false,
+    }
+}
+);
+
+
+var cell = Bodies.circle(315, 285,30, {
+	render:{
+		fillStyle: "rgba(252,115,117,1)",
+	}
+})
+// var gladPoint = Bodies.circle(300, 290,1, {
+// 	isStatic: true,
+// })
+var cellConnection = Constraint.create({
+	pointA: {x: 315, y: 285},
+	bodyB: cell,
+	// pointB: {x:300, y: 280},
+	stiffness: 0.05,
+	length: 1,
+	render:{
+		visible: false,
+	}
+})
+World.add(engine3.world, [cell, cellConnection]);
+
+var mouse3 = Mouse.create(render3.canvas),
+        mouseConstraint = MouseConstraint.create(engine3, {
+            mouse: mouse3,
+            constraint: {
+				stiffness: 0.05,
+                render: {
+					visible: false,
+                }
+			}
+        });
+
+Events.on(engine3, 'afterUpdate', function() {
+	if (mouseConstraint.mouse.button === -1 && (cell.position.x > 335 || cell.position.y < 265)) {
+		cell = Bodies.circle(315, 285, 30, {density: 0.004, render:{
+			fillStyle: "rgba(252,115,117,1)",
+		}});
+		World.add(engine3.world, cell);
+		cellConnection.bodyB = cell;
+	}
+});
+World.add(engine3.world, mouseConstraint);
+
+
+// keep the mouse in sync with rendering
+render3.mouse = mouse3;
+// run the engine1
+Engine.run(engine3);
+
+// run the renderer
+Render.run(render3);
