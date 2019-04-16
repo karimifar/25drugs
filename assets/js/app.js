@@ -87,6 +87,20 @@ var mwidth = document.getElementById("svg-container").offsetWidth
 var mheight = document.getElementById("svg-container").offsetHeight
 $("#graphic-container").css("height", mheight)
 
+
+// $(".more").on("click",function(){
+// 	console.log("click")
+// 	// $(this).text
+// 	$(this).siblings(".complete").toggleClass("expand"); 
+
+// });
+
+
+
+
+
+
+
 // ***** Matter JS physics engine *****
 
 // module aliases
@@ -165,6 +179,7 @@ function parsePath(path, vertices){
 }
 
 var colors=["rgba(247,147,30,1)", "rgba(102,166,196,1)", "rgba(252,115,117,1)"]
+var colors2=["rgba(68,98,120,1)", "rgba(255,217,125,1)", "rgba(244,96,54,1)", "rgba(244,96,54,1)"]
 var circlesArr = []
 for(var i=0; i<25; i++){
 	var pickedColor = getRandom(0,2);
@@ -318,6 +333,8 @@ function randomPosNeg(){
 
 ///Matter JS for section 3
 var engine3 = Engine.create();
+// engine3.world.gravity.y = 0.4;
+
 var sec3Matter = document.getElementById("sec3-matter")
 var render3 = Render.create({
     element: sec3Matter,
@@ -334,17 +351,48 @@ var render3 = Render.create({
 );
 
 
-var cell = Bodies.circle(315, 285,30, {
+
+
+var wall2= Bodies.rectangle(650, 400,20, 1800, {isStatic:true, render:{visible: false}, restitution:0.9})
+var ground= Bodies.rectangle(320, 850,1200, 100, {isStatic:true, render:{visible: false}, restitution:0.9})
+
+var cell1options = {
+	friction:0.5,
+	frictionAir:0.01,
+	restitution:0.5,
 	render:{
-		fillStyle: "rgba(252,115,117,1)",
+		fillStyle: colors[getRandom(0,2)]
+	}
+}
+var cell = Bodies.circle(145, 565,45, cell1options)
+
+
+
+
+var cellConnection = Constraint.create({
+	pointA: {x: 145, y: 565},
+	bodyB: cell,
+	// pointB: {x:300, y: 280},
+	stiffness: 0.007,
+	length: 1,
+	render:{
+		visible: false,
 	}
 })
-// var gladPoint = Bodies.circle(300, 290,1, {
-// 	isStatic: true,
-// })
-var cellConnection = Constraint.create({
-	pointA: {x: 315, y: 285},
-	bodyB: cell,
+
+var cell2options = {
+	friction:0.05,
+	frictionAir:0.05,
+	restitution:0.9,
+	render:{
+		fillStyle: colors2[getRandom(0,2)]
+	}
+}
+var cell2 = Bodies.circle(383, 330,15,cell2options)
+
+var cell2Connection = Constraint.create({
+	pointA: {x: 383, y: 330},
+	bodyB: cell2,
 	// pointB: {x:300, y: 280},
 	stiffness: 0.05,
 	length: 1,
@@ -352,34 +400,51 @@ var cellConnection = Constraint.create({
 		visible: false,
 	}
 })
-World.add(engine3.world, [cell, cellConnection]);
+World.add(engine3.world, [cell, cellConnection, ground, wall2, cell2, cell2Connection]);
 
 var mouse3 = Mouse.create(render3.canvas),
         mouseConstraint = MouseConstraint.create(engine3, {
             mouse: mouse3,
             constraint: {
-				stiffness: 0.05,
+				stiffness: 0.5,
                 render: {
 					visible: false,
                 }
 			}
         });
 
-Events.on(engine3, 'afterUpdate', function() {
-	if (mouseConstraint.mouse.button === -1 && (cell.position.x > 335 || cell.position.y < 265)) {
-		cell = Bodies.circle(315, 285, 30, {density: 0.004, render:{
-			fillStyle: "rgba(252,115,117,1)",
-		}});
-		World.add(engine3.world, cell);
-		cellConnection.bodyB = cell;
-	}
-});
-World.add(engine3.world, mouseConstraint);
+// Events.on(engine3, 'afterUpdate', function() {
+// 	if (mouseConstraint.mouse.button === -1 && (cell.position.x > 165 || cell.position.y < 545)) {
+// 		cell = Bodies.circle(145, 565, 45, {density: 0.004, render:{
+// 			fillStyle: colors[getRandom(0,2)],
+// 		}});
+// 		World.add(engine3.world, cell);
+// 		cellConnection.bodyB = cell;
+// 	}
+// });
+// World.add(engine3.world, mouseConstraint);
 
+
+addCanon(145,565,45,cell,cellConnection, cell1options, colors);
+addCanon(383,330,15,cell2,cell2Connection, cell2options, colors2);
+
+
+
+function addCanon(x,y,radius, object, objectConnection, options, colArr){
+	Events.on(engine3, 'afterUpdate', function() {
+		if (mouseConstraint.mouse.button === -1 && (object.position.x > x+30 || object.position.y < y-30)) {
+			options.render.fillStyle = colArr[getRandom(0,colArr.length-1)]
+			object = Bodies.circle(x, y, radius, options);
+			World.add(engine3.world, object);
+			objectConnection.bodyB = object;
+		}
+	});
+	World.add(engine3.world, mouseConstraint);
+	
+}
 
 // keep the mouse in sync with rendering
 render3.mouse = mouse3;
-// run the engine1
 Engine.run(engine3);
 
 // run the renderer

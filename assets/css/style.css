@@ -205,6 +205,7 @@ canvas{
     flex-direction: column;
     justify-content: center;
     padding-right: 40px;
+    transition: all 0.2s ease-in-out;
 }
 .d-info-col h1{
     font-family: "benton-sans", sans-serif;
@@ -226,4 +227,28 @@ canvas{
     line-height: 1.2em;
     padding-left: 18px;
     margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+
+}
+
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    max-width:700px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+.links .inst-logo{
+    width: 80px;
+}
+.inst-logo img{
+    width: 100%;
+}
+.link a{
+    font-family: "benton-sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #2FD8BE;
+
 }
