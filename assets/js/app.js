@@ -191,6 +191,8 @@ for(var i=0; i<25; i++){
 	World.add(engine1.world, circlesArr[i]);
 	// console.log("YAY", circlesArr)
 }
+
+
 // create two boxes and a ground
 
 var ceiling = Bodies.rectangle(1116/2,40,1110,86, {
@@ -218,15 +220,15 @@ World.add(engine1.world, [ pillShell, ceiling]);
 console.log(circlesArr)
 
 var mouse = Mouse.create(render1.canvas),
-        mouseConstraint = MouseConstraint.create(engine1, {
-            mouse: mouse,
-            constraint: {
-                stiffness: 0.01,
-                render: {
-                    visible: false
-                }
-            }
-        });
+	mouseConstraint = MouseConstraint.create(engine1, {
+		mouse: mouse,
+		constraint: {
+			stiffness: 0.01,
+			render: {
+				visible: false
+			}
+		}
+	});
 
 World.add(engine1.world, mouseConstraint);
 
@@ -240,6 +242,35 @@ Engine.run(engine1);
 // run the renderer
 Render.run(render1);
 
+var homeCanvas = document.getElementById("home-matter")
+
+homeCanvas.addEventListener("mousemove", function(e){
+	var coordinates = getMousePos(homeCanvas, e);
+	console.log(coordinates)
+	var hoveredArr = Matter.Query.point(circlesArr,coordinates)
+	console.log(hoveredArr)
+	if (hoveredArr.length === 1){
+		hoveredArr[0].render.strokeStyle = "rgba(255,255, 255,1)"
+		hoveredArr[0].render.lineWidth = 2
+		console.log(hoveredArr[0])
+		console.log(coordinates)
+	}
+})
+function getMousePos(canvas, evt) {
+	var rect = canvas.getBoundingClientRect();
+	var skewedX = evt.clientX - rect.left,
+		skewedY = evt.clientY - rect.top,
+		canvasWidth = rect.width,
+		canvasHeight= rect.height;
+
+	var realX= (1116/canvasWidth)*skewedX,
+		realY= (1116/canvasWidth)*skewedY;
+
+    return {
+      x: realX,
+      y: realY
+    };
+}
 
 function applyForce(){
 	for(var i=0; i<circlesArr.length; i++){
