@@ -243,18 +243,41 @@ Engine.run(engine1);
 Render.run(render1);
 
 var homeCanvas = document.getElementById("home-matter")
-
+var hovered = null;
+var hoveredIndex;
 homeCanvas.addEventListener("mousemove", function(e){
 	var coordinates = getMousePos(homeCanvas, e);
-	console.log(coordinates)
+	// console.log(coordinates)
 	var hoveredArr = Matter.Query.point(circlesArr,coordinates)
-	console.log(hoveredArr)
-	if (hoveredArr.length === 1){
-		hoveredArr[0].render.strokeStyle = "rgba(255,255, 255,1)"
-		hoveredArr[0].render.lineWidth = 2
-		console.log(hoveredArr[0])
-		console.log(coordinates)
+	if (!hovered){
+		hovered = Matter.Query.point(circlesArr,coordinates)[0]
+		hoveredIndex = hovered.id -1
+		hovered.render.strokeStyle = "rgba(255,255, 255,1)"
+		hovered.render.lineWidth = 3
+	}else{
+		if (hoveredArr.length ===1){
+			document.body.style.cursor = 'pointer';
+			if(hoveredArr[0].id === hovered.id){
+				hovered = Matter.Query.point(circlesArr,coordinates)[0]
+				hoveredIndex = hovered.id -1
+				hovered.render.strokeStyle = "rgba(255,255, 255,1)"
+				hovered.render.lineWidth = 3
+			}else{
+				hoveredIndex = hovered.id -1
+				var unhovered = circlesArr[hoveredIndex];
+				unhovered.render.lineWidth = 0
+				hovered = Matter.Query.point(circlesArr,coordinates)[0]
+			}
+		}else{
+			document.body.style.cursor = 'default';
+			console.log(hoveredIndex)
+			var unhovered = circlesArr[hoveredIndex];
+			unhovered.render.lineWidth = 0
+		}
+
+
 	}
+	
 })
 function getMousePos(canvas, evt) {
 	var rect = canvas.getBoundingClientRect();
