@@ -256,7 +256,7 @@ homeCanvas.addEventListener("mousemove", function(e){
 		hovered.render.lineWidth = 3
 	}else{
 		if (hoveredArr.length ===1){
-			document.body.style.cursor = 'pointer';
+			homeCanvas.style.cursor = 'grab';
 			if(hoveredArr[0].id === hovered.id){
 				hovered = Matter.Query.point(circlesArr,coordinates)[0]
 				hoveredIndex = hovered.id -1
@@ -269,7 +269,7 @@ homeCanvas.addEventListener("mousemove", function(e){
 				hovered = Matter.Query.point(circlesArr,coordinates)[0]
 			}
 		}else{
-			document.body.style.cursor = 'default';
+			homeCanvas.style.cursor = 'default';
 			console.log(hoveredIndex)
 			var unhovered = circlesArr[hoveredIndex];
 			unhovered.render.lineWidth = 0
