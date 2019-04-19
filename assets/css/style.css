@@ -208,7 +208,7 @@ canvas{
     padding-right: 40px;
     transition: all 0.2s ease-in-out;
 }
-.d-info-col h1{
+.d-info-col .title h1{
     font-family: "benton-sans", sans-serif;
     font-weight: 1000;
     font-size: 60px;
@@ -219,7 +219,21 @@ canvas{
     border-left: #fff 2px solid;
     padding-left: 15px;
 }
-
+.d-info-col .num h1{
+    font-family: "benton-sans", sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+    position: relative;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    width:75px;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+}
 .subhead p{
     font-family: "benton-sans", sans-serif;
     color: white;
