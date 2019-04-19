@@ -256,6 +256,9 @@ homeCanvas.addEventListener("mousemove", function(e){
 		hovered.render.lineWidth = 3
 	}else{
 		if (hoveredArr.length ===1){
+			// homeCanvas.addEventListener("click", function(){
+			// 	window.location.href = '#sec3'
+			// })
 			homeCanvas.style.cursor = 'grab';
 			if(hoveredArr[0].id === hovered.id){
 				hovered = Matter.Query.point(circlesArr,coordinates)[0]
@@ -430,7 +433,9 @@ var cellConnection = Constraint.create({
 	stiffness: 0.007,
 	length: 1,
 	render:{
-		visible: false,
+		visible: true,
+		type: "line",
+		lineWidth: 1
 	}
 })
 
@@ -451,7 +456,9 @@ var cell2Connection = Constraint.create({
 	stiffness: 0.05,
 	length: 1,
 	render:{
-		visible: false,
+		visible: true,
+		type: "line",
+		lineWidth: 1
 	}
 })
 World.add(engine3.world, [cell, cellConnection, ground, wall2, cell2, cell2Connection]);
