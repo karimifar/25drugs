@@ -122,7 +122,7 @@
 }
 .expanded .navlist{
     height: 100vh;
-    background: #fff;
+    background: rgba(30,30,30,0.9);
     width: 300px;
 }
 ul{
@@ -136,7 +136,7 @@ ul{
 
 .expanded .navlist li{
     display: block;
-    color: #111;
+    color: #fff;
     font-family: "benton-sans", sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -144,7 +144,7 @@ ul{
 }
 
 .navlist li:hover{
-    background-color: #2FD8BE; 
+    background-color: rgba(102,166,196,1); 
     color: white;
 }
 

@@ -80,6 +80,15 @@ $("#nav-btn").on("click", function(){
 	$("#sidebar").toggleClass("expanded")
 })
 
+$("#nav-btn").on("mouseover", function(){
+	$("#sidebar").addClass("expanded")
+})
+$("#fullpage").on("mouseover", function(){
+	if($("#sidebar").hasClass("expanded")){
+		$("#sidebar").removeClass("expanded")
+	}
+	
+})
 
 
 //seting the height of the graphic so that it's centered vertically
