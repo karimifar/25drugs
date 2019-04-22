@@ -4,7 +4,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//Navigation
 	menu: '#menu',
 	lockAnchors: false,
-	anchors:['firstPage', 'sec2', 'sec3'],
+	anchors:['firstPage', 'sec2', 'sec3', 'sec4'],
 	navigation: true,
 	navigationPosition: 'right',
 	navigationTooltips: [' ', 'secondSlide'],
@@ -14,7 +14,7 @@ var myFullpage = new fullpage('#fullpage', {
 
 	//Scrolling
 	css3: true,
-	scrollingSpeed: 700,
+	scrollingSpeed: 1200,
 	autoScrolling: true,
 	fitToSection: true,
 	fitToSectionDelay: 1000,
@@ -28,11 +28,11 @@ var myFullpage = new fullpage('#fullpage', {
 	continuousHorizontal: false,
 	scrollHorizontally: false,
 	interlockedSlides: false,
-	dragAndMove: true,
+	dragAndMove: false,
 	offsetSections: false,
 	resetSliders: false,
 	fadingEffect: false,
-	normalScrollElements: '#element1, .element2',
+	normalScrollElements: 'canvas',
 	scrollOverflow: true,
 	scrollOverflowReset: false,
 	scrollOverflowOptions: null,
