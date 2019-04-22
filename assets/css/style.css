@@ -28,7 +28,7 @@
 
 }
 .section:nth-child(even){
-    background: #222
+    /* background: #222 */
 }
 #home-wrap{
     /* margin-left: 200px; */
