@@ -14,7 +14,7 @@ var myFullpage = new fullpage('#fullpage', {
 
 	//Scrolling
 	css3: true,
-	scrollingSpeed: 1200,
+	scrollingSpeed: 1000,
 	autoScrolling: true,
 	fitToSection: true,
 	fitToSectionDelay: 1000,
@@ -32,7 +32,7 @@ var myFullpage = new fullpage('#fullpage', {
 	offsetSections: false,
 	resetSliders: false,
 	fadingEffect: false,
-	normalScrollElements: 'canvas',
+	// normalScrollElements: '.graphic-container',
 	scrollOverflow: true,
 	scrollOverflowReset: false,
 	scrollOverflowOptions: null,
@@ -97,12 +97,33 @@ var mheight = document.getElementById("svg-container").offsetHeight
 $("#graphic-container").css("height", mheight)
 
 
-// $(".more").on("click",function(){
-// 	console.log("click")
-// 	// $(this).text
-// 	$(this).siblings(".complete").toggleClass("expand"); 
+// see more function for subheads
+var showChar = 250;
+var ellipsestext = "...";
+var moretext = ">>";
+var lesstext = "<<";
+$('.subhead p').each(function () {
+    var content = $(this).html();
+    if (content.length > showChar) {
+        var show_content = content.substr(0, showChar);
+        var hide_content = content.substr(showChar, content.length - showChar);
+        var html = show_content + '<span class="moreelipses">' + ellipsestext + '</span><span class="remaining-content"><span>' + hide_content + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+        $(this).html(html);
+    }
+});
 
-// });
+$(".morelink").click(function () {
+    if ($(this).hasClass("less")) {
+        $(this).removeClass("less");
+        $(this).html(moretext);
+    } else {
+        $(this).addClass("less");
+        $(this).html(lesstext);
+    }
+    $(this).parent().prev().toggle();
+    $(this).prev().toggle();
+    return false;
+});
 
 
 
