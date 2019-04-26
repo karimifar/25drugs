@@ -7,7 +7,8 @@ var content = [
 		illustration: "assets/img/illustrations/tbi.png",
 		instLogo: "assets/img/inst-logos/utmb.png",
 		institution: "The University of Texas Medical Branch",
-		link: "http://www.utsystempophealth.org/thj-stories/how-growth-hormone-can-lift-the-tbi-brain-fog"
+		link: "http://www.utsystempophealth.org/thj-stories/how-growth-hormone-can-lift-the-tbi-brain-fog",
+		matter:true,
 	},
 	{
 		num:2,
@@ -15,9 +16,76 @@ var content = [
 		shortTitle: "Stem Cell Treatment",
 		subhead: "Millions of Americans suffer from traumatic brain injuries (TBI) each year, but few therapies exist that can repair even minimal damage from severe TBI. As a result, treatments tend to be supportive rather than reparative. Dr. Charles Cox and his team are working to change that. “Traumatic brain injury is really two things: a primary injury and a secondary injury,” says Cox, Professor of Pediatric Surgery at McGovern Medical School at UTHealth in Houston. “The initial impact––on the ground or with an object––is the primary kinetic injury, and nothing can be done about that kinetic disruption of tissue. But then there is a secondary sequence of reactions as the body’s innate immune system responds to the damaged tissue, generating brain inflammation that ends up killing neurons.” Cox’s research is centered around using stem cell therapy to limit this collateral inflammatory damage that follows the immediate trauma of brain injury, so that some of the damaged tissue has a chance to recover.",
 		illustration: "assets/img/illustrations/stem-cell.png",
-		instLogo: "assets/img/inst-logos/uthealth.png",
+		instLogo: "assets/img/inst-logos/utmb.png",
 		institution: "UTHealth Houston",
-		link: "http://www.utsystempophealth.org/thj-stories/the-failure-and-unexpected-promise"
+		link: "http://www.utsystempophealth.org/thj-stories/the-failure-and-unexpected-promise",
+		matter:true,
+	},
+	{
+		num:3,
+		title: "Diabetes Drug Shows Promise for Chronic Pain",
+		shortTitle: "Neuron Treatment",
+		subhead: "Scientists seeking an effective treatment for one type of chronic pain believe a ubiquitous, generic diabetes medication might solve both the discomfort and the mental deficits that go with the pain.“People who are in constant pain have problems thinking straight sometimes. The longer you’re in pain, the more entrenched the impairment becomes,” said Stephanie Shiers, a fourth-year cognition and neuroscience doctoral student at The University of Texas at Dallas and lead author of a study recently published in the Journal of Neuroscience. “These impairments aren’t addressed by existing therapeutics.”",
+		illustration: "assets/img/illustrations/neuron.gif",
+		instLogo: "assets/img/inst-logos/utmb.png",
+		institution: "UTHealth Houston",
+		link: "https://www.utdallas.edu/news/research/study-common-diabetes-drug-offers-hope-for-chronic-pain-patients/",
+		matter:false,
+	},
+	{
+		num:4,
+		title: "Biochemists study enzymes to provide keys for drug development in cancer, bacterial infection and neurodegenerative disease",
+		shortTitle: "Neuron Treatment",
+		subhead: "Researcher received a $429,033 National Institutes of Health grant to continue his work retro-engineering the sulfur oxidation process and mapping out of the chemical mechanism of three key enzymes.",
+		illustration: "assets/img/illustrations/Enzymatic.png",
+		instLogo: "assets/img/inst-logos/utmb.png",
+		institution: "UTHealth Houston",
+		link: "https://www.uta.edu/news/releases/2018/08/Brad%20Pierce%20NIH%20grant.php",
+		matter:false,
+	},
+	{
+		num:5,
+		title: "Stroke Prevention Drug Combo Shows Promise",
+		shortTitle: "Neuron Treatment",
+		subhead: "If you’ve had a minor stroke or a transient ischemic stroke (TIA), taking the clot-preventing drug clopidogrel along with aspirin may lower your risk of having a major stroke within the next 90 days, according to new research published in The New England Journal of Medicine. An international study of 4,881 adults in 10 countries who either had a minor stroke or a TIA showed that people who took clopidogrel plus aspirin had a 25 percent lower risk of a major stroke, heart attack or death from blood clots within the three months after the first incident, compared with those who took aspirin alone.",
+		illustration: "assets/img/illustrations/Transient.png",
+		instLogo: "assets/img/inst-logos/utmb.png",
+		institution: "UTHealth Houston",
+		link: "https://dellmed.utexas.edu/news/stroke-prevention-drug-combo-shows-promise-study-says",
+		matter:false,
+	},
+	{
+		num:6,
+		title: "Rapamycin lotion reduces facial tumors caused by tuberous sclerosis",
+		shortTitle: "Neuron Treatment",
+		subhead: "“People with tuberous sclerosis complex want to look like everyone else,” said Mary Kay Koenig, M.D., the study’s lead author, co-director of the Tuberous Sclerosis Center of Excellence and holder of the Endowed Chair of Mitochondrial Medicine at McGovern Medical School at UTHealth. “And, they can with this treatment.” Tuberous sclerosis complex affects about 50,000 people in the United States and is characterized by the uncontrolled growth of non-cancerous tumors throughout the body.",
+		illustration: "assets/img/illustrations/freckles.png",
+		instLogo: "assets/img/inst-logos/utmb.png",
+		institution: "UTHealth Houston",
+		link: "https://www.uth.edu/media/story.htm?id=37af25df-14a2-4c5e-b1ee-ac9585946aa0",
+		matter:false,
+	},
+	{
+		num:7,
+		title: "The 40 Year-old Discovery Behind A Promising New Flu Drug",
+		shortTitle: "Neuron Treatment",
+		subhead: "Existing flu treatments, such as Tamiflu, attack the virus after it has replicated in host cells; they work by making it harder for daughter viruses to escape from the host cell. The new drug Xofluza, on the other hand, attacks the flu virus at the early stage that Krug's research illuminated, blocking flu before it is able to create daughter viruses. ”It stops the virus cold,” Krug said. ”It can't do anything.” Theoretically, this should make the new drug exquisitely effective at halting progression of the disease. And already human trials have demonstrated that Xofluza patients have a much lower viral load in the first three days of treatment than Tamiflu patients and stop shedding flu virus in about a day, compared to about three days with Tamiflu.",
+		illustration: "assets/img/illustrations/rna.png",
+		instLogo: "assets/img/inst-logos/utmb.png",
+		institution: "UTHealth Houston",
+		link: "https://cns.utexas.edu/news/the-40-year-old-discovery-behind-a-promising-new-flu-drug",
+		matter:false,
+	},
+	{
+		num:8,
+		title: "A Score to Settle with Cancer",
+		shortTitle: "Neuron Treatment",
+		subhead: "Jonathan Sessler was a college student when he was first diagnosed with Hodgkin's lymphoma. Fortunately, he was also a chemistry major. After surviving radiation therapy, relapsing and then surviving extremely high doses of what he calls ”rat poison” (a.k.a. chemotherapy), his oncologist challenged him: ”You're a chemist. Find new cancer drugs.” In the four decades since, he's founded two companies, one of which commercialized a blockbuster drug for leukemia and was sold for $21 billion. The other is working to develop a drug he invented to treat ovarian cancer, based on large molecules that deliver poisons to cancer cells and named after the Lone Star state: Texaphyrin. He knows the odds of bringing effective new cancer treatments to market are stacked against him, yet he tirelessly pushes ahead.",
+		illustration: "assets/img/illustrations/tx-mol.png",
+		instLogo: "assets/img/inst-logos/utmb.png",
+		institution: "UTHealth Houston",
+		link: "https://cns.utexas.edu/point/a-score-to-settle-with-cancer",
+		matter:false,
 	}
 ]
 
@@ -31,12 +99,15 @@ content.forEach(function(drug){
 	var graphicCol = $("<div class='d-graphicCol'>")
 	var graphicContain = $("<div class='graphic-container d-graphic-container'>")
 	var staticImg = $("<div class='pngAndCanvas png-container'><img src='"+drug.illustration+"'></div>")
-	///here an if statement for interactive ones
+	if(drug.matter){
+		var matterDiv = $("<div class='pngAndCanvas d-canvas' id='"+matterId+"'</div>");
+		graphicContain.append(matterDiv)
+	}
 	var infoCol= $("<div class='d-info-col'>")
 	var drugNum = $("<div class='num'><h1>"+drug.num+"</h1><div>")
 	var title = $("<div class='title'><h1>"+drug.title+"</h1></div>");
 	var subhead = $("<div class='subhead'><p>"+drug.subhead+"</p></div>")
-	var links = $("<div class='links'><div class='link'><a href='"+drug.link+"' target='_blank'><i class='fas fa-link'></i>Read More</a></div><div class='inst-logo'><img src='"+drug.instLogo+"'></div></div>")
+	var links = $("<div class='links'><div class='link'><a href='"+drug.link+"' target='_blank'><i class='fas fa-link'></i> Read More</a></div><div class='inst-logo'><img src='"+drug.instLogo+"'></div></div>")
 	
 
 	$("#fullpage").append(drugSec);
@@ -403,7 +474,7 @@ window.setInterval(applyForce, 2000);
 
 ///Matter JS for section 2
 var engine2 = Engine.create();
-var sec2Matter = document.getElementById("sec2-matter")
+var sec2Matter = document.getElementById("sec1-matter")
 var render2 = Render.create({
     element: sec2Matter,
     engine: engine2,
@@ -484,7 +555,7 @@ function randomPosNeg(){
 var engine3 = Engine.create();
 // engine3.world.gravity.y = 0.4;
 
-var sec3Matter = document.getElementById("sec3-matter")
+var sec3Matter = document.getElementById("sec2-matter")
 var render3 = Render.create({
     element: sec3Matter,
     engine: engine3,
