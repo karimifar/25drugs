@@ -24,7 +24,7 @@ var content = [
 	{
 		num:3,
 		title: "Diabetes Drug Shows Promise for Chronic Pain",
-		shortTitle: "Neuron Treatment",
+		shortTitle: "Diabetes Drug Shows Promise for Chronic Pain",
 		subhead: "Scientists seeking an effective treatment for one type of chronic pain believe a ubiquitous, generic diabetes medication might solve both the discomfort and the mental deficits that go with the pain.“People who are in constant pain have problems thinking straight sometimes. The longer you’re in pain, the more entrenched the impairment becomes,” said Stephanie Shiers, a fourth-year cognition and neuroscience doctoral student at The University of Texas at Dallas and lead author of a study recently published in the Journal of Neuroscience. “These impairments aren’t addressed by existing therapeutics.”",
 		illustration: "assets/img/illustrations/neuron.gif",
 		instLogo: "assets/img/inst-logos/utmb.png",
@@ -35,7 +35,7 @@ var content = [
 	{
 		num:4,
 		title: "Biochemists study enzymes to provide keys for drug development in cancer, bacterial infection and neurodegenerative disease",
-		shortTitle: "Neuron Treatment",
+		shortTitle: "Biochemists study enzymes to provide",
 		subhead: "Researcher received a $429,033 National Institutes of Health grant to continue his work retro-engineering the sulfur oxidation process and mapping out of the chemical mechanism of three key enzymes.",
 		illustration: "assets/img/illustrations/Enzymatic.png",
 		instLogo: "assets/img/inst-logos/utmb.png",
@@ -46,7 +46,7 @@ var content = [
 	{
 		num:5,
 		title: "Stroke Prevention Drug Combo Shows Promise",
-		shortTitle: "Neuron Treatment",
+		shortTitle: "Stroke Prevention Drug",
 		subhead: "If you’ve had a minor stroke or a transient ischemic stroke (TIA), taking the clot-preventing drug clopidogrel along with aspirin may lower your risk of having a major stroke within the next 90 days, according to new research published in The New England Journal of Medicine. An international study of 4,881 adults in 10 countries who either had a minor stroke or a TIA showed that people who took clopidogrel plus aspirin had a 25 percent lower risk of a major stroke, heart attack or death from blood clots within the three months after the first incident, compared with those who took aspirin alone.",
 		illustration: "assets/img/illustrations/Transient.png",
 		instLogo: "assets/img/inst-logos/utmb.png",
@@ -57,7 +57,7 @@ var content = [
 	{
 		num:6,
 		title: "Rapamycin lotion reduces facial tumors caused by tuberous sclerosis",
-		shortTitle: "Neuron Treatment",
+		shortTitle: "Rapamycin lotion reduces facial tumors",
 		subhead: "“People with tuberous sclerosis complex want to look like everyone else,” said Mary Kay Koenig, M.D., the study’s lead author, co-director of the Tuberous Sclerosis Center of Excellence and holder of the Endowed Chair of Mitochondrial Medicine at McGovern Medical School at UTHealth. “And, they can with this treatment.” Tuberous sclerosis complex affects about 50,000 people in the United States and is characterized by the uncontrolled growth of non-cancerous tumors throughout the body.",
 		illustration: "assets/img/illustrations/freckles.png",
 		instLogo: "assets/img/inst-logos/utmb.png",
@@ -68,7 +68,7 @@ var content = [
 	{
 		num:7,
 		title: "The 40 Year-old Discovery Behind A Promising New Flu Drug",
-		shortTitle: "Neuron Treatment",
+		shortTitle: "The 40 Year-old Discovery Behind A Promising New Flu Drug",
 		subhead: "Existing flu treatments, such as Tamiflu, attack the virus after it has replicated in host cells; they work by making it harder for daughter viruses to escape from the host cell. The new drug Xofluza, on the other hand, attacks the flu virus at the early stage that Krug's research illuminated, blocking flu before it is able to create daughter viruses. ”It stops the virus cold,” Krug said. ”It can't do anything.” Theoretically, this should make the new drug exquisitely effective at halting progression of the disease. And already human trials have demonstrated that Xofluza patients have a much lower viral load in the first three days of treatment than Tamiflu patients and stop shedding flu virus in about a day, compared to about three days with Tamiflu.",
 		illustration: "assets/img/illustrations/rna.png",
 		instLogo: "assets/img/inst-logos/utmb.png",
@@ -79,7 +79,7 @@ var content = [
 	{
 		num:8,
 		title: "A Score to Settle with Cancer",
-		shortTitle: "Neuron Treatment",
+		shortTitle: "A Score to Settle with Cancer",
 		subhead: "Jonathan Sessler was a college student when he was first diagnosed with Hodgkin's lymphoma. Fortunately, he was also a chemistry major. After surviving radiation therapy, relapsing and then surviving extremely high doses of what he calls ”rat poison” (a.k.a. chemotherapy), his oncologist challenged him: ”You're a chemist. Find new cancer drugs.” In the four decades since, he's founded two companies, one of which commercialized a blockbuster drug for leukemia and was sold for $21 billion. The other is working to develop a drug he invented to treat ovarian cancer, based on large molecules that deliver poisons to cancer cells and named after the Lone Star state: Texaphyrin. He knows the odds of bringing effective new cancer treatments to market are stacked against him, yet he tirelessly pushes ahead.",
 		illustration: "assets/img/illustrations/tx-mol.png",
 		instLogo: "assets/img/inst-logos/utmb.png",
@@ -89,9 +89,12 @@ var content = [
 	}
 ]
 
+var idArr = ["home"]
 
 content.forEach(function(drug){
 	var secId = "section"+drug.num;
+	var fpId = "drug"+drug.num
+	idArr.push(fpId)
 	var matterId = "sec"+drug.num+"-matter"
 
 	var drugSec = $("<div class='section' id='"+secId+"'></div>")
@@ -121,6 +124,13 @@ content.forEach(function(drug){
 	infoCol.append(subhead)
 	infoCol.append(links)
 
+
+	if(drug.shortTitle.length>25){
+		drug.shortTitle = drug.shortTitle.substr(0,25)+"..."
+	}
+	var navItem = $("<a class='nav-item' id='d-num-"+drug.num+"' href='#"+fpId+"'><li><span class='drug-number' >"+drug.num+". </span><span class='drug-title'>"+drug.shortTitle+"</span></li></a>");
+	$(".navlist ul").append(navItem)
+
 	})
 
 // ***** fullpage JS *****
@@ -129,9 +139,9 @@ var myFullpage = new fullpage('#fullpage', {
 	//Navigation
 	menu: '#menu',
 	lockAnchors: false,
-	anchors:['firstPage', 'sec2', 'sec3', 'sec4', 'sec5', 'sec6'],
-	navigation: true,
-	navigationPosition: 'right',
+	anchors: idArr,
+	navigation: false,
+	// navigationPosition: 'top',
 	navigationTooltips: [' ', 'secondSlide'],
 	showActiveTooltip: true,
 	slidesNavigation: false,
@@ -156,7 +166,7 @@ var myFullpage = new fullpage('#fullpage', {
 	dragAndMove: false,
 	offsetSections: false,
 	resetSliders: false,
-	fadingEffect: false,
+	fadingEffect: true,
 	// normalScrollElements: '.graphic-container',
 	scrollOverflow: true,
 	scrollOverflowReset: false,
@@ -190,8 +200,19 @@ var myFullpage = new fullpage('#fullpage', {
 	lazyLoading: true,
 
 	//events
-	onLeave: function(origin, destination, direction){},
-	afterLoad: function(origin, destination, direction){},
+	onLeave: function(origin, destination, direction){
+		// console.log(origin, destination,direction)
+		if (origin.index === 0 ||destination.index === 0){
+			$(".sidebar").toggleClass("invisible")
+		}
+		$(".nav-item").removeClass("active")
+		var targetNav = "#d-num-"+destination.index;
+		$(targetNav).addClass("active")
+	},
+	afterLoad: function(origin, destination, direction){
+		// console.log(destination)
+		
+	},
 	afterRender: function(){},
 	afterResize: function(width, height){},
 	afterResponsive: function(isResponsive){},
@@ -225,9 +246,13 @@ $("#fullpage").on("mouseover", function(){
 
 
 //seting the height of the graphic so that it's centered vertically
-var mwidth = document.getElementById("svg-container").offsetWidth
-var mheight = document.getElementById("svg-container").offsetHeight
-$("#graphic-container").css("height", mheight)
+function alignHomeslide(){
+	var mwidth = document.getElementById("svg-container").offsetWidth
+	var mheight = document.getElementById("svg-container").offsetHeight
+	$("#graphic-container").css("height", mheight)
+}
+alignHomeslide();
+window.addEventListener('resize', alignHomeslide);
 
 
 // see more function for subheads

@@ -37,7 +37,7 @@
     z-index: 4;
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    height: 90vh;
     padding: 10vh 10%;
     justify-content: space-between;
     /* background: #eee; */
@@ -106,7 +106,12 @@
     left: 0;
     top:0;
     display: flex;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
 
+}
+.sidebar.invisible{
+    opacity: 0;
 }
 .sidebar div{
     display: inline-block;
@@ -116,6 +121,7 @@
 
 }
 .navlist{
+    z-index: 2;
     height: 100vh;
     width: 0px;
     transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -127,20 +133,37 @@
 }
 ul{
     list-style-type: none;
+    padding-left: 10px;
+    transition: all 0.2s ease-in-out;
+
+}
+.expanded ul {
+    padding-left: 0;
+}
+.nav-item.active li{
+    color: #fff;
 }
 .navlist li{
-    display: none;
+    white-space:nowrap;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-}
-
-.expanded .navlist li{
-    display: block;
-    color: #fff;
+    color: #777;
     font-family: "benton-sans", sans-serif;
     font-weight: 600;
     font-size: 16px;
     padding: 10px;
+}
+.navlist li .drug-title{
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    transition-delay: 0.2s;
+}
+
+.expanded .navlist li .drug-title{
+    visibility: visible;
+    opacity: 1;
+    white-space: nowrap;
 }
 
 .navlist li:hover{
@@ -151,6 +174,88 @@ ul{
 .navlist a:hover{
     text-decoration: none;
 }
+
+#scrollAnim a{
+    text-decoration: none;
+
+}
+#scrollAnim{
+    position: relative;
+    text-align: center;
+    margin-top: -1%;
+}
+#scrollAnim p{
+    margin-top:60px;
+    color: #ddd;
+    font-size: 12px;
+    font-family: "benton-sans", sans-serif;
+    font-weight: 100;
+}
+/* #scrollAnim a {
+    padding-top: 60px;
+  } */
+  #scrollAnim a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 1px solid #2FD8BE;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  #scrollAnim a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #2FD8BE;
+    border-radius: 100%;
+    -webkit-animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes sdb10 {
+    0% {
+      -webkit-transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes sdb10 {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+
+
+
 
 .graphicCol{
     /* background: red; */
