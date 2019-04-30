@@ -103,7 +103,7 @@ var content = [
 		title: "Pediatric cancer drug shows 93 percent response rate",
 		shortTitle: "The Bat Flower Drug",
 		subhead: " A first-of-its-kind drug targeting a fused gene found in many types of cancer was effective in 93 percent of pediatric patients tested, researchers at UT Southwestern’s Simmons Cancer Center announced. Most cancer drugs are targeted to specific organs or locations in the body. Larotrectinib is the first cancer drug to receive FDA breakthrough therapy designation for patients with a specific fusion of two genes in the cancer cell, no matter what cancer type. The research appears in The Lancet Oncology.",
-		illustration: "assets/img/illustrations/Genes.png",
+		illustration: "assets/img/illustrations/Genes.gif",
 		instLogo: "assets/img/inst-logos/utmb.png",
 		institution: "UTHealth Houston",
 		link: "https://www.utsouthwestern.edu/newsroom/articles/year-2018/pediatric-cancer-drug.html",

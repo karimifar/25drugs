@@ -1,0 +1,56 @@
+@media only screen and (max-width: 800px) {
+    .sec-wrap{
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 10% 0;
+        padding-left: 60px;
+    }
+    .d-graphicCol{
+        height: auto;
+        position: relative;
+        /* background: red; */
+        width: 80%;
+        margin: auto;
+        min-width: unset;
+        max-width: 400px;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .d-info-col .num{
+        position: absolute;
+        top: 20px;
+        right: 80px;
+        z-index: 4
+    }
+    .d-info-col{
+        flex-grow: unset;
+        padding-right: 10px;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .d-info-col .title{
+        width: 40%;
+        padding-left: 10px;
+    }
+    .d-info-col .subhead{
+        width: 60%;
+    }
+    .d-info-col .links{
+        flex-grow: 1;
+    }
+    .subhead p{
+        margin-top: 0;
+        font-size: 14px;
+    }
+    .d-info-col .title h1{
+        font-size: 22px;
+        border-left: none;
+        padding-left: 0px;
+    }
+}

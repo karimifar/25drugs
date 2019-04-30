@@ -1,0 +1,16 @@
+@media only screen and (max-width: 640px) {
+    .subhead p{
+        padding-left: 10px;
+        margin-top: 20px;
+    }
+    .d-info-col .title{
+        width: 100%;
+    }
+    .d-info-col .subhead{
+        width: 100%;
+    }
+    .d-info-col .links{
+        width: 100%;
+    }
+
+}
