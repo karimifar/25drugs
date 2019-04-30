@@ -316,8 +316,8 @@ canvas{
     position: relative;
     /* background: red; */
     width: 50%;
-    min-width: 350px;
-    padding: 0 5%;
+    min-width: 400px;
+    padding-right: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -354,6 +354,7 @@ canvas{
 .sec-wrap{
     display: flex;
     justify-content: space-between;
+    padding-left: 60px;
 }
 
 .d-info-col{

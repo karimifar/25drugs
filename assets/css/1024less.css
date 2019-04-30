@@ -1,14 +1,16 @@
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1024px) {
     .d-info-col .title h1{
         font-family: "benton-sans", sans-serif;
         font-weight: 1000;
-        font-size: 40px;
+        font-size: 28px;
         max-width:700px;
         /* z-index: 4; */
         position: relative;
-        color: #2FD8BE;
         border-left: #fff 2px solid;
         padding-left: 15px;
+    }
+    .subhead p{
+        font-size: 16px;
     }
     .d-graphicCol{
         height: 100vh;
@@ -25,7 +27,7 @@
     }
     .sec-wrap{
         justify-content: flex-start;
-        
+        /* padding-left: 60px; */
     }
     
 }
