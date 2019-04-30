@@ -22,8 +22,8 @@
     }
     .d-info-col .num{
         position: absolute;
-        top: 20px;
-        right: 80px;
+        top: 40px;
+        right: 40px;
         z-index: 4
     }
     .d-info-col{

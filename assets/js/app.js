@@ -37,7 +37,7 @@ var content = [
 		title: "Biochemists study enzymes to provide keys for drug development in cancer, bacterial infection and neurodegenerative disease",
 		shortTitle: "Biochemists study enzymes to provide",
 		subhead: "Researcher received a $429,033 National Institutes of Health grant to continue his work retro-engineering the sulfur oxidation process and mapping out of the chemical mechanism of three key enzymes.",
-		illustration: "assets/img/illustrations/Enzymatic.png",
+		illustration: "assets/img/illustrations/enzymatic.gif",
 		instLogo: "assets/img/inst-logos/utmb.png",
 		institution: "UTHealth Houston",
 		link: "https://www.uta.edu/news/releases/2018/08/Brad%20Pierce%20NIH%20grant.php",
@@ -118,6 +118,17 @@ var content = [
 		instLogo: "assets/img/inst-logos/utmb.png",
 		institution: "UTHealth Houston",
 		link: "https://www.easttexasmatters.com/news/local-news/lung-scarring-reversal-drugs-discovered-by-local-doctors-sees-great-progress/674313067",
+		matter:false,
+	},
+	{
+		num:12,
+		title: "Newly developed therapeutic shown to combat drug addiction",
+		shortTitle: "A Drug to Combat Drug Addiction!",
+		subhead: "The researchers trained rats to press on a lever for cocaine infusions at certain light cues. Once the rats learned this cocaine-seeking behavior, half of them received the most promising therapeutic and the other half received only saline.",
+		illustration: "assets/img/illustrations/drug-addiction.gif",
+		instLogo: "assets/img/inst-logos/utmb.png",
+		institution: "UTHealth Houston",
+		link: "https://www.utmb.edu/newsroom/article11798.aspx",
 		matter:false,
 	}
 ]
