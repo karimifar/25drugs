@@ -92,7 +92,7 @@ var content = [
 		title: "Drug from Bat Flower shrinks resistant tumors",
 		shortTitle: "The Bat Flower Drug",
 		subhead: "There is nothing bleaker to a family than being told that their loved one’s cancer has stopped responding to chemotherapy and there are no more options. UT Health San Antonio and spinoff company Terrona LLC want to end that. “We can help patients for a time, but there comes a point when we do not have further therapy that we can utilize,” said Susan L. Mooberry, Ph.D., professor of pharmacology in the Joe R. & Teresa Lozano Long School of Medicine at UT Health San Antonio.",
-		illustration: "assets/img/illustrations/bat-flower.png",
+		illustration: "assets/img/illustrations/bat-flower.gif",
 		instLogo: "assets/img/inst-logos/utmb.png",
 		institution: "UTHealth Houston",
 		link: "https://news.uthscsa.edu/drug-from-bat-flower-shrinks-resistant-tumors/",
@@ -101,7 +101,7 @@ var content = [
 	{
 		num:10,
 		title: "Pediatric cancer drug shows 93 percent response rate",
-		shortTitle: "The Bat Flower Drug",
+		shortTitle: "Pediatric cancer drug shows 93 percent response rate",
 		subhead: " A first-of-its-kind drug targeting a fused gene found in many types of cancer was effective in 93 percent of pediatric patients tested, researchers at UT Southwestern’s Simmons Cancer Center announced. Most cancer drugs are targeted to specific organs or locations in the body. Larotrectinib is the first cancer drug to receive FDA breakthrough therapy designation for patients with a specific fusion of two genes in the cancer cell, no matter what cancer type. The research appears in The Lancet Oncology.",
 		illustration: "assets/img/illustrations/Genes.gif",
 		instLogo: "assets/img/inst-logos/utmb.png",

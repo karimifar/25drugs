@@ -177,7 +177,7 @@ ul{
     white-space: nowrap;
 }
 
-.navlist li:hover{
+.expanded .navlist li:hover{
     background-color: rgba(102,166,196,1); 
     color: white;
 }
