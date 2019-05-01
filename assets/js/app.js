@@ -172,7 +172,7 @@ content.forEach(function(drug){
 	if(drug.shortTitle.length>25){
 		drug.shortTitle = drug.shortTitle.substr(0,25)+"..."
 	}
-	var navItem = $("<a class='nav-item' id='d-num-"+drug.num+"' href='#"+fpId+"'><li><span class='drug-number' >"+drug.num+". </span><span class='drug-title'>"+drug.shortTitle+"</span></li></a>");
+	var navItem = $("<a class='nav-item' id='d-num-"+drug.num+"' href='#"+fpId+"'><li><span class='drug-number' >"+drug.num+"</span><span class='drug-title'>. "+drug.shortTitle+"</span></li></a>");
 	$(".navlist ul").append(navItem)
 
 	})
