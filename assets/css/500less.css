@@ -3,6 +3,9 @@
         display: block;
         z-index: 10;
     }
+    .drug-number{
+        visibility: hidden;
+    }
     .sidebar, .sidebar.expanded{
         visibility: hidden;
     }
@@ -13,6 +16,9 @@
         visibility: visible;
         width: 100%;
     }
+    .sidebar.mob-expanded .drug-number{
+        visibility: visible;
+    }
     .expanded .navlist{
         width: 100%;
     }
@@ -20,9 +26,7 @@
     .navlist .nav-item.active li .drug-number{
         transition: none;
     }
-    .drug-number{
-        transition: none;
-    }
+
     .navlist li .drug-title{
         transition-delay: 0s;
     }
