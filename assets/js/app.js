@@ -142,9 +142,9 @@ content.forEach(function(drug){
 	var matterId = "sec"+drug.num+"-matter"
 
 	var drugSec = $("<div class='section' id='"+secId+"'></div>")
-	var secWrap = $("<div class='sec-wrap'>")
-	var graphicCol = $("<div class='d-graphicCol'>")
-	var graphicContain = $("<div class='graphic-container d-graphic-container'>")
+	var secWrap = $("<div class='sec-wrap'></div>")
+	var graphicCol = $("<div class='d-graphicCol'></div>")
+	var graphicContain = $("<div class='graphic-container d-graphic-container'></div>")
 	var staticImg = $("<div class='pngAndCanvas png-container'><img src='"+drug.illustration+"'></div>")
 	if(drug.matter){
 		var matterDiv = $("<div class='pngAndCanvas d-canvas' id='"+matterId+"'</div>");
@@ -267,7 +267,7 @@ var myFullpage = new fullpage('#fullpage', {
 
 // ***** Sidebar *****
 $("#nav-btn").on("click", function(){
-	$("#sidebar").toggleClass("expanded")
+	$("#sidebar").toggleClass("mob-expanded expanded")
 })
 
 $("#sidebar").on("mouseover", function(){

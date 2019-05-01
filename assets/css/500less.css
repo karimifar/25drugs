@@ -1,0 +1,30 @@
+@media only screen and (max-width: 500px) {
+    #nav-btn{
+        display: block;
+        z-index: 10;
+    }
+    .sidebar, .sidebar.expanded{
+        visibility: hidden;
+    }
+    .sec-wrap{
+        padding-left: 0px;
+    }
+    .sidebar.mob-expanded{
+        visibility: visible;
+        width: 100%;
+    }
+    .expanded .navlist{
+        width: 100%;
+    }
+
+    .navlist .nav-item.active li .drug-number{
+        transition: none;
+    }
+    .drug-number{
+        transition: none;
+    }
+    .navlist li .drug-title{
+        transition-delay: 0s;
+    }
+
+}
