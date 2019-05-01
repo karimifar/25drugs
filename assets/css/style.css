@@ -80,22 +80,20 @@
     width: 55%;
 }
 
-#nav-btn{
+/* #nav-btn{
     height: 100vh;
     width:60px;
-    /* background-color: #444; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    /* border-right: #888 5px solid; */
 }
 .expanded #nav-btn{
     height: 100vh;
     width:1px;
     background-color: #fff;
-}
+} */
 .nav-arrow{
     font-size: 35px;
     color: white;
@@ -116,6 +114,7 @@
     display: flex;
     opacity: 1;
     transition: all 0.2s ease-in-out;
+    width:60px;
 
 }
 .sidebar.invisible{
@@ -149,7 +148,7 @@ ul{
 .expanded ul {
     padding-left: 0;
 }
-.nav-item.active li{
+.expanded .nav-item.active li{
     color: #fff;
 }
 .navlist li{
@@ -176,7 +175,29 @@ ul{
     opacity: 1;
     white-space: nowrap;
 }
-
+.navlist li .drug-number{
+    font-size: 12px;
+}
+.navlist li .drug-number{
+    width: 30px;
+    padding: 4px 5px;
+    float: left;
+    text-align: center;
+}
+.navlist .nav-item.active li .drug-number{
+    background-color: #2FD8BE;
+    border-radius: 20px;
+    color: #111;
+    transition: all 0.6s ease-in-out;
+}
+.expanded .navlist .nav-item.active li .drug-number{
+    background-color: unset;
+    border-radius: 20px;
+    color: #fff;
+}
+.expanded .navlist li .drug-number{
+    font-weight:600;
+}
 .expanded .navlist li:hover{
     background-color: rgba(102,166,196,1); 
     color: white;

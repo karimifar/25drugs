@@ -270,7 +270,7 @@ $("#nav-btn").on("click", function(){
 	$("#sidebar").toggleClass("expanded")
 })
 
-$("#nav-btn").on("mouseover", function(){
+$("#sidebar").on("mouseover", function(){
 	$("#sidebar").addClass("expanded")
 })
 $("#fullpage").on("mouseover", function(){
