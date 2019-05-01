@@ -1,4 +1,7 @@
 @media only screen and (max-width: 500px) {
+    .sec-wrap{
+        justify-content: flex-start;
+    }
     #nav-btn{
         display: block;
         z-index: 10;
