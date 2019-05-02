@@ -248,6 +248,7 @@ var myFullpage = new fullpage('#fullpage', {
 		// console.log(origin, destination,direction)
 		if (origin.index === 0 ||destination.index === 0){
 			$(".sidebar").toggleClass("invisible")
+			$("#nav-btn").toggleClass("invisible")
 		}
 		$(".nav-item").removeClass("active")
 		var targetNav = "#d-num-"+destination.index;
