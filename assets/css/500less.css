@@ -9,6 +9,7 @@
     #nav-btn.opened{
         left: unset;
         right: 20px;
+        transition: all 0.5s ease-in-out;
     }
     .drug-number{
         visibility: hidden;
@@ -39,6 +40,16 @@
     }
     .navlist{
         padding-top:50px;
+    }
+
+    .d-graphicCol{
+        max-width: 300px;
+    }
+    .d-info-col .title h1{
+        font-weight: 300;
+    }
+    .subhead p{
+        font-size: 14px;
     }
 
 }

@@ -27,5 +27,18 @@
         justify-content: flex-start;
         
     }
+    #home-wrap{
+        padding: 10vh 40px;
+    }
+
+    #graphic-container{
+        width:66%;
+        min-width: 800px;
+    }
+    
+    #home-wrap h1{
+        font-size: 100px;
+    }
+
     
 }

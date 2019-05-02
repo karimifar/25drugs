@@ -27,4 +27,24 @@
         font-weight: 500;
     }
 
+    .d-graphicCol{
+        max-width: 350px;
+    }
+
+    #home-wrap{
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    #home-wrap .intro{
+        margin-top:15px;
+        margin-left: 0px;
+        font-size: 18px;
+        width: 100%;
+    }
+    #logo-div{
+        max-width: 280px;
+        min-width: 200px;
+    }
+
 }

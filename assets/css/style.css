@@ -8,7 +8,7 @@
     font-family: "benton-sans", sans-serif;
     font-weight: 1000;
     font-size: 120px;
-    width:500px;
+    width:fit-content;
     /* z-index: 4; */
     position: relative;
     color: white;
@@ -17,7 +17,9 @@
     height: 1.9em;
     
 }
-
+#home-wrap .title{
+    height: fit-content;
+}
 .fp-tableCell{
     vertical-align: unset;
 }
@@ -41,16 +43,19 @@
     flex-direction: column;
     height: 90vh;
     padding: 10vh 10%;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     /* background: #eee; */
 }
-.home-intro{
+.home-logos{
+    margin-top: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
-.intro{
+#home-wrap .intro{
+    height: fit-content;
     width: 30%;
     min-width: 400px;
     font-size: 20px;
@@ -298,8 +303,10 @@ ul{
     width: 100%;
 
 }
-.graphic-container{
-    width:100%;
+#graphic-container{
+    width:56%;
+    margin: 0 auto;
+    position: relative;
     /* position: absolute;
     left: 22%; */
     /* background: #eee; */
@@ -318,13 +325,14 @@ canvas{
 
 .svgAndCanvas{
     position: absolute;
-    width:56%;
-    margin: 0 22%;
+    /* width:56%;
+    margin: 0 22%; */
 }
 
 #svg-container{
     z-index: 1;
     pointer-events:none;
+    width: 100%;
 }
 
 .d-graphicCol{
