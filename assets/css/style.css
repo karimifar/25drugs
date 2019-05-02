@@ -1,5 +1,6 @@
 *{
     font-family: "benton-sans", sans-serif;
+    -webkit-overflow-scrolling: touch;
 }
 .invisible{
     opacity: 0;

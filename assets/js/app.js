@@ -196,7 +196,7 @@ var myFullpage = new fullpage('#fullpage', {
 	scrollingSpeed: 1000,
 	autoScrolling: true,
 	fitToSection: true,
-	fitToSectionDelay: 1000,
+	fitToSectionDelay: 100,
 	scrollBar: false,
 	easing: 'easeInOutCubic',
 	easingcss3: 'ease',
@@ -215,8 +215,8 @@ var myFullpage = new fullpage('#fullpage', {
 	scrollOverflow: true,
 	scrollOverflowReset: false,
 	scrollOverflowOptions: null,
-	touchSensitivity: 15,
-	normalScrollElementTouchThreshold: 5,
+	touchSensitivity: 5,
+	normalScrollElementTouchThreshold: 10,
 	bigSectionsDestination: null,
 
 	//Accessibility
