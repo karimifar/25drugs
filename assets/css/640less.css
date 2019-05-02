@@ -12,5 +12,19 @@
     .d-info-col .links{
         width: 100%;
     }
+    .d-info-col .num{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .d-info-col .num h1{
+        font-size: 18px;
+        width:45px;
+        height: 30px;
+        background: #fff;
+        color: #000;
+        border: none;
+        font-weight: 500;
+    }
 
 }

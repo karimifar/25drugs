@@ -6,6 +6,10 @@
         display: block;
         z-index: 10;
     }
+    #nav-btn.opened{
+        left: unset;
+        right: 20px;
+    }
     .drug-number{
         visibility: hidden;
     }
@@ -32,6 +36,9 @@
 
     .navlist li .drug-title{
         transition-delay: 0s;
+    }
+    .navlist{
+        padding-top:50px;
     }
 
 }

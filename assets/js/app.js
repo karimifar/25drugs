@@ -268,6 +268,10 @@ var myFullpage = new fullpage('#fullpage', {
 // ***** Sidebar *****
 $("#nav-btn").on("click", function(){
 	$("#sidebar").toggleClass("mob-expanded expanded")
+	$("#nav-btn").toggleClass("opened")
+	$("#nav-btn i").toggleClass("fa-times")
+	$("#nav-btn i").toggleClass("fa-bars")
+
 })
 
 $("#sidebar").on("mouseover", function(){
@@ -277,6 +281,16 @@ $("#fullpage").on("mouseover", function(){
 	if($("#sidebar").hasClass("expanded")){
 		$("#sidebar").removeClass("expanded")
 	}
+	
+})
+
+$(".nav-item").on("click", function(){
+	setTimeout(function(){
+		$("#sidebar").toggleClass("mob-expanded expanded")
+		$("#nav-btn").toggleClass("opened")
+		$("#nav-btn i").toggleClass("fa-times")
+		$("#nav-btn i").toggleClass("fa-bars")
+	},200)
 	
 })
 
