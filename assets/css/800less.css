@@ -51,6 +51,7 @@
     .subhead{
         max-height: 160px;
         overflow: scroll;
+        -webkit-overflow-scrolling: touch;
     }
     .d-info-col .title h1{
         font-size: 22px;
