@@ -211,7 +211,7 @@ var myFullpage = new fullpage('#fullpage', {
 	offsetSections: false,
 	resetSliders: false,
 	fadingEffect: true,
-	// normalScrollElements: '.graphic-container',
+	normalScrollElements: '.subhead',
 	scrollOverflow: true,
 	scrollOverflowReset: false,
 	scrollOverflowOptions: null,

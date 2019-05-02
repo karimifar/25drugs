@@ -48,9 +48,32 @@
         margin-top: 0;
         font-size: 14px;
     }
+    .subhead{
+        max-height: 160px;
+        overflow: scroll;
+    }
     .d-info-col .title h1{
         font-size: 22px;
         border-left: none;
         padding-left: 0px;
     }
+
+    #scrollAnim a span {
+        width: 20px;
+        height: 35px;
+        margin-left: -10px;
+        border-radius: 30px;
+      }
+      #scrollAnim a span::before {
+        width: 3px;
+        height: 3px;
+        margin-left: -1.5px;
+
+      }
+      #scrollAnim p{
+        margin-top:40px;
+        font-size: 10px;
+      }
+
+
 }
