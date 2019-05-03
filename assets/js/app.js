@@ -48,7 +48,7 @@ var content = [
 		title: "Stroke Prevention Drug Combo Shows Promise",
 		shortTitle: "Stroke Prevention Drug",
 		subhead: "If you’ve had a minor stroke or a transient ischemic stroke (TIA), taking the clot-preventing drug clopidogrel along with aspirin may lower your risk of having a major stroke within the next 90 days, according to new research published in The New England Journal of Medicine. An international study of 4,881 adults in 10 countries who either had a minor stroke or a TIA showed that people who took clopidogrel plus aspirin had a 25 percent lower risk of a major stroke, heart attack or death from blood clots within the three months after the first incident, compared with those who took aspirin alone.",
-		illustration: "assets/img/illustrations/Transient.png",
+		illustration: "assets/img/illustrations/transient.gif",
 		instLogo: "assets/img/inst-logos/utmb.png",
 		institution: "UTHealth Houston",
 		link: "https://dellmed.utexas.edu/news/stroke-prevention-drug-combo-shows-promise-study-says",
@@ -212,7 +212,7 @@ var myFullpage = new fullpage('#fullpage', {
 	resetSliders: false,
 	fadingEffect: true,
 	normalScrollElements: '.subhead',
-	scrollOverflow: true,
+	scrollOverflow: false,
 	scrollOverflowReset: false,
 	scrollOverflowOptions: null,
 	touchSensitivity: 5,
@@ -315,7 +315,7 @@ window.addEventListener('resize', alignHomeslide);
 
 
 // see more function for subheads
-var showChar = 250;
+var showChar = 200;
 var ellipsestext = "...";
 var moretext = ">>";
 var lesstext = "<<";
