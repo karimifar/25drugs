@@ -147,7 +147,7 @@ content.forEach(function(drug){
 	var graphicContain = $("<div class='graphic-container d-graphic-container'></div>")
 	var staticImg = $("<div class='pngAndCanvas png-container'><img src='"+drug.illustration+"'></div>")
 	if(drug.matter){
-		var matterDiv = $("<div class='pngAndCanvas d-canvas' id='"+matterId+"'</div>");
+		var matterDiv = $("<div class='pngAndCanvas d-canvas' id='"+matterId+"'></div>");
 		graphicContain.append(matterDiv)
 	}
 	var infoCol= $("<div class='d-info-col'>")
