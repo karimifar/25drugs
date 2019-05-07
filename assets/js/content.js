@@ -62,18 +62,6 @@ var content = [
     },
 
     {
-        num:15,
-        title: "Dr. Bubble Popper",
-        shortTitle: "Dr. Bubble Popper",
-        subhead: "“We can cure almost anything,” says Dr. David McPherson. “Any cancer. Any heart disease. But the quantities needed to do so, right now, may kill the patient.” This is true, he says, not just of injectable drugs, but of pills, inhalants, and every other method of drug delivery. What’s needed are new, better, more universal ways to get drugs where we need them and keep them away from where we don’t. McPherson’s solution, on which he’s been working for almost 20 years, is a class of carriers called echogenic liposomes. They are essentially tiny innerspace submarines, with an outer lipid shell, that carry different types of drugs throughout the bloodstream.",
-        illustration: "assets/img/illustrations/tbi.png",
-        instLogo: "assets/img/inst-logos/utmb.png",
-        institution: "UTHealth",
-        link: "http://www.utsystempophealth.org/a-solution-to-the-flu-problem",
-        matter:true,
-    },
-
-    {
         num:16,
         title: "Anti-Alcoholism Drug Shows Promise in Animal Models",
         shortTitle: "Anti-Alcoholism Drug",
@@ -143,7 +131,19 @@ var content = [
         institution: "UT Southwestern",
         Link: "https://www.utsouthwestern.edu/newsroom/articles/year-2018/children-of-hope.html",
         matter:true,
-    }
+    },
+    {
+        num:15,
+        title: "The UPS Man",
+        shortTitle: "The UPS Man",
+        subhead: "“We can cure almost anything,” says Dr. David McPherson. “Any cancer. Any heart disease. But the quantities needed to do so, right now, may kill the patient.” This is true, he says, not just of injectable drugs, but of pills, inhalants, and every other method of drug delivery. What’s needed are new, better, more universal ways to get drugs where we need them and keep them away from where we don’t. McPherson’s solution, on which he’s been working for almost 20 years, is a class of carriers called echogenic liposomes. They are essentially tiny innerspace submarines, with an outer lipid shell, that carry different types of drugs throughout the bloodstream.",
+        illustration: "assets/img/illustrations/tbi.png",
+        instLogo: "assets/img/inst-logos/utmb.png",
+        institution: "UTHealth",
+        link: "http://www.utsystempophealth.org/a-solution-to-the-flu-problem",
+        matter:true,
+    },
+
 ]
 
 
