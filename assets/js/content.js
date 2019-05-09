@@ -1,17 +1,7 @@
 
 
 var content = [
-    {
-        num:22,
-        title: "New Hope for Fighting Orphan Cancers",
-        shortTitle: "Orphan Cancers",
-        subhead: "Researchers have discovered that malignant rhabdoid tumors (MRT), a rare pediatric cancer without effective treatments, may be sensitive to drugs that block the cancer cell’s ability to dispose of misfolded proteins. The findings provide a much-needed therapeutic target for these and other cancers caused by mutations in the SMARCB1 gene. Based on these findings, the researchers now are leading a Phase II clinical trial to investigate this approach in renal medullary carcinoma (RMC), a related adolescent cancer also characterized by SMARCB1 mutations. Malignant rhabdoid tumors are aggressive pediatric cancers that generally manifest in children in the first year of life.",
-        illustration: "assets/img/illustrations/tbi.png",
-        instLogo: "assets/img/inst-logos/utmb.png",
-        institution: "MD Anderson",
-        Link: "https://www.mdanderson.org/newsroom/new-therapeutic-target-found-for-aggressive-pediatric-cancers-with-few-treatment-options.h00-159300678.html",
-        matter:true,
-    },
+    
 
     {
         num:20,
