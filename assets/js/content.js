@@ -60,19 +60,6 @@ var content = [
         link: "",
         matter:true,
     },
-
-    {
-        num:16,
-        title: "Anti-Alcoholism Drug Shows Promise in Animal Models",
-        shortTitle: "Anti-Alcoholism Drug",
-        subhead: "Scientists at The University of Texas at Austin have successfully tested in animals a drug that, they say, may one day help block the withdrawal symptoms and cravings that incessantly coax people with alcoholism to drink. If eventually brought to market, it could help the more than 15 million Americans, and many more around the world who suffer from alcoholism stay sober. If what has been shown to work in worms and rats addicted to alcohol can eventually be demonstrated to work in humans with minimal side effects, it would be a true breakthrough.",
-        illustration: "assets/img/illustrations/tbi.png",
-        instLogo: "assets/img/inst-logos/utmb.png",
-        institution: "UT Austin",
-        Link: "https://news.utexas.edu/2018/05/03/anti-alcoholism-drug-shows-promise-in-animal-models/",
-        matter:true,
-    },
-
     {
         num:17,
         title: "Biologists Design New Molecules To Help Stall Lung Cancer",
