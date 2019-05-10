@@ -4,11 +4,11 @@ var content = [
 		title: "How Growth Hormone Can Lift the TBI Brain Fog",
 		shortTitle: "TBI Brain Fog drug",
 		subhead: "It was a few days after Thanksgiving in 2001, and Paula Offenhauser was rummaging for her plastic Christmas tree in the attic. Realizing she needed scissors to free the decorative shrub from its packaging, she headed back down to the floor below. The attic ladder was one of those steep, narrow, precarious ones. Offenhauser tripped at the top and tumbled down, her body crumpling at the bottom, wedged between the ladder and the door opposite the bottom rung. After that, she doesn’t remember much. “I went to the attic, and I woke up in a hospital six days later,” said Offenhauser. She hit the back of her head on either the wall or the ladder––the bloodstains were unclear. Her 25-month-old daughter answered the phone when Offenhauser’s sister called an hour later, and was able to communicate enough to prompt an immediate 911 call.",
-		illustration: "assets/img/illustrations/tbi.png",
+		illustration: "assets/img/illustrations/tbi.gif",
 		instLogo: "assets/img/inst-logos/utmb.png",
 		institution: "The University of Texas Medical Branch",
 		link: "http://www.utsystempophealth.org/thj-stories/how-growth-hormone-can-lift-the-tbi-brain-fog",
-		matter:true,
+		matter:false,
 	},
 	{
 		num:2,
