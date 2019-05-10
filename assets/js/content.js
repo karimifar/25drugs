@@ -14,19 +14,6 @@ var content = [
         Link: "https://www.utsouthwestern.edu/newsroom/articles/year-2018/lung-cancer-habib.html",
         matter:true,
     },
-
-    {
-        num:23,
-        title: "Toward a Cure for the Kissing Bug Disease?",
-        shortTitle: "New Chagas Hope",
-        subhead: "Chagas disease is a potentially life-threatening disease caused by the parasite Trypanosoma cruzi, which is transmitted to animals and people by insect vectors, popularly known as kissing bugs, and by blood transfusion, organ transplant, congenitally, and by contaminated foods and juices. The disease has been endemic to Latin America, affecting 6 million to 7 million people, but it is rapidly spreading through the United States, Europe and other nonendemic regions as a result of globalization. Yet, there is no fully effective drug and no clinical vaccine. Researchers at UTEP will conduct a phase II clinical trial in Bolivia with new regimens of the drugs benznidazole and nifurtimox.",
-        illustration: "assets/img/illustrations/tbi.png",
-        instLogo: "assets/img/inst-logos/utmb.png",
-        institution: "UTEP",
-        Link: "https://www.utep.edu/newsfeed/utep-scientists-awarded-6m-to-improve-treatment-for-chagas-disease.html",
-        matter:true,
-    },
-
     {
         num:24,
         title: "Nanodiamond Based Anti-HIV Drug Delivery Targeted Towards the Brain.”",
