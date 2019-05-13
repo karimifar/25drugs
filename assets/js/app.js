@@ -15,11 +15,11 @@ var content = [
 		title: "The Failure, and Unexpected Promise, of Stem Cell Treatment for TBIs",
 		shortTitle: "Stem Cell Treatment",
 		subhead: "Millions of Americans suffer from traumatic brain injuries (TBI) each year, but few therapies exist that can repair even minimal damage from severe TBI. As a result, treatments tend to be supportive rather than reparative. Dr. Charles Cox and his team are working to change that. “Traumatic brain injury is really two things: a primary injury and a secondary injury,” says Cox, Professor of Pediatric Surgery at McGovern Medical School at UTHealth in Houston. “The initial impact––on the ground or with an object––is the primary kinetic injury, and nothing can be done about that kinetic disruption of tissue. But then there is a secondary sequence of reactions as the body’s innate immune system responds to the damaged tissue, generating brain inflammation that ends up killing neurons.” Cox’s research is centered around using stem cell therapy to limit this collateral inflammatory damage that follows the immediate trauma of brain injury, so that some of the damaged tissue has a chance to recover.",
-		illustration: "assets/img/illustrations/stem-cell.png",
+		illustration: "assets/img/illustrations/stem.gif",
 		instLogo: "assets/img/inst-logos/uthealth.png",
 		institution: "UTHealth Houston",
 		link: "http://www.utsystempophealth.org/thj-stories/the-failure-and-unexpected-promise",
-		matter:true,
+		matter:false,
 	},
 	{
 		num:3,
