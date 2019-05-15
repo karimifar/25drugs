@@ -2,7 +2,7 @@ var content = [
 	{
 		num:1,
 		title: "How Growth Hormone Can Lift the TBI Brain Fog",
-		shortTitle: "TBI Brain Fog drug",
+		shortTitle: "Lifting the Brain Fog",
 		subhead: "It was a few days after Thanksgiving in 2001, and Paula Offenhauser was rummaging for her plastic Christmas tree in the attic. Realizing she needed scissors to free the decorative shrub from its packaging, she headed back down to the floor below. The attic ladder was one of those steep, narrow, precarious ones. Offenhauser tripped at the top and tumbled down, her body crumpling at the bottom, wedged between the ladder and the door opposite the bottom rung. After that, she doesn’t remember much. “I went to the attic, and I woke up in a hospital six days later,” said Offenhauser. She hit the back of her head on either the wall or the ladder––the bloodstains were unclear. Her 25-month-old daughter answered the phone when Offenhauser’s sister called an hour later, and was able to communicate enough to prompt an immediate 911 call.",
 		illustration: "assets/img/illustrations/tbi.gif",
 		instLogo: "assets/img/inst-logos/utmb.png",
@@ -24,7 +24,7 @@ var content = [
 	{
 		num:3,
 		title: "Diabetes Drug Shows Promise for Chronic Pain",
-		shortTitle: "Diabetes Drug Shows Promise for Chronic Pain",
+		shortTitle: "Diabetes Drug for Pain",
 		subhead: "Scientists seeking an effective treatment for one type of chronic pain believe a ubiquitous, generic diabetes medication might solve both the discomfort and the mental deficits that go with the pain.“People who are in constant pain have problems thinking straight sometimes. The longer you’re in pain, the more entrenched the impairment becomes,” said Stephanie Shiers, a fourth-year cognition and neuroscience doctoral student at The University of Texas at Dallas and lead author of a study recently published in the Journal of Neuroscience. “These impairments aren’t addressed by existing therapeutics.”",
 		illustration: "assets/img/illustrations/neuron.gif",
 		instLogo: "assets/img/inst-logos/utdallas.png",
@@ -34,9 +34,9 @@ var content = [
 	},
 	{
 		num:4,
-		title: "Biochemists study enzymes to provide keys for drug development in cancer, bacterial infection and neurodegenerative disease",
-		shortTitle: "Biochemists study enzymes to provide",
-		subhead: "Researcher received a $429,033 National Institutes of Health grant to continue his work retro-engineering the sulfur oxidation process and mapping out of the chemical mechanism of three key enzymes.",
+		title: "Unlocking the Secrets of Sulfur-Metabolizing Enzymes",
+		shortTitle: "Metabolizing Sulfur",
+		subhead: "“Sulfur is the one of most abundant elements in the body but little is known about the enzymes involved in its metabolism,” said Brad Pierce, associate professor of biochemistry at The University of Texas at Arlington. Pierce and his colleagues recently received a ational Institutes of Health grant to continue his work retro-engineering the sulfur oxidation process and mapping out of the chemical mechanism of three key enzymes – cysteine dioxygenase, cysteamine dioxygenase, and 3-mercaptopropionic acid dioxygenase – to provide the necessary framework to develop effective therapies and drugs for different disease states.",
 		illustration: "assets/img/illustrations/enzymatic.gif",
 		instLogo: "assets/img/inst-logos/uta.png",
 		institution: "UTHealth Houston",
@@ -46,7 +46,7 @@ var content = [
 	{
 		num:5,
 		title: "Stroke Prevention Drug Combo Shows Promise",
-		shortTitle: "Stroke Prevention Drug",
+		shortTitle: "Stroke Prevention",
 		subhead: "If you’ve had a minor stroke or a transient ischemic stroke (TIA), taking the clot-preventing drug clopidogrel along with aspirin may lower your risk of having a major stroke within the next 90 days, according to new research published in The New England Journal of Medicine. An international study of 4,881 adults in 10 countries who either had a minor stroke or a TIA showed that people who took clopidogrel plus aspirin had a 25 percent lower risk of a major stroke, heart attack or death from blood clots within the three months after the first incident, compared with those who took aspirin alone.",
 		illustration: "assets/img/illustrations/transient.gif",
 		instLogo: "assets/img/inst-logos/utaustin.png",
@@ -56,9 +56,9 @@ var content = [
 	},
 	{
 		num:6,
-		title: "Rapamycin lotion reduces facial tumors caused by tuberous sclerosis",
-		shortTitle: "Rapamycin lotion reduces facial tumors",
-		subhead: "“People with tuberous sclerosis complex want to look like everyone else,” said Mary Kay Koenig, M.D., the study’s lead author, co-director of the Tuberous Sclerosis Center of Excellence and holder of the Endowed Chair of Mitochondrial Medicine at McGovern Medical School at UTHealth. “And, they can with this treatment.” Tuberous sclerosis complex affects about 50,000 people in the United States and is characterized by the uncontrolled growth of non-cancerous tumors throughout the body.",
+		title: "Rapamycin Lotion Reduces Facial Tumors Caused by Tuberous Sclerosis",
+		shortTitle: "Facial Tumors",
+		subhead: "Addressing a critical issue for people with a genetic disorder called tuberous sclerosis complex (TSC), doctors at McGovern Medical School have found that a skin cream containing rapamycin significantly reduced the disfiguring facial tumors affecting more than 90 percent of people with the condition. Tuberous sclerosis complex affects about 50,000 people in the United States and is characterized by the uncontrolled growth of non-cancerous tumors throughout the body.",
 		illustration: "assets/img/illustrations/Freckles.gif",
 		instLogo: "assets/img/inst-logos/uthealth.png",
 		institution: "UTHealth Houston",
@@ -68,8 +68,8 @@ var content = [
 	{
 		num:7,
 		title: "The 40 Year-old Discovery Behind A Promising New Flu Drug",
-		shortTitle: "The 40 Year-old Discovery Behind A Promising New Flu Drug",
-		subhead: "Existing flu treatments, such as Tamiflu, attack the virus after it has replicated in host cells; they work by making it harder for daughter viruses to escape from the host cell. The new drug Xofluza, on the other hand, attacks the flu virus at the early stage that Krug's research illuminated, blocking flu before it is able to create daughter viruses. ”It stops the virus cold,” Krug said. ”It can't do anything.” Theoretically, this should make the new drug exquisitely effective at halting progression of the disease. And already human trials have demonstrated that Xofluza patients have a much lower viral load in the first three days of treatment than Tamiflu patients and stop shedding flu virus in about a day, compared to about three days with Tamiflu.",
+		shortTitle: "Origin Story of a Flu Drug",
+		subhead: "The untold story of Xoflua, which was approved by the FDA in 2018, is about the basic research, without which the drug would have been impossible, and how scientist Robert Krug made the discovery in the 1970s about how flu hijacks a critical process inside cells early on. Other flu treatments, such as Tamiflu, attack the virus after it has replicated in host cells; they work by making it harder for daughter viruses to escape from the host cell. Xofluza, on the other hand, attacks the flu virus at the early stage that Krug's research illuminated, blocking flu before it is able to create daughter viruses. \"It stops the virus cold,\" Krug said. \"It can't do anything.\"",
 		illustration: "assets/img/illustrations/rna.gif",
 		instLogo: "assets/img/inst-logos/utaustin.png",
 		institution: "UTHealth Houston",
@@ -89,7 +89,7 @@ var content = [
 	},
 	{
 		num:9,
-		title: "Drug from Bat Flower shrinks resistant tumors",
+		title: "Drug from Bat Flower Shrinks Resistant Tumors",
 		shortTitle: "The Bat Flower Drug",
 		subhead: "There is nothing bleaker to a family than being told that their loved one’s cancer has stopped responding to chemotherapy and there are no more options. UT Health San Antonio and spinoff company Terrona LLC want to end that. “We can help patients for a time, but there comes a point when we do not have further therapy that we can utilize,” said Susan L. Mooberry, Ph.D., professor of pharmacology in the Joe R. & Teresa Lozano Long School of Medicine at UT Health San Antonio.",
 		illustration: "assets/img/illustrations/bat-flower.gif",
@@ -100,8 +100,8 @@ var content = [
 	},
 	{
 		num:10,
-		title: "Pediatric cancer drug shows 93 percent response rate",
-		shortTitle: "Pediatric cancer drug shows 93 percent response rate",
+		title: "Pediatric Cancer Drug Shows 93 Percent Response Rate",
+		shortTitle: "Pediatric Cancer",
 		subhead: " A first-of-its-kind drug targeting a fused gene found in many types of cancer was effective in 93 percent of pediatric patients tested, researchers at UT Southwestern’s Simmons Cancer Center announced. Most cancer drugs are targeted to specific organs or locations in the body. Larotrectinib is the first cancer drug to receive FDA breakthrough therapy designation for patients with a specific fusion of two genes in the cancer cell, no matter what cancer type. The research appears in The Lancet Oncology.",
 		illustration: "assets/img/illustrations/Genes.gif",
 		instLogo: "assets/img/inst-logos/utsw.png",
@@ -122,9 +122,9 @@ var content = [
 	},
 	{
 		num:12,
-		title: "Newly developed therapeutic shown to combat drug addiction",
-		shortTitle: "A Drug to Combat Drug Addiction!",
-		subhead: "The researchers trained rats to press on a lever for cocaine infusions at certain light cues. Once the rats learned this cocaine-seeking behavior, half of them received the most promising therapeutic and the other half received only saline.",
+		title: "Therapeutic Shown to Combat Drug Addiction in Rats",
+		shortTitle: "Combating Drug Addiction",
+		subhead: "When someone habitually misuses drugs, their brain chemistry is changed in ways that make it harder for them to quit taking drugs despite negative consequences. Once someone has developed this brain disorder, their mind pays sharper attention to cues that encourage drug use, making it harder for them to abstain. Serotonin, a brain chemical that transmits information between neural regions, is a key player in these changes. There are currently no medications available to correct this chemical imbalance",
 		illustration: "assets/img/illustrations/drug-addiction.gif",
 		instLogo: "assets/img/inst-logos/utmb.png",
 		institution: "UTMB",
@@ -134,7 +134,7 @@ var content = [
 	{
         num:13,
         title: "Anti-Alcoholism Drug Shows Promise in Animal Models",
-        shortTitle: "Anti-Alcoholism Drug",
+        shortTitle: "Against Alcoholism",
         subhead: "Scientists at The University of Texas at Austin have successfully tested in animals a drug that, they say, may one day help block the withdrawal symptoms and cravings that incessantly coax people with alcoholism to drink. If eventually brought to market, it could help the more than 15 million Americans, and many more around the world who suffer from alcoholism stay sober. If what has been shown to work in worms and rats addicted to alcohol can eventually be demonstrated to work in humans with minimal side effects, it would be a true breakthrough.",
         illustration: "assets/img/illustrations/alcoholism.gif",
         instLogo: "assets/img/inst-logos/utaustin.png",
@@ -244,7 +244,7 @@ var content = [
     {
         num:23,
         title: "Chemists make historic fluorine discovery",
-        shortTitle: "Chemists make historic fluorine discovery",
+        shortTitle: "Fluorine Breakthrough",
         subhead: "A groundbreaking discovery by chemists at The University of Texas at San Antonio (UTSA) will have a significant impact on how pharmaceutical companies develop new drug treatments. The breakthrough involves fluorine, which forms the second strongest carbon bond (C-F) known to science, after the carbon-silicon (C-Si) bond.",
         illustration: "assets/img/illustrations/fluorine.png",
         instLogo: "assets/img/inst-logos/utsa.png",
@@ -255,7 +255,7 @@ var content = [
     {
         num:24,
         title: "Sending Cancer Drugs through the Blood-Brain Barrier",
-        shortTitle: "Sending Cancer Drugs through the Blood-Brain Barrier",
+        shortTitle: "Across the Blood Brain Barrier",
         subhead: "Dr. Zhenpeng Qin’s cancer research focuses on inducing tiny nanoscale forces to pry open the blood-brain barrier. The technique relies on first engineering nanoparticles with an antibody that allows the particles to bind to the innermost cells lining the brain blood vessels, the endothelial cells, which form the blood-brain barrier. Once delivered intravenously, nanoparticles bind to those endothelial cells that are adjacent to tight-junction proteins located between endothelial cells. With the nanoparticles in position, Qin’s team directs a pulsating, near-infrared laser directly onto the nanoparticles.",
         illustration: "assets/img/illustrations/aaa.png",
         instLogo: "assets/img/inst-logos/utdallas.png",
@@ -266,7 +266,7 @@ var content = [
     {
         num:25,
         title: "Overcoming Resistance in Mantle Cell Lymphoma",
-        shortTitle: "Overcoming Resistance in Mantle Cell Lymphoma",
+        shortTitle: "Overcoming Resistance",
         subhead: "Mantle cell lymphoma is a rare, aggressive blood cancer that does not always respond to treatment. IACS-10759 , which was developed by MD Anderson’s Therapeutics Discovery division, takes a different approach than chemotherapy and radiation therapy. It inhibits oxidative phosphorylation (OXPHOS), one of two key metabolic processes on which cancel cells depend to support their growth and survival.",
         illustration: "assets/img/illustrations/aaa.png",
         instLogo: "assets/img/inst-logos/mda.png",
