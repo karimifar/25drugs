@@ -110,6 +110,8 @@ var myFullpage = new fullpage('#fullpage', {
 
 	//events
 	onLeave: function(origin, destination, direction){
+		var navList = document.getElementById("navlist")
+		navList.scrollTop = destination.index * 10
 		// console.log(origin, destination,direction)
 		if (origin.index === 0 ||destination.index === 0){
 			$(".sidebar").toggleClass("invisible")
@@ -118,6 +120,7 @@ var myFullpage = new fullpage('#fullpage', {
 		$(".nav-item").removeClass("active")
 		var targetNav = "#d-num-"+destination.index;
 		$(targetNav).addClass("active")
+
 	},
 	afterLoad: function(origin, destination, direction){
 		// console.log(destination)
