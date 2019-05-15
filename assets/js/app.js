@@ -76,7 +76,7 @@ var myFullpage = new fullpage('#fullpage', {
 	offsetSections: false,
 	resetSliders: false,
 	fadingEffect: true,
-	normalScrollElements: '.subhead',
+	normalScrollElements: '.subhead, .navlist, .nav-item',
 	scrollOverflow: false,
 	scrollOverflowReset: false,
 	scrollOverflowOptions: null,

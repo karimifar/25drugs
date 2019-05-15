@@ -29,6 +29,7 @@
     }
     .expanded .navlist{
         width: 100%;
+        background: rgba(30,30,30,1);
     }
 
     .navlist .nav-item.active li .drug-number{
