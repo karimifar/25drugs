@@ -1,5 +1,6 @@
 var idArr = ["home"]
-
+var winHeight = window.innerHeight	
+var winWidth = window.innerWidth
 content.forEach(function(drug){
 	var secId = "section"+drug.num;
 	var fpId = "drug"+drug.num
@@ -111,7 +112,8 @@ var myFullpage = new fullpage('#fullpage', {
 	//events
 	onLeave: function(origin, destination, direction){
 		var navList = document.getElementById("navlist")
-		navList.scrollTop = destination.index * 10
+		// console.log(winHeight/35)
+		navList.scrollTop = (destination.index-1) * 35
 		// console.log(origin, destination,direction)
 		if (origin.index === 0 ||destination.index === 0){
 			$(".sidebar").toggleClass("invisible")
