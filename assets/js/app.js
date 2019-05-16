@@ -45,6 +45,12 @@ content.forEach(function(drug){
 idArr.push("about")
 // ***** fullpage JS *****
 
+
+var scrollState = true;
+if(winWidth<640){
+	scrollState = false;
+}
+
 var myFullpage = new fullpage('#fullpage', {
 	//Navigation
 	menu: '#menu',
@@ -60,7 +66,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//Scrolling
 	css3: true,
 	scrollingSpeed: 1000,
-	autoScrolling: true,
+	autoScrolling: scrollState,
 	fitToSection: true,
 	fitToSectionDelay: 100,
 	scrollBar: false,
@@ -138,10 +144,7 @@ var myFullpage = new fullpage('#fullpage', {
 	afterSlideLoad: function(section, origin, destination, direction){},
 	onSlideLeave: function(section, origin, destination, direction){}
 });
-if(winWidth<640){
-	console.log("now")
-	myFullpage.getFullpageData.autoScrolling = false;
-}
+
 // ***** Sidebar *****
 $("#nav-btn").on("click", function(){
 	$("#sidebar").toggleClass("mob-expanded expanded")
