@@ -138,8 +138,12 @@ var myFullpage = new fullpage('#fullpage', {
 	afterSlideLoad: function(section, origin, destination, direction){},
 	onSlideLeave: function(section, origin, destination, direction){}
 });
-
-
+if(winWidth<640){
+	console.log("now")
+	myFullpage.getFullpageData.autoScrolling = false;
+	myFullpage.getFullpageData.continuousVertical = true;
+	myFullpage.getFullpageData.fitToSection = false;
+}
 // ***** Sidebar *****
 $("#nav-btn").on("click", function(){
 	$("#sidebar").toggleClass("mob-expanded expanded")
