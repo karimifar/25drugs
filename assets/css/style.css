@@ -1,9 +1,26 @@
-*{
-    font-family: "benton-sans", sans-serif;
+p{
+    font-family: "benton-sans", sans-serif !important;
     scroll-behavior: smooth;
 }
 ::-webkit-scrollbar { 
     display: none; 
+}
+#home-btn img{
+    width: 30px;
+    opacity: 0.2;
+    transition: all 0.3s ease-in-out;
+}
+.expanded #home-btn img{
+    width: 35px;
+    opacity: 0.6;
+}
+#home-btn li{
+    padding: 5px 0;
+    padding-left: 20px;
+}
+#home-btn{
+    margin-top:40px;
+    display: block;
 }
 .invisible{
     opacity: 0;
@@ -118,6 +135,8 @@
     left: 0;
     top:0;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     opacity: 1;
     transition: all 0.2s ease-in-out;
     width:60px;
@@ -132,6 +151,7 @@
 .sidebar.expanded{
     width:340px;
 
+
 }
 .navlist{
     padding-top:20px;
@@ -145,9 +165,8 @@
 }
 .expanded .navlist{
     height: 100vh;
-    background: rgba(30,30,30,0.95);
     width: 300px;
-    
+    background: rgba(30,30,30,0.95);
 }
 ul{
     list-style-type: none;
@@ -213,6 +232,12 @@ ul{
     color: white;
 }
 
+.expanded #home-btn li:hover{
+    background-color: unset;
+}
+.expanded #home-btn li:hover img{
+    opacity: 1;
+}
 .navlist a:hover{
     text-decoration: none;
 }
@@ -478,4 +503,54 @@ canvas{
 .morelink:hover{
     color: #fff;
     opacity: 1;
+}
+
+#last-sec{
+    background: #111
+}
+
+#cred-wrap{
+    height: 100vh;
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+#about-content{
+    padding: 20px 50px;
+    /* padding-left: 80px; */
+    display: flex;
+    justify-content: space-between;
+}
+.about-col{
+    padding: 0 20px;
+}
+.ack-col p{
+    font-size: 28px;
+    line-height: 1.1em;
+}
+
+.ack-col h1{
+    font-size: 18px;
+    font-family: "benton-sans", sans-serif;
+    margin-bottom: 20px;
+    color: #2FD8BE;
+    font-weight: 600;
+}
+
+.cred-col{
+    min-width: 400px;
+    padding-top: 38px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+}
+.cred-col p{
+    margin-bottom: 10px;
+}
+.cred-item .title {
+    font-weight: 100;
+    color: #2FD8BE;
+    display: block;
+    margin-bottom: 3px;
 }

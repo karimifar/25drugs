@@ -22,8 +22,8 @@ content.forEach(function(drug){
 	var subhead = $("<div class='subhead'><p>"+drug.subhead+"</p></div>")
 	var links = $("<div class='links'><div class='link'><a href='"+drug.link+"' target='_blank'><i class='fas fa-link'></i> Read More</a></div><div class='inst-logo'><img src='"+drug.instLogo+"'></div></div>")
 	
-
-	$("#fullpage").append(drugSec);
+	drugSec.insertBefore( "#last-sec" );
+	// $("#fullpage").append(drugSec);
 	drugSec.append(secWrap)
 	secWrap.append(graphicCol)
 	graphicCol.append(graphicContain)
@@ -40,9 +40,9 @@ content.forEach(function(drug){
 	}
 	var navItem = $("<a class='nav-item' id='d-num-"+drug.num+"' href='#"+fpId+"'><li><span class='drug-number' >"+drug.num+"</span><span class='drug-title'>"+drug.shortTitle+"</span></li></a>");
 	$(".navlist ul").append(navItem)
-
+	navItem.insertBefore("#about-btn")
 	})
-
+idArr.push("about")
 // ***** fullpage JS *****
 
 var myFullpage = new fullpage('#fullpage', {
@@ -52,7 +52,7 @@ var myFullpage = new fullpage('#fullpage', {
 	anchors: idArr,
 	navigation: false,
 	// navigationPosition: 'top',
-	navigationTooltips: [' ', 'secondSlide'],
+	navigationTooltips: [''],
 	showActiveTooltip: true,
 	slidesNavigation: false,
 	slidesNavPosition: 'bottom',
@@ -122,6 +122,10 @@ var myFullpage = new fullpage('#fullpage', {
 		$(".nav-item").removeClass("active")
 		var targetNav = "#d-num-"+destination.index;
 		$(targetNav).addClass("active")
+		if (destination.index === 26){
+			$("#about-btn").addClass("active")
+		}
+
 
 	},
 	afterLoad: function(origin, destination, direction){
