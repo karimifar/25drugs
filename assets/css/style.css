@@ -520,7 +520,12 @@ canvas{
     padding: 20px 50px;
     /* padding-left: 80px; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+}
+.about-logos{
+    padding: 20px 50px;
+    padding-left: 80px;
 }
 .about-col{
     padding: 0 20px;
@@ -539,7 +544,7 @@ canvas{
 }
 
 .cred-col{
-    min-width: 400px;
+    min-width: 350px;
     padding-top: 38px;
     /* display: flex;
     flex-direction: column;
@@ -553,4 +558,15 @@ canvas{
     color: #2FD8BE;
     display: block;
     margin-bottom: 3px;
+}
+
+.about-logos{
+    margin-top: 20px;
+}
+.about-logos img{
+    width: 150px;
+}
+#about-uts-logo{
+    width: 250px;
+    margin-left: 20px;
 }

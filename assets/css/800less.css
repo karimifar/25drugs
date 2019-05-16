@@ -76,5 +76,23 @@
         font-size: 10px;
       }
 
+      .about-col{
+        width: 100%;
+        padding: 15px 0;
+    }
+    .ack-col p{
+        font-size: 14px;
+    }
+    .cred-col p{
+        font-size: 14px;
+    }
+    #about-content{
+        padding: 10px 30px;
+    }
+    .about-logos{
+        padding: 10px 30px;
+    }
+    
+
 
 }

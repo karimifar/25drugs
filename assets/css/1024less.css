@@ -33,7 +33,7 @@
         font-size: 16px;
     }
     .links .inst-logo{
-        width: 120px;
+        width: 140px;
     }
 
     .d-info-col .num h1{
@@ -72,5 +72,12 @@
     .home-logos{
 
         justify-content: flex-start;
+    }
+
+    .ack-col p{
+        font-size: 22px;
+    }
+    .cred-col{
+        min-width: 250px;
     }
 }

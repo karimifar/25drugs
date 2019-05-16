@@ -53,4 +53,14 @@
         font-size: 14px;
     }
 
+    .about-logos img{
+        display: block;
+        margin: 10px 0;
+        width:120px;
+    }
+    #about-uts-logo{
+        margin-left: 0;
+        width:200px;
+    }
+
 }
