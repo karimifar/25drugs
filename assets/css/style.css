@@ -2,6 +2,9 @@
     font-family: "benton-sans", sans-serif;
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar { 
+    display: none; 
+}
 .invisible{
     opacity: 0;
 }
