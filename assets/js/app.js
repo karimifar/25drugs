@@ -120,7 +120,7 @@ var myFullpage = new fullpage('#fullpage', {
 		var navList = document.getElementById("navlist")
 		// console.log(winHeight/35)
 		navList.scrollTop = (destination.index-1) * 35
-		// console.log(origin, destination,direction)
+		console.log(origin, destination,direction)
 		if (origin.index === 0 ||destination.index === 0){
 			$(".sidebar").toggleClass("invisible")
 			$("#nav-btn").toggleClass("invisible")
