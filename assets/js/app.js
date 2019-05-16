@@ -60,7 +60,7 @@ var myFullpage = new fullpage('#fullpage', {
 	//Scrolling
 	css3: true,
 	scrollingSpeed: 1000,
-	autoScrolling: true,
+	autoScrolling: false,
 	fitToSection: true,
 	fitToSectionDelay: 100,
 	scrollBar: false,
@@ -141,8 +141,6 @@ var myFullpage = new fullpage('#fullpage', {
 if(winWidth<640){
 	console.log("now")
 	myFullpage.getFullpageData.autoScrolling = false;
-	myFullpage.getFullpageData.continuousVertical = true;
-	myFullpage.getFullpageData.fitToSection = false;
 }
 // ***** Sidebar *****
 $("#nav-btn").on("click", function(){
