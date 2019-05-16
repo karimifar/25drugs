@@ -520,7 +520,7 @@ canvas{
     padding: 20px 50px;
     /* padding-left: 80px; */
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
 .about-logos{

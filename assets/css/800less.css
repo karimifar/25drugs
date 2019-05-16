@@ -87,10 +87,11 @@
         font-size: 14px;
     }
     #about-content{
-        padding: 10px 30px;
+        padding: 10px 60px;
+        flex-wrap: wrap;
     }
     .about-logos{
-        padding: 10px 30px;
+        padding: 10px 60px;
     }
     
 
