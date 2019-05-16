@@ -112,5 +112,8 @@
         margin-left: 0;
         width:200px;
     }
+    .section{
+        border-top: 1px solid #666;
+    }
 
 }
