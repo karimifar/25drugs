@@ -351,7 +351,7 @@ ul{
 }
 svg{
     width: 100%;
-    pointer-events:none;
+    /* pointer-events:none; */
 }
 
 canvas{
@@ -397,12 +397,12 @@ canvas{
 }
 .pngAndCanvas img{
     width:100%;
-    pointer-events:none;
+    /* pointer-events:none; */
    
 }
 
 .png-container{
-    pointer-events:none;
+    /* pointer-events:none; */
 }
 .d-canvas{
     position: absolute;

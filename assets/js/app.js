@@ -68,7 +68,7 @@ var myFullpage = new fullpage('#fullpage', {
 	css3: true,
 	scrollingSpeed: 1000,
 	autoScrolling: !isMobile,
-	fitToSection: false,
+	fitToSection: true,
 	fitToSectionDelay: 100,
 	scrollBar: false,
 	easing: 'easeInOutCubic',
