@@ -116,4 +116,15 @@
         border-top: 1px solid #666;
     }
 
+    #home-btn{
+        padding-left: 10px;
+        display: none;
+    }
+    .mob-expanded #home-btn{
+        display: block;
+    }
+    #home-btn img{
+        transition: none;
+    }
+
 }

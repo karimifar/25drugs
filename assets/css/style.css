@@ -8,7 +8,7 @@ p{
 #home-btn img{
     width: 30px;
     opacity: 0.2;
-    /* transition: all 0.3s ease-in-out; */
+    transition: width 0.3s ease-in-out;
 }
 .expanded #home-btn img{
     width: 35px;
@@ -19,7 +19,7 @@ p{
     padding-left: 20px;
 }
 #home-btn{
-    margin-top:40px;
+    margin-top:30px;
     display: block;
 }
 .invisible{
@@ -133,7 +133,7 @@ p{
     flex-direction: column;
     justify-content: center;
     opacity: 1;
-    transition: all 0.2s ease-in-out;
+    /* transition: all 0.2s ease-in-out; */
     width:60px;
 
 }
@@ -186,6 +186,10 @@ ul{
     font-size: 16px;
     padding: 10px;
     padding-left: 20px;
+}
+
+#home-btn li{
+    transition: none;
 }
 .navlist li .drug-title{
     visibility: hidden;
@@ -367,6 +371,7 @@ canvas{
 }
 
 .d-graphicCol{
+    z-index: 2;
     height: 100vh;
     position: relative;
     /* background: red; */
@@ -413,6 +418,7 @@ canvas{
 }
 
 .d-info-col{
+    z-index: 3;
     flex-grow: 2;
     display: flex;
     flex-direction: column;
@@ -566,3 +572,4 @@ canvas{
     width: 250px;
     margin-left: 20px;
 }
+
