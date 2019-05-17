@@ -55,6 +55,8 @@
     #home-wrap{
         flex-direction: row;
         padding: 5vh 40px;
+        /* flex-wrap: nowrap; */
+
     }
     #home-wrap h1{
         font-size: 50px;
@@ -63,7 +65,7 @@
     #home-wrap .intro{
         margin-top:0px;
         margin-left: 20px;
-        margin-right: 10%;
+        margin-right: 5%;
         font-size: 18px;
         flex-grow: 1;
         max-width: 600px;
