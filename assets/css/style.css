@@ -157,6 +157,7 @@ p{
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
 }
 .expanded .navlist{
     height: 100vh;
