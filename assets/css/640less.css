@@ -54,7 +54,7 @@
     }
     #nav-btn{
         display: block;
-        z-index: 10;
+        z-index: 21;
     }
     #nav-btn.opened{
         left: unset;

@@ -8,7 +8,7 @@ p{
 #home-btn img{
     width: 30px;
     opacity: 0.2;
-    transition: all 0.3s ease-in-out;
+    /* transition: all 0.3s ease-in-out; */
 }
 .expanded #home-btn img{
     width: 35px;
@@ -109,11 +109,12 @@ p{
 }
 
 #nav-btn{
+    z-index: 21;
     font-size: 24px;
     color: #fff;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 20px;
     display: none;
@@ -122,16 +123,10 @@ p{
     padding-top: 0;
 }
 
-
-
-
-.expanded .nav-arrow{
-    transform: rotate(180deg);
-    transform-origin: 50% 50%;
-}
 .sidebar{
+    z-index: 20;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     left: 0;
     top:0;
     display: flex;
@@ -172,6 +167,7 @@ ul{
     list-style-type: none;
     padding-left: 0px;
     transition: all 0.2s ease-in-out;
+
 
 }
 .expanded ul {
