@@ -308,12 +308,13 @@ function parsePath(path, vertices){
 var colors=["rgba(247,147,30,1)", "rgba(102,166,196,1)", "rgba(252,115,117,1)"]
 var colors2=["rgba(68,98,120,1)", "rgba(255,217,125,1)", "rgba(244,96,54,1)", "rgba(244,96,54,1)"]
 var circlesArr = []
-for(var i=0; i<25; i++){
+for(var i=0; i<content.length; i++){
 	var pickedColor = getRandom(0,2);
 	circlesArr.push(Bodies.circle(getRandom(155,890), getRandom(150,345),getRandom(50,70), {
 		render:{
 			fillStyle: colors[pickedColor]
-		}
+		},
+		content: content[i]
 	}));
 	World.add(engine1.world, circlesArr[i]);
 	// console.log("YAY", circlesArr)
@@ -392,6 +393,7 @@ homeCanvas.addEventListener("mousemove", function(e){
 				hoveredIndex = hovered.id -1
 				hovered.render.strokeStyle = "rgba(255,255, 255,1)"
 				hovered.render.lineWidth = 3
+				console.log(hovered.content)
 			}else{
 				hoveredIndex = hovered.id -1
 				var unhovered = circlesArr[hoveredIndex];
