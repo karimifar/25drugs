@@ -67,7 +67,7 @@ var myFullpage = new fullpage('#fullpage', {
 	css3: true,
 	scrollingSpeed: 1000,
 	autoScrolling: scrollState,
-	fitToSection: true,
+	fitToSection: false,
 	fitToSectionDelay: 100,
 	scrollBar: false,
 	easing: 'easeInOutCubic',
@@ -432,3 +432,13 @@ function applyForce(){
 
 window.setInterval(applyForce, 2000);
 
+
+
+
+
+
+
+var firstSlide = document.getElementById("section1")
+window.addEventListener("scroll", function(){
+	console.log(window.pageYOffset)
+})
