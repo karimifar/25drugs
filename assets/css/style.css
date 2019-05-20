@@ -161,7 +161,7 @@ p{
 }
 .expanded .navlist{
     height: 100vh;
-    width: 300px;
+    width: 340px;
     background: rgba(30,30,30,0.95);
 }
 ul{
@@ -577,8 +577,6 @@ canvas{
 #tooltip{
     background: red;
     position: fixed;
-    top:110px;
-    left:100px;
     z-index: 10000;
 }
 .notShown{

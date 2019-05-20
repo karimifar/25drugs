@@ -41,7 +41,7 @@ content.forEach(function(drug){
 	infoCol.append(links)
 
 
-	if(drug.shortTitle.length>25){
+	if(drug.shortTitle.length>35){
 		drug.shortTitle = drug.shortTitle.substr(0,25)+"..."
 	}
 	var navItem = $("<a class='nav-item' id='d-num-"+drug.num+"' href='#"+fpId+"'><li><span class='drug-number' >"+drug.num+"</span><span class='drug-title'>"+drug.shortTitle+"</span></li></a>");
@@ -118,6 +118,7 @@ var myFullpage = new fullpage('#fullpage', {
 
 	//events
 	onLeave: function(origin, destination, direction){
+		$("#tooltip").addClass("notShown")
 		var navList = document.getElementById("navlist")
 		// console.log(winHeight/35)
 		navList.scrollTop = (destination.index-1) * 35
@@ -376,6 +377,8 @@ var homeCanvas = document.getElementById("home-matter")
 var hovered = null;
 var hoveredIndex;
 homeCanvas.addEventListener("mousemove", function(e){
+	var tooltipX= e.clientX + 20
+	var tooltipY= e.clientY + 10
 	var coordinates = getMousePos(homeCanvas, e);
 	// console.log(coordinates)
 	var hoveredArr = Matter.Query.point(circlesArr,coordinates)
@@ -389,15 +392,25 @@ homeCanvas.addEventListener("mousemove", function(e){
 			// homeCanvas.addEventListener("click", function(){
 			// 	window.location.href = '#sec3'
 			// })
-			homeCanvas.style.cursor = 'grab';
+			homeCanvas.style.cursor = 'pointer';
 			if(hoveredArr[0].id === hovered.id){
 				hovered = Matter.Query.point(circlesArr,coordinates)[0]
 				hoveredIndex = hovered.id -1
 				hovered.render.strokeStyle = "rgba(255,255, 255,1)"
 				hovered.render.lineWidth = 3
 				console.log(hovered.content)
-				$("#tooltip").text(hovered.content.institution)
+				$(".t-drug-inst").text(hovered.content.institution)
+				$(".t-drug-title").text(hovered.content.shortTitle)
+				$(".t-drug-no").text(hovered.content.num)
 				$("#tooltip").removeClass("notShown")
+				$("#tooltip").css({"left": tooltipX+"px", "top": tooltipY+"px",})
+
+				// var drugLink = 
+				// console.log(drugLink)
+				homeCanvas.addEventListener("mouseup", function(){
+					window.location.href = "#drug"+hovered.content.num
+				})
+				
 			}else{
 				hoveredIndex = hovered.id -1
 				var unhovered = circlesArr[hoveredIndex];
