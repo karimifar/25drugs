@@ -376,6 +376,7 @@ Render.run(render1);
 var homeCanvas = document.getElementById("home-matter")
 var hovered = null;
 var hoveredIndex;
+var drugLink;
 homeCanvas.addEventListener("mousemove", function(e){
 	var tooltipX= e.clientX + 20
 	var tooltipY= e.clientY + 10
@@ -383,6 +384,7 @@ homeCanvas.addEventListener("mousemove", function(e){
 	// console.log(coordinates)
 	var hoveredArr = Matter.Query.point(circlesArr,coordinates)
 	if (!hovered){
+		drugLink = null;
 		hovered = Matter.Query.point(circlesArr,coordinates)[0]
 		hoveredIndex = hovered.id -1
 		hovered.render.strokeStyle = "rgba(255,255, 255,1)"
@@ -393,8 +395,11 @@ homeCanvas.addEventListener("mousemove", function(e){
 			// 	window.location.href = '#sec3'
 			// })
 			homeCanvas.style.cursor = 'pointer';
+
+			//when moving mouse on the same circle
 			if(hoveredArr[0].id === hovered.id){
 				hovered = Matter.Query.point(circlesArr,coordinates)[0]
+				drugLink = "#drug"+hovered.content.num
 				hoveredIndex = hovered.id -1
 				hovered.render.strokeStyle = "rgba(255,255, 255,1)"
 				hovered.render.lineWidth = 3
@@ -405,24 +410,37 @@ homeCanvas.addEventListener("mousemove", function(e){
 				$("#tooltip").removeClass("notShown")
 				$("#tooltip").css({"left": tooltipX+"px", "top": tooltipY+"px",})
 
-				// var drugLink = 
-				// console.log(drugLink)
-				homeCanvas.addEventListener("mouseup", function(){
-					window.location.href = "#drug"+hovered.content.num
+				homeCanvas.addEventListener("click", function(){
+					console.log(drugLink)
+					// window.location.href = "#drug"+hovered.content.num
 				})
 				
+			//when moving mouse from one circle to another
 			}else{
 				hoveredIndex = hovered.id -1
 				var unhovered = circlesArr[hoveredIndex];
 				unhovered.render.lineWidth = 0
 				hovered = Matter.Query.point(circlesArr,coordinates)[0]
-				$("#tooltip").addClass("notShown")
+
+
+				$(".t-drug-inst").text(hovered.content.institution)
+				$(".t-drug-title").text(hovered.content.shortTitle)
+				$(".t-drug-no").text(hovered.content.num)
+				$("#tooltip").removeClass("notShown")
+				$("#tooltip").css({"left": tooltipX+"px", "top": tooltipY+"px",})
+
+				// homeCanvas.addEventListener("click", function(){
+				// 	console.log(drugLink)
+				// 	window.location.href = "#drug"+hovered.content.num
+				// })
+				// $("#tooltip").addClass("notShown")
 			}
 		}else{
 			homeCanvas.style.cursor = 'default';
-			console.log(hoveredIndex)
+			// console.log(hoveredIndex)
 			var unhovered = circlesArr[hoveredIndex];
 			unhovered.render.lineWidth = 0
+			drugLink = null
 			$("#tooltip").addClass("notShown")
 		}
 
