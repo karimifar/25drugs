@@ -198,14 +198,14 @@ window.addEventListener('resize', alignHomeslide);
 // see more function for subheads
 var showChar = 200;
 var ellipsestext = "...";
-var moretext = ">>";
-var lesstext = "<<";
+var moretext = '<i class="fas fa-arrow-circle-right"></i>'
+var lesstext = '<i class="fas fa-arrow-circle-left"></i>';
 $('.subhead p').each(function () {
     var content = $(this).html();
     if (content.length > showChar) {
         var show_content = content.substr(0, showChar);
         var hide_content = content.substr(showChar, content.length - showChar);
-        var html = show_content + '<span class="moreelipses">' + ellipsestext + '</span><span class="remaining-content"><span>' + hide_content + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+        var html = show_content + '<span class="moreelipses">' + ellipsestext + '</span><span class="remaining-content"><span>' + hide_content + '</span><a href="" class="morelink">'+ moretext+ '</a></span>';
         $(this).html(html);
     }
 });
