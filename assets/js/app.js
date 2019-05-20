@@ -305,14 +305,16 @@ function parsePath(path, vertices){
 	}
 }
 
+var colors11 = ["rgba(247,147,30,1)", "rgba(102,166,196,1)", "rgba(252,115,117,1)","rgba(68,98,120,1)", "rgba(255,217,125,1)", "rgba(244,96,54,1)", "rgba(190,96,54,1)", "rgba(200,98,120,1)", "rgba(100,217,125,1)", "rgba(150,96,54,1)", "rgba(100,96,54,1)" ]
+
 var colors=["rgba(247,147,30,1)", "rgba(102,166,196,1)", "rgba(252,115,117,1)"]
 var colors2=["rgba(68,98,120,1)", "rgba(255,217,125,1)", "rgba(244,96,54,1)", "rgba(244,96,54,1)"]
 var circlesArr = []
 for(var i=0; i<content.length; i++){
-	var pickedColor = getRandom(0,2);
+	var pickedColor = colors11[content[i].instCode];
 	circlesArr.push(Bodies.circle(getRandom(155,890), getRandom(150,345),getRandom(50,70), {
 		render:{
-			fillStyle: colors[pickedColor]
+			fillStyle: pickedColor
 		},
 		content: content[i]
 	}));
@@ -394,17 +396,21 @@ homeCanvas.addEventListener("mousemove", function(e){
 				hovered.render.strokeStyle = "rgba(255,255, 255,1)"
 				hovered.render.lineWidth = 3
 				console.log(hovered.content)
+				$("#tooltip").text(hovered.content.institution)
+				$("#tooltip").removeClass("notShown")
 			}else{
 				hoveredIndex = hovered.id -1
 				var unhovered = circlesArr[hoveredIndex];
 				unhovered.render.lineWidth = 0
 				hovered = Matter.Query.point(circlesArr,coordinates)[0]
+				$("#tooltip").addClass("notShown")
 			}
 		}else{
 			homeCanvas.style.cursor = 'default';
 			console.log(hoveredIndex)
 			var unhovered = circlesArr[hoveredIndex];
 			unhovered.render.lineWidth = 0
+			$("#tooltip").addClass("notShown")
 		}
 
 

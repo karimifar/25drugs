@@ -574,3 +574,13 @@ canvas{
     margin-left: 20px;
 }
 
+#tooltip{
+    background: red;
+    position: fixed;
+    top:110px;
+    left:100px;
+    z-index: 10000;
+}
+.notShown{
+    display: none;
+}

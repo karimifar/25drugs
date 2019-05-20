@@ -8,7 +8,8 @@ var content = [
 		instLogo: "assets/img/inst-logos/utmb.png",
 		institution: "The University of Texas Medical Branch",
 		link: "http://www.utsystempophealth.org/thj-stories/how-growth-hormone-can-lift-the-tbi-brain-fog",
-		matter:false,
+        matter:false,
+        instCode: 0,
 	},
 	{
 		num:2,
@@ -19,7 +20,8 @@ var content = [
 		instLogo: "assets/img/inst-logos/uthealth.png",
 		institution: "UTHealth Houston",
 		link: "http://www.utsystempophealth.org/thj-stories/the-failure-and-unexpected-promise",
-		matter:false,
+        matter:false,
+        instCode: 1,
 	},
 	{
 		num:3,
@@ -28,9 +30,10 @@ var content = [
 		subhead: "Scientists seeking an effective treatment for one type of chronic pain believe a ubiquitous, generic diabetes medication might solve both the discomfort and the mental deficits that go with the pain.“People who are in constant pain have problems thinking straight sometimes. The longer you’re in pain, the more entrenched the impairment becomes,” said Stephanie Shiers, a fourth-year cognition and neuroscience doctoral student at The University of Texas at Dallas and lead author of a study recently published in the Journal of Neuroscience. “These impairments aren’t addressed by existing therapeutics.”",
 		illustration: "assets/img/illustrations/neuron.gif",
 		instLogo: "assets/img/inst-logos/utdallas.png",
-		institution: "UTHealth Houston",
+		institution: "UT Dallas",
 		link: "https://www.utdallas.edu/news/research/study-common-diabetes-drug-offers-hope-for-chronic-pain-patients/",
-		matter:false,
+        matter:false,
+        instCode: 2,
 	},
 	{
 		num:4,
@@ -39,9 +42,10 @@ var content = [
 		subhead: "“Sulfur is the one of most abundant elements in the body but little is known about the enzymes involved in its metabolism,” said Brad Pierce, associate professor of biochemistry at The University of Texas at Arlington. Pierce and his colleagues recently received a ational Institutes of Health grant to continue his work retro-engineering the sulfur oxidation process and mapping out of the chemical mechanism of three key enzymes – cysteine dioxygenase, cysteamine dioxygenase, and 3-mercaptopropionic acid dioxygenase – to provide the necessary framework to develop effective therapies and drugs for different disease states.",
 		illustration: "assets/img/illustrations/enzymes.png",
 		instLogo: "assets/img/inst-logos/uta.png",
-		institution: "UTHealth Houston",
+		institution: "UT Arlington",
 		link: "https://www.uta.edu/news/releases/2018/08/Brad%20Pierce%20NIH%20grant.php",
-		matter:false,
+        matter:false,
+        instCode: 3,
 	},
 	{
 		num:5,
@@ -50,9 +54,10 @@ var content = [
 		subhead: "If you’ve had a minor stroke or a transient ischemic stroke (TIA), taking the clot-preventing drug clopidogrel along with aspirin may lower your risk of having a major stroke within the next 90 days, according to new research published in The New England Journal of Medicine. An international study of 4,881 adults in 10 countries who either had a minor stroke or a TIA showed that people who took clopidogrel plus aspirin had a 25 percent lower risk of a major stroke, heart attack or death from blood clots within the three months after the first incident, compared with those who took aspirin alone.",
 		illustration: "assets/img/illustrations/transient.gif",
 		instLogo: "assets/img/inst-logos/utaustin.png",
-		institution: "UTHealth Houston",
+		institution: "UT Austin",
 		link: "https://dellmed.utexas.edu/news/stroke-prevention-drug-combo-shows-promise-study-says",
-		matter:false,
+        matter:false,
+        instCode: 4,
 	},
 	{
 		num:6,
@@ -63,7 +68,8 @@ var content = [
 		instLogo: "assets/img/inst-logos/uthealth.png",
 		institution: "UTHealth Houston",
 		link: "https://med.uth.edu/news/2018/07/16/rapamycin-lotion-reduces-facial-tumors-caused-by-tuberous-sclerosis-uthealth-reports/",
-		matter:false,
+        matter:false,
+        instCode: 1,
 	},
 	{
 		num:7,
@@ -72,9 +78,10 @@ var content = [
 		subhead: "The untold story of Xoflua, which was approved by the FDA in 2018, is about the basic research, without which the drug would have been impossible, and how scientist Robert Krug made the discovery in the 1970s about how flu hijacks a critical process inside cells early on. Other flu treatments, such as Tamiflu, attack the virus after it has replicated in host cells; they work by making it harder for daughter viruses to escape from the host cell. Xofluza, on the other hand, attacks the flu virus at the early stage that Krug's research illuminated, blocking flu before it is able to create daughter viruses. \"It stops the virus cold,\" Krug said. \"It can't do anything.\"",
 		illustration: "assets/img/illustrations/rna.gif",
 		instLogo: "assets/img/inst-logos/utaustin.png",
-		institution: "UTHealth Houston",
+		institution: "UT Austin",
 		link: "https://cns.utexas.edu/news/the-40-year-old-discovery-behind-a-promising-new-flu-drug",
-		matter:false,
+        matter:false,
+        instCode: 4,
 	},
 	{
 		num:8,
@@ -83,9 +90,10 @@ var content = [
 		subhead: "Jonathan Sessler was a college student when he was first diagnosed with Hodgkin's lymphoma. Fortunately, he was also a chemistry major. After surviving radiation therapy, relapsing and then surviving extremely high doses of what he calls ”rat poison” (a.k.a. chemotherapy), his oncologist challenged him: ”You're a chemist. Find new cancer drugs.” In the four decades since, he's founded two companies, one of which commercialized a blockbuster drug for leukemia and was sold for $21 billion. The other is working to develop a drug he invented to treat ovarian cancer, based on large molecules that deliver poisons to cancer cells and named after the Lone Star state: Texaphyrin. He knows the odds of bringing effective new cancer treatments to market are stacked against him, yet he tirelessly pushes ahead.",
 		illustration: "assets/img/illustrations/tx-mol.gif",
 		instLogo: "assets/img/inst-logos/utaustin.png",
-		institution: "UTHealth Houston",
+		institution: "UT Austin",
 		link: "https://cns.utexas.edu/point/a-score-to-settle-with-cancer",
-		matter:false,
+        matter:false,
+        instCode: 4,
 	},
 	{
 		num:9,
@@ -94,9 +102,10 @@ var content = [
 		subhead: "There is nothing bleaker to a family than being told that their loved one’s cancer has stopped responding to chemotherapy and there are no more options. UT Health San Antonio and spinoff company Terrona LLC want to end that. “We can help patients for a time, but there comes a point when we do not have further therapy that we can utilize,” said Susan L. Mooberry, Ph.D., professor of pharmacology in the Joe R. & Teresa Lozano Long School of Medicine at UT Health San Antonio.",
 		illustration: "assets/img/illustrations/bat-flower.gif",
 		instLogo: "assets/img/inst-logos/utsa.png",
-		institution: "UTHealth Houston",
+		institution: "UTHealth San Antonio",
 		link: "https://news.uthscsa.edu/drug-from-bat-flower-shrinks-resistant-tumors/",
-		matter:false,
+        matter:false,
+        instCode: 5,
 	},
 	{
 		num:10,
@@ -105,9 +114,10 @@ var content = [
 		subhead: " A first-of-its-kind drug targeting a fused gene found in many types of cancer was effective in 93 percent of pediatric patients tested, researchers at UT Southwestern’s Simmons Cancer Center announced. Most cancer drugs are targeted to specific organs or locations in the body. Larotrectinib is the first cancer drug to receive FDA breakthrough therapy designation for patients with a specific fusion of two genes in the cancer cell, no matter what cancer type. The research appears in The Lancet Oncology.",
 		illustration: "assets/img/illustrations/Genes.gif",
 		instLogo: "assets/img/inst-logos/utsw.png",
-		institution: "UTHealth Houston",
+		institution: "UT Southwestern",
 		link: "https://www.utsouthwestern.edu/newsroom/articles/year-2018/pediatric-cancer-drug.html",
-		matter:false,
+        matter:false,
+        instCode: 6,
 	},
 	{
 		num:11,
@@ -118,7 +128,8 @@ var content = [
 		instLogo: "assets/img/inst-logos/tyler.png",
 		institution: "UTHealth Northeast",
 		link: "https://www.easttexasmatters.com/news/local-news/lung-scarring-reversal-drugs-discovered-by-local-doctors-sees-great-progress/674313067",
-		matter:false,
+        matter:false,
+        instCode: 7,
 	},
 	{
 		num:12,
@@ -129,7 +140,8 @@ var content = [
 		instLogo: "assets/img/inst-logos/utmb.png",
 		institution: "UTMB",
 		link: "https://www.utmb.edu/newsroom/article11798.aspx",
-		matter:false,
+        matter:false,
+        instCode: 0,
 	},
 	{
         num:13,
@@ -141,6 +153,7 @@ var content = [
         institution: "UT Austin",
         link: "https://news.utexas.edu/2018/05/03/anti-alcoholism-drug-shows-promise-in-animal-models/",
         matter:false,
+        instCode: 4,
 	},
 	{
         num:14,
@@ -152,6 +165,7 @@ var content = [
         institution: "MD Anderson",
         link: "https://www.mdanderson.org/newsroom/new-therapeutic-target-found-for-aggressive-pediatric-cancers-with-few-treatment-options.h00-159300678.html",
         matter:false,
+        instCode: 8,
     },
 	{
         num:15,
@@ -163,6 +177,7 @@ var content = [
         institution: "UTEP",
         link: "https://www.utep.edu/newsfeed/utep-scientists-awarded-6m-to-improve-treatment-for-chagas-disease.html",
         matter:false,
+        instCode: 9,
     },
     {
         num:16,
@@ -174,6 +189,7 @@ var content = [
         institution: "UTRGV",
         link: "https://www.utrgv.edu/en-us/about-utrgv/news/press-releases/2018/august-03-utrgv-awarded-grant-for-anti-hiv-drug-research/index.htm",
         matter:false,
+        instCode: 10,
     },
     {
         num:17,
@@ -185,6 +201,7 @@ var content = [
         institution: "The University of Texas Medical Branch",
         link: "",
         matter:false,
+        instCode: 0,
     },
     {
         num:18,
@@ -196,6 +213,7 @@ var content = [
         institution: "UT Southwestern",
         link: "https://www.utsouthwestern.edu/newsroom/articles/year-2018/lung-cancer-habib.html",
         matter:false,
+        instCode: 6,
     },
     {
         num:19,
@@ -207,6 +225,7 @@ var content = [
         institution: "UT Southwestern",
         link: "https://www.utsouthwestern.edu/newsroom/articles/year-2019/cutting-edge.html",
         matter:false,
+        instCode: 6,
     },
     {
         num:20,
@@ -218,6 +237,7 @@ var content = [
         institution: "UT Southwestern",
         link: "https://www.utsouthwestern.edu/newsroom/articles/year-2018/children-of-hope.html",
         matter:false,
+        instCode: 6,
     },
     {
         num:21,
@@ -229,6 +249,7 @@ var content = [
         institution: "UTHealth",
         link: "http://www.utsystempophealth.org/thj-stories/ups-man",
         matter:false,
+        instCode: 1,
     },
     {
         num:22,
@@ -240,6 +261,7 @@ var content = [
         institution: "UT Health San Antonio",
         link: "http://www.utsystempophealth.org/kenneth-hargreaves-ut-health-san-antonio",
         matter:false,
+        instCode: 5,
     },
     {
         num:23,
@@ -251,6 +273,7 @@ var content = [
         institution: "UT Health San Antonio",
         link: "https://phys.org/news/2018-09-chemists-historic-fluorine-discovery.html",
         matter:false,
+        instCode: 5,
     },
     {
         num:24,
@@ -262,6 +285,7 @@ var content = [
         institution: "UT Dallas",
         link: "https://www.utdallas.edu/news/research/engineer-brain-cancer-treatment-2019/",
         matter:false,
+        instCode: 2,
     },
     {
         num:25,
@@ -273,5 +297,6 @@ var content = [
         institution: "MD Anderson",
         link: "https://www.mdanderson.org/newsroom/study-shows-md-anderson-developed-drug-effective-in-overcoming-ibrutinib-resistance-in-mantle-cell-lymphoma.h00-159303045.html",
         matter:false,
+        instCode: 8,
     },
 ]
