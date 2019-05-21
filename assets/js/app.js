@@ -384,8 +384,8 @@ homeCanvas.addEventListener("click", function(){
 	}
 })
 homeCanvas.addEventListener("mousemove", function(e){
-	var tooltipX= e.clientX + 20
-	var tooltipY= e.clientY + 10
+	var tooltipX= e.clientX + -15
+	var tooltipY= e.clientY + 25
 	var coordinates = getMousePos(homeCanvas, e);
 	// console.log(coordinates)
 	var hoveredArr = Matter.Query.point(circlesArr,coordinates)
