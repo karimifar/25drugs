@@ -577,10 +577,46 @@ canvas{
 }
 
 #tooltip{
-    background: red;
+    /* background: #ffffffcc; */
+    color: #000;
     position: fixed;
     z-index: 10000;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    /* border: 1px solid #000; */
 }
-.notShown{
+#tooltip.notShown{
     display: none;
+}
+.t-drug-no-div{
+    margin-right: 5px;
+}
+.t-drug-no{
+    border: 1px solid #2FD8BE;
+    background-color: #111111aa;
+    padding: 10px 5px;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 900;
+    width:38px;
+    text-align: center;
+}
+
+.t-info-div{
+    /* border: 1px solid #fff;
+    border-radius: 5px; */
+
+}
+.t-info-div p {
+    background-color: #111111aa;
+    padding: 2px 5px;
+    color: #fff;
+}
+.t-drug-title{
+    font-weight: 600;
+}
+.t-drug-inst{
+    font-size: 12px;
+    font-style: italic;
 }
