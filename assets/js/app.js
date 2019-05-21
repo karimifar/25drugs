@@ -377,6 +377,12 @@ var homeCanvas = document.getElementById("home-matter")
 var hovered = null;
 var hoveredIndex;
 var drugLink;
+homeCanvas.addEventListener("click", function(){
+	console.log(drugLink)
+	if(drugLink){
+		window.location.href = drugLink
+	}
+})
 homeCanvas.addEventListener("mousemove", function(e){
 	var tooltipX= e.clientX + 20
 	var tooltipY= e.clientY + 10
@@ -409,11 +415,6 @@ homeCanvas.addEventListener("mousemove", function(e){
 				$(".t-drug-no").text(hovered.content.num)
 				$("#tooltip").removeClass("notShown")
 				$("#tooltip").css({"left": tooltipX+"px", "top": tooltipY+"px",})
-
-				homeCanvas.addEventListener("click", function(){
-					console.log(drugLink)
-					// window.location.href = "#drug"+hovered.content.num
-				})
 				
 			//when moving mouse from one circle to another
 			}else{
