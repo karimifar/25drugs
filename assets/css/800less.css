@@ -49,7 +49,7 @@
         font-size: 14px;
     }
     .subhead{
-        /* max-height: 100px; */
+        max-height: 180px;
         overflow: scroll;
         -webkit-overflow-scrolling: touch;
     }
