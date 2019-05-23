@@ -82,4 +82,11 @@
     .cred-col{
         min-width: 250px;
     }
+
+    #legend{
+        top:unset;
+        right:unset;
+        left: -40px;
+        bottom: 50px;
+    }
 }

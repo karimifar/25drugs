@@ -90,6 +90,10 @@ p{
 }
 .intro p{
     vertical-align: bottom;
+    display: inline;
+    background-color: #00000055;
+    box-shadow: 10px 0 0 #00000055, -10px 0 0 #00000055;
+
 }
 
 #logo-div{
@@ -364,11 +368,35 @@ canvas{
     /* width:56%;
     margin: 0 22%; */
 }
-
 #svg-container{
     z-index: 1;
     pointer-events:none;
     width: 100%;
+}
+#legend{
+    position: absolute;
+    top:80px;
+    right:-70px;
+    z-index: 99;
+    color: white;
+    font-family: "benton-sans", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 10px;
+}
+#legend td{
+    padding: 1px 6px;
+}
+.leg-title{
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 6px;
+}
+#legend .color{
+    width: 20px;
+    height: 8px;
+    /* background-color: #2FD8BE; */
 }
 
 .d-graphicCol{

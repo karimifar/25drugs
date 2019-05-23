@@ -49,7 +49,7 @@
         font-size: 14px;
     }
     .subhead{
-        max-height: 100px;
+        /* max-height: 100px; */
         overflow: scroll;
         -webkit-overflow-scrolling: touch;
     }
@@ -98,7 +98,9 @@
         margin-top: 0px;
   
     }
-    
+    #legend{
+        display: none;
+    }
 
 
 }

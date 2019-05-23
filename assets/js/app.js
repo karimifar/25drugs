@@ -246,7 +246,7 @@ var Engine = Matter.Engine,
 
 // create an engine
 var engine1 = Engine.create();
-engine1.world.gravity.y = 0.2;
+engine1.world.gravity.y = 0.05;
 var homeMatter = document.getElementById('home-matter');
 console.log(homeMatter)
 // create a renderer
@@ -306,7 +306,7 @@ function parsePath(path, vertices){
 	}
 }
 
-var colors11 = ["rgba(247,147,30,1)", "rgba(102,166,196,1)", "rgba(252,115,117,1)","rgba(68,98,120,1)", "rgba(255,217,125,1)", "rgba(244,96,54,1)", "rgba(190,96,54,1)", "rgba(200,98,120,1)", "rgba(100,217,125,1)", "rgba(150,96,54,1)", "rgba(100,96,54,1)" ]
+var colors11 = ["rgba(241,96,54,1)", "rgba(247,148,32,1)", "rgba(102,166,196,1)", "rgba(86,194,179,1)","rgba(68,99,120,1)", "rgba(242,114,117,1)", "rgba(100,151,74,1)"     , "rgba(234,41,107,1)", "rgba(80,56,87,1)", "rgba(222,169,134,1)", "rgba(255,209,75,1)" ]
 
 var colors=["rgba(247,147,30,1)", "rgba(102,166,196,1)", "rgba(252,115,117,1)"]
 var colors2=["rgba(68,98,120,1)", "rgba(255,217,125,1)", "rgba(244,96,54,1)", "rgba(244,96,54,1)"]
@@ -467,11 +467,11 @@ function getMousePos(canvas, evt) {
 
 function applyForce(){
 	for(var i=0; i<circlesArr.length; i++){
-		Body.applyForce(circlesArr[i], {x: circlesArr[i].position.x, y: circlesArr[i].position.y}, {x: getRandom(-0.005,0.005), y: getRandom(-0.001,-0.0001)})
+		Body.applyForce(circlesArr[i], {x: circlesArr[i].position.x, y: circlesArr[i].position.y}, {x: getRandom(-0.005,0.005)*getRandom(0,0.1), y: getRandom(-0.001,-0.0001)*getRandom(0,0.4)})
 	}
 }
 
-window.setInterval(applyForce, 2000);
+window.setInterval(applyForce, 500);
 
 
 
@@ -494,3 +494,15 @@ if(isMobile){
 	})
 }
 
+
+
+
+
+//// legend stuff
+var legBoxes = $("td .color");
+console.log(legBoxes)
+
+for(var i =0; i<legBoxes.length; i++){
+	console.log(i)
+	$(legBoxes[i]).css({"background-color": colors11[i]})
+}
