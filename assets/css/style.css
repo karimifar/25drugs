@@ -204,6 +204,12 @@ ul{
     font-weight: 600;
 }
 
+#about-btn li{
+    color: #2FD8BE;
+}
+#about-btn .drug-title{
+    font-weight: 200;
+}
 .expanded .navlist li .drug-title{
     visibility: visible;
     opacity: 1;

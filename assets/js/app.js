@@ -8,7 +8,7 @@ var idArr = ["home"]
 var winHeight = window.innerHeight	
 var winWidth = window.innerWidth
 
-var colors11 = ["rgba(241,96,54,1)", "rgba(247,148,32,1)", "rgba(102,166,196,1)", "rgba(86,194,179,1)","rgba(68,99,120,1)", "rgba(242,114,117,1)", "rgba(100,151,74,1)"     , "rgba(234,41,107,1)", "rgba(80,56,87,1)", "rgba(222,169,134,1)", "rgba(255,209,75,1)" ]
+var colors11 = ["rgba(241,96,54,1)", "rgba(247,148,32,1)", "rgba(102,166,196,1)", "rgba(47,216,190,1)","rgba(68,99,120,1)", "rgba(242,114,117,1)", "rgba(100,151,74,1)"     , "rgba(234,41,107,1)", "rgba(80,56,87,1)", "rgba(222,169,134,1)", "rgba(255,209,75,1)" ]
 
 content.forEach(function(drug){
 	var secId = "section"+drug.num;
