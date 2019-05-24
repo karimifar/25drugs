@@ -24,7 +24,8 @@
         font-size: 18px;
         width:45px;
         height: 30px;
-        background: #fff;
+        padding-top:5px;
+        /* background: #fff; */
         /* color: #000; */
         /* border: none; */
         font-weight: 500;
