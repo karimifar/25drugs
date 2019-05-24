@@ -10,6 +10,9 @@ var winWidth = window.innerWidth
 
 var colors11 = ["rgba(241,96,54,1)", "rgba(247,148,32,1)", "rgba(102,166,196,1)", "rgba(47,216,190,1)","rgba(68,99,120,1)", "rgba(242,114,117,1)",      "rgba(202,41,35,1)","rgba(234,41,107,1)", "rgba(35,106,54,1)","rgba(106,168,50,1)", "rgba(255,209,75,1)" ]
 
+
+
+var placeHolder = "assets/img/inst-logos/utsw.png"
 content.forEach(function(drug){
 	var secId = "section"+drug.num;
 	var fpId = "drug"+drug.num
@@ -20,11 +23,11 @@ content.forEach(function(drug){
 	var secWrap = $("<div class='sec-wrap'></div>")
 	var graphicCol = $("<div class='d-graphicCol'></div>")
 	var graphicContain = $("<div class='graphic-container d-graphic-container'></div>")
-	var staticImg = $("<div class='pngAndCanvas png-container'><img src='"+drug.illustration+"'></div>")
-	if(drug.matter){
-		var matterDiv = $("<div class='pngAndCanvas d-canvas' id='"+matterId+"'></div>");
-		graphicContain.append(matterDiv)
-	}
+	var staticImg = $("<div class='pngAndCanvas gif-container'><img data-src ='"+ drug.illustration + "' src='"+placeHolder+"'></div>")
+	// if(drug.matter){
+	// 	var matterDiv = $("<div class='pngAndCanvas d-canvas' id='"+matterId+"'></div>");
+	// 	graphicContain.append(matterDiv)
+	// }
 	var infoCol= $("<div class='d-info-col'>")
 	var drugNum = $("<div class='num'><h1 style='border-color:"+colors11[drug.instCode]+"'>"+drug.num+"</h1><div>")
 	var title = $("<div class='title'><h1>"+drug.title+"</h1></div>");
@@ -394,9 +397,11 @@ homeCanvas.addEventListener("mousemove", function(e){
 	if (!hovered){
 		drugLink = null;
 		hovered = Matter.Query.point(circlesArr,coordinates)[0]
-		hoveredIndex = hovered.id -1
-		hovered.render.strokeStyle = "rgba(255,255, 255,1)"
-		hovered.render.lineWidth = 3
+		if(hovered){
+			hoveredIndex = hovered.id -1
+			hovered.render.strokeStyle = "rgba(255,255, 255,1)"
+			hovered.render.lineWidth = 3
+		}
 	}else{
 		if (hoveredArr.length ===1){
 			// homeCanvas.addEventListener("click", function(){
@@ -508,3 +513,46 @@ for(var i =0; i<legBoxes.length; i++){
 	console.log(i)
 	$(legBoxes[i]).css({"background-color": colors11[i]})
 }
+
+
+
+
+
+////observer test
+const loadImage = (image) => {
+	const src = image.dataset.src;
+	fetchImage(src).then(() => {
+	  image.src = src;
+	})
+  }
+
+const fetchImage = (url) => {
+	return new Promise((resolve, reject) => {
+	const image = new Image();
+	image.src = url;
+	image.onload = resolve;
+	image.onerror = reject;
+	});
+}
+const options = {
+	rootMargin: '0px 0px 200px 0px',
+	threshold: 0.1
+  };
+  const handleIntersection = (entries, observer) => {
+	entries.forEach(entry => {
+	  if(entry.intersectionRatio > 0) {
+		  console.log(entry)
+		loadImage(entry.target)
+	  }
+	})
+  }
+const observer = new IntersectionObserver(handleIntersection, options);
+
+const images = document.querySelectorAll('img');
+
+images.forEach(img => {
+  observer.observe(img);
+})
+
+
+
