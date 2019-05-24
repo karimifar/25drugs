@@ -7,6 +7,9 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 var idArr = ["home"]
 var winHeight = window.innerHeight	
 var winWidth = window.innerWidth
+
+var colors11 = ["rgba(241,96,54,1)", "rgba(247,148,32,1)", "rgba(102,166,196,1)", "rgba(86,194,179,1)","rgba(68,99,120,1)", "rgba(242,114,117,1)", "rgba(100,151,74,1)"     , "rgba(234,41,107,1)", "rgba(80,56,87,1)", "rgba(222,169,134,1)", "rgba(255,209,75,1)" ]
+
 content.forEach(function(drug){
 	var secId = "section"+drug.num;
 	var fpId = "drug"+drug.num
@@ -23,7 +26,7 @@ content.forEach(function(drug){
 		graphicContain.append(matterDiv)
 	}
 	var infoCol= $("<div class='d-info-col'>")
-	var drugNum = $("<div class='num'><h1>"+drug.num+"</h1><div>")
+	var drugNum = $("<div class='num'><h1 style='background-color:"+colors11[drug.instCode]+"'>"+drug.num+"</h1><div>")
 	var title = $("<div class='title'><h1>"+drug.title+"</h1></div>");
 	var subhead = $("<div class='subhead'><p>"+drug.subhead+"</p></div>")
 	var links = $("<div class='links'><div class='link'><a href='"+drug.link+"' target='_blank'><i class='fas fa-link'></i> Read More</a></div><div class='inst-logo'><img src='"+drug.instLogo+"'></div></div>")
@@ -306,7 +309,6 @@ function parsePath(path, vertices){
 	}
 }
 
-var colors11 = ["rgba(241,96,54,1)", "rgba(247,148,32,1)", "rgba(102,166,196,1)", "rgba(86,194,179,1)","rgba(68,99,120,1)", "rgba(242,114,117,1)", "rgba(100,151,74,1)"     , "rgba(234,41,107,1)", "rgba(80,56,87,1)", "rgba(222,169,134,1)", "rgba(255,209,75,1)" ]
 
 var colors=["rgba(247,147,30,1)", "rgba(102,166,196,1)", "rgba(252,115,117,1)"]
 var colors2=["rgba(68,98,120,1)", "rgba(255,217,125,1)", "rgba(244,96,54,1)", "rgba(244,96,54,1)"]
