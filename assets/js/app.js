@@ -315,7 +315,7 @@ var colors2=["rgba(68,98,120,1)", "rgba(255,217,125,1)", "rgba(244,96,54,1)", "r
 var circlesArr = []
 for(var i=0; i<content.length; i++){
 	var pickedColor = colors11[content[i].instCode];
-	circlesArr.push(Bodies.circle(getRandom(155,890), getRandom(150,345),getRandom(50,70), {
+	circlesArr.push(Bodies.circle(getRandom(155,890), getRandom(150,345),getRandom(60,60), {
 		render:{
 			fillStyle: pickedColor
 		},
