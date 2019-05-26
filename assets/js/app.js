@@ -513,7 +513,7 @@ for(var i =0; i<legBoxes.length; i++){
 
 
 ////observer test
-var images = document.querySelectorAll('img');
+var images = document.querySelectorAll('.gif-container img');
 
 function loadImage(image){
 	var src = image.dataset.gif;
@@ -537,7 +537,7 @@ var options = {
   function handleIntersection(entries, observer){
 	entries.forEach( function(entry){
 	  if(entry.intersectionRatio > 0) {
-		  console.log(entry)
+		//   console.log(entry)
 		loadImage(entry.target)
 	  }
 	})
