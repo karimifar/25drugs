@@ -50,6 +50,7 @@ p{
     padding-top: 0 !important;
     z-index: 2;
     background: black;
+    /* background: rgba(247,148,32,1); */
 
 }
 .section:nth-child(even){

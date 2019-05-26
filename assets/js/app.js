@@ -23,7 +23,7 @@ content.forEach(function(drug){
 	var secWrap = $("<div class='sec-wrap'></div>")
 	var graphicCol = $("<div class='d-graphicCol'></div>")
 	var graphicContain = $("<div class='graphic-container d-graphic-container'></div>")
-	var staticImg = $("<div class='pngAndCanvas gif-container'><img data-src ='"+ drug.illustration + "' src='"+placeHolder+"'></div>")
+	var staticImg = $("<div class='pngAndCanvas gif-container'><img data-gif ='"+ drug.illustration + "' src='"+drug.static+"'></div>")
 	// if(drug.matter){
 	// 	var matterDiv = $("<div class='pngAndCanvas d-canvas' id='"+matterId+"'></div>");
 	// 	graphicContain.append(matterDiv)
@@ -126,9 +126,8 @@ var myFullpage = new fullpage('#fullpage', {
 	onLeave: function(origin, destination, direction){
 		$("#tooltip").addClass("notShown")
 		var navList = document.getElementById("navlist")
-		// console.log(winHeight/35)
 		navList.scrollTop = (destination.index-1) * 35
-		console.log(origin, destination,direction)
+		// console.log(origin, destination,direction)
 		if (origin.index === 0 ||destination.index === 0 && !isMobile){
 			$(".sidebar").toggleClass("invisible")
 			$("#nav-btn").toggleClass("invisible")
@@ -254,7 +253,6 @@ var Engine = Matter.Engine,
 var engine1 = Engine.create();
 engine1.world.gravity.y = 0.05;
 var homeMatter = document.getElementById('home-matter');
-console.log(homeMatter)
 // create a renderer
 var render1 = Render.create({
     element: homeMatter,
@@ -308,7 +306,6 @@ function parsePath(path, vertices){
 			y: parseInt(xyArray[1])
 		}
 		vertices.push(point);
-		console.log(vertices)
 	}
 }
 
@@ -353,7 +350,6 @@ function getRandom(min,max){
 // add all of the bodies to the world
 World.add(engine1.world, [ pillShell, ceiling]);
 // World.add(engine.world, circlesArr);
-console.log(circlesArr)
 
 var mouse = Mouse.create(render1.canvas),
 	mouseConstraint = MouseConstraint.create(engine1, {
@@ -383,7 +379,7 @@ var hovered = null;
 var hoveredIndex;
 var drugLink;
 homeCanvas.addEventListener("click", function(){
-	console.log(drugLink)
+	// console.log(drugLink)
 	if(drugLink){
 		window.location.href = drugLink
 	}
@@ -416,7 +412,7 @@ homeCanvas.addEventListener("mousemove", function(e){
 				hoveredIndex = hovered.id -1
 				hovered.render.strokeStyle = "rgba(255,255, 255,1)"
 				hovered.render.lineWidth = 3
-				console.log(hovered.content)
+				// console.log(hovered.content)
 				$(".t-drug-inst").text(hovered.content.institution)
 				$(".t-drug-title").text(hovered.content.shortTitle)
 				$(".t-drug-no").text(hovered.content.num)
@@ -490,7 +486,7 @@ var firstSlide = document.getElementById("section1")
 if(isMobile){
 	window.addEventListener("scroll", function(){
 		var topScroll = window.pageYOffset;
-		console.log(topScroll)
+		// console.log(topScroll)
 		if (topScroll>= 0.9*winHeight){
 			$(".sidebar").removeClass("invisible")
 			$("#nav-btn").removeClass("invisible")
@@ -507,10 +503,8 @@ if(isMobile){
 
 //// legend stuff
 var legBoxes = $("td .color");
-console.log(legBoxes)
 
 for(var i =0; i<legBoxes.length; i++){
-	console.log(i)
 	$(legBoxes[i]).css({"background-color": colors11[i]})
 }
 
@@ -519,14 +513,16 @@ for(var i =0; i<legBoxes.length; i++){
 
 
 ////observer test
-const loadImage = (image) => {
-	const src = image.dataset.src;
-	fetchImage(src).then(() => {
+var images = document.querySelectorAll('img');
+
+function loadImage(image){
+	var src = image.dataset.gif;
+	fetchImage(src).then(function(){
 	  image.src = src;
 	})
   }
 
-const fetchImage = (url) => {
+function fetchImage(url){
 	return new Promise((resolve, reject) => {
 	const image = new Image();
 	image.src = url;
@@ -534,23 +530,21 @@ const fetchImage = (url) => {
 	image.onerror = reject;
 	});
 }
-const options = {
-	rootMargin: '0px 0px 200px 0px',
+var options = {
+	rootMargin: '0px 0px 800px 0px',
 	threshold: 0.1
   };
-  const handleIntersection = (entries, observer) => {
-	entries.forEach(entry => {
+  function handleIntersection(entries, observer){
+	entries.forEach( function(entry){
 	  if(entry.intersectionRatio > 0) {
 		  console.log(entry)
 		loadImage(entry.target)
 	  }
 	})
   }
-const observer = new IntersectionObserver(handleIntersection, options);
+var observer = new IntersectionObserver(handleIntersection, options);
 
-const images = document.querySelectorAll('img');
-
-images.forEach(img => {
+images.forEach(function(img){
   observer.observe(img);
 })
 
