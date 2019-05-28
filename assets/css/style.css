@@ -557,22 +557,26 @@ canvas{
     color: white;
 }
 #about-content{
-    padding: 20px 50px;
+    padding: 20px 60px;
     /* padding-left: 80px; */
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .about-logos{
     padding: 20px 50px;
     padding-left: 80px;
 }
 .about-col{
-    padding: 0 20px;
+    padding: 0 30px;
+    max-width: 1200px;
 }
 .ack-col p{
-    font-size: 28px;
-    line-height: 1.1em;
+    font-size: 38px;
+    line-height: 1.2em;
+}
+.ack-col a{
+    color: #2FD8BE;
 }
 
 .ack-col h1{
@@ -608,7 +612,7 @@ canvas{
 }
 #about-uts-logo{
     width: 250px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 #tooltip{
