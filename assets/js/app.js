@@ -548,5 +548,21 @@ images.forEach(function(img){
   observer.observe(img);
 })
 
+var url= window.location.href
 
-
+$(".facebook").on("click", function(){
+	// console.log(url)
+	window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
+	'facebook-share-dialog',
+	'width=600,height=400'
+	);
+	return false;
+})
+$(".twitter").on("click", function(){
+	// console.log(url)
+	window.open("https://twitter.com/intent/tweet?url=" + url,
+	'twitter-share-dialog',
+	'width=600,height=400'
+	);
+	return false;
+})

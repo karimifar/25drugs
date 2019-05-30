@@ -660,3 +660,23 @@ canvas{
     font-size: 9px;
     font-style: italic;
 }
+
+.socialBtn{
+    font-size: 24px;
+    padding: 4px;
+    pointer-events: auto ;
+    color: #2FD8BE99;
+    transition: all 0.2s ease-out;
+}
+.socialBtn:hover{
+    cursor: pointer;
+    color: #fff;
+}
+.social-share{
+    margin-top: 10px;
+}
+
+.about-col .socialBtn{
+    font-size: 28px;
+    padding: 4px 6px;
+}

@@ -256,7 +256,17 @@
         display: none;
     }
 
+    .social-share{
+        margin-top: 5px;
+    }
 
+    .socialBtn{
+        color: #fff;
+    }
+    .about-col .socialBtn{
+        font-size: 18px;
+        color: #2FD8BE;
+    }
 }
 
 
