@@ -54,6 +54,8 @@ content.forEach(function(drug){
 	$(".navlist ul").append(navItem)
 	navItem.insertBefore("#about-btn")
 	})
+
+$("#d-num-Bonus .drug-number").html("<i class='fas fa-asterisk'></i>")
 idArr.push("about")
 // ***** fullpage JS *****
 
@@ -136,6 +138,9 @@ var myFullpage = new fullpage('#fullpage', {
 		var targetNav = "#d-num-"+destination.index;
 		$(targetNav).addClass("active")
 		if (destination.index === 26){
+			$("#d-num-Bonus").addClass("active")
+		}
+		if (destination.index === 27){
 			$("#about-btn").addClass("active")
 		}
 

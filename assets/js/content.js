@@ -326,7 +326,7 @@ var content = [
         instCode: 10,
     },
     {
-		num:26,
+		num:"Bonus",
 		title: "Cross-Town Collaboration",
 		shortTitle: "Cross-Town Collaboration",
 		subhead: "It wasn’t long after Doug Frantz joined the chemistry department at The University of Texas at San Antonio, after six years working for Merck in New Jersey, that he started getting questions. People from various sectors wanted advice on drug development, and Frantz, with his background in commercial drug production, seemed a potential source. At Merck, he and his colleagues had produced the drugs that would be used in chemical trials. It gave him the “soup to nuts” experience regarding how drug discovery worked from the industrial side. “There was so much interest,” said Frantz, “that it seemed there was more to be done than just offer advice.”",
