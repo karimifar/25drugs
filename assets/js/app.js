@@ -92,7 +92,7 @@ var myFullpage = new fullpage('#fullpage', {
 	offsetSections: false,
 	resetSliders: false,
 	fadingEffect: true,
-	normalScrollElements: '.subhead, .navlist, .nav-item, .sidebar',
+	normalScrollElements: '.navlist, .nav-item, .sidebar',
 	scrollOverflow: false,
 	scrollOverflowReset: false,
 	scrollOverflowOptions: null,
