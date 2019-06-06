@@ -578,8 +578,11 @@ canvas{
 }
 .ack-col a{
     color: #2FD8BE;
+    text-decoration: underline;
 }
-
+.ack-col a:hover{
+    opacity: 0.7;
+}
 .ack-col h1{
     font-size: 18px;
     font-family: "benton-sans", sans-serif;
