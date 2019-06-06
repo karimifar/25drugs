@@ -23,7 +23,7 @@ content.forEach(function(drug){
 	var secWrap = $("<div class='sec-wrap'></div>")
 	var graphicCol = $("<div class='d-graphicCol'></div>")
 	var graphicContain = $("<div class='graphic-container d-graphic-container'></div>")
-	var staticImg = $("<div class='pngAndCanvas gif-container'><img data-gif ='"+ drug.illustration + "' src='"+drug.static+"'></div>")
+	var staticImg = $("<div class='pngAndCanvas gif-container'><img alt='"+ drug.altText + "'"+ "data-gif ='"+ drug.illustration + "' src='"+drug.static+"'></div>")
 	// if(drug.matter){
 	// 	var matterDiv = $("<div class='pngAndCanvas d-canvas' id='"+matterId+"'></div>");
 	// 	graphicContain.append(matterDiv)
@@ -32,7 +32,7 @@ content.forEach(function(drug){
 	var drugNum = $("<div class='num'><h1 style='border-color:"+colors11[drug.instCode]+"'>"+drug.num+"</h1><div>")
 	var title = $("<div class='title'><h1>"+drug.title+"</h1></div>");
 	var subhead = $("<div class='subhead'><p>"+drug.subhead+"</p></div>")
-	var links = $("<div class='links'><div class='link'><a href='"+drug.link+"' target='_blank'><i class='fas fa-link'></i> Read More</a></div><div class='inst-logo'><img src='"+drug.instLogo+"'></div></div>")
+	var links = $("<div class='links'><div class='link'><a href='"+drug.link+"' target='_blank'><i class='fas fa-link'></i> Read More</a></div><div class='inst-logo'><img alt='"+drug.institution+" logo'" +"src='"+drug.instLogo+"'></div></div>")
 	
 	drugSec.insertBefore( "#last-sec" );
 	// $("#fullpage").append(drugSec);
@@ -565,7 +565,7 @@ $(".facebook").on("click", function(){
 })
 $(".twitter").on("click", function(){
 	// console.log(url)
-	window.open("https://twitter.com/intent/tweet?text=25 Drugs from UT Institutions @TXHealthJournal" + url+ "&url=" + url,
+	window.open("https://twitter.com/intent/tweet?text=25 Drugs from UT Institutions @TXHealthJournal &url=" + url,
 	'twitter-share-dialog',
 	'width=600,height=400'
 	);
