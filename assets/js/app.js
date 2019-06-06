@@ -1,3 +1,7 @@
+
+// var console = { log: function() {} };
+
+
 var isMobile = false; //initiate as false
 // device detection
 if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -50,15 +54,22 @@ content.forEach(function(drug){
 	if(drug.shortTitle.length>35){
 		drug.shortTitle = drug.shortTitle.substr(0,25)+"..."
 	}
-	var navItem = $("<a class='nav-item' id='d-num-"+drug.num+"' href='#"+fpId+"'><li><span class='drug-number' >"+drug.num+"</span><span class='drug-title'>"+drug.shortTitle+"</span></li></a>");
+	var navItem = $("<a class='nav-item' id='d-num-"+drug.num+"'><li><span class='drug-number' >"+drug.num+"</span><span class='drug-title'>"+drug.shortTitle+"</span></li></a>");
 	$(".navlist ul").append(navItem)
 	navItem.insertBefore("#about-btn")
-	})
+	
+})
 
 $("#d-num-Bonus .drug-number").html("<k class='fas fa-asterisk'></k>")
 idArr.push("about")
 // ***** fullpage JS *****
 
+
+$(".nav-item").on("click", function(){
+	var navId= $(this).attr("id");
+	var destNum = parseInt(navId.split("-")[2])+1
+	fullpage_api.moveTo(destNum);
+})
 
 var myFullpage = new fullpage('#fullpage', {
 	//Navigation
