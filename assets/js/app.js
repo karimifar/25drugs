@@ -67,7 +67,16 @@ idArr.push("about")
 
 $(".nav-item").on("click", function(){
 	var navId= $(this).attr("id");
-	var destNum = parseInt(navId.split("-")[2])+1
+	var destNum;
+	if(navId==="home-btn"){
+		destNum=1;
+	}else if(navId==="about-btn"){
+		destNum=28;
+	}else if(navId==="d-num-Bonus"){
+		destNum=27
+	}else{
+		destNum = parseInt(navId.split("-")[2])+1
+	}
 	fullpage_api.moveTo(destNum);
 })
 
