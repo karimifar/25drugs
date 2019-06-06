@@ -693,3 +693,14 @@ canvas{
 #d-num-Bonus .drug-number{
     font-size: 12px; 
 }
+
+#uts-bar{
+    width: 100%;
+    background: #444;
+    padding: 10px 10%;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #2FD8BE;
+}
+#uts-bar img{
+    width: 240px;
+}
