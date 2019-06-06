@@ -19,7 +19,7 @@ content.forEach(function(drug){
 	idArr.push(fpId)
 	var matterId = "sec"+drug.num+"-matter"
 
-	var drugSec = $("<div class='section' id='"+secId+"'><div id='"+fpId+"'></div></div>")
+	var drugSec = $("<div class='section' id='"+secId+"'></div>")
 	var secWrap = $("<div class='sec-wrap'></div>")
 	var graphicCol = $("<div class='d-graphicCol'></div>")
 	var graphicContain = $("<div class='graphic-container d-graphic-container'></div>")
