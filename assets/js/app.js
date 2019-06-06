@@ -32,7 +32,7 @@ content.forEach(function(drug){
 	var drugNum = $("<div class='num'><h1 style='border-color:"+colors11[drug.instCode]+"'>"+drug.num+"</h1><div>")
 	var title = $("<div class='title'><h1>"+drug.title+"</h1></div>");
 	var subhead = $("<div class='subhead'><p>"+drug.subhead+"</p></div>")
-	var links = $("<div class='links'><div class='link'><a  aria-label='read more about "+drug.shortTitle+ "' href='"+drug.link+"' target='_blank'><i class='fas fa-link'></i> Read More</a></div><div class='inst-logo'><img alt='"+drug.institution+" logo'" +"src='"+drug.instLogo+"'></div></div>")
+	var links = $("<div class='links'><div class='link'><a  aria-label='read more about "+drug.shortTitle+ "' href='"+drug.link+"' target='_blank'><k class='fas fa-link'></k> Read More</a></div><div class='inst-logo'><img alt='"+drug.institution+" logo'" +"src='"+drug.instLogo+"'></div></div>")
 	
 	drugSec.insertBefore( "#last-sec" );
 	// $("#fullpage").append(drugSec);
@@ -55,7 +55,7 @@ content.forEach(function(drug){
 	navItem.insertBefore("#about-btn")
 	})
 
-$("#d-num-Bonus .drug-number").html("<i class='fas fa-asterisk'></i>")
+$("#d-num-Bonus .drug-number").html("<k class='fas fa-asterisk'></k>")
 idArr.push("about")
 // ***** fullpage JS *****
 
@@ -208,8 +208,8 @@ window.addEventListener('resize', alignHomeslide);
 // see more function for subheads
 var showChar = 200;
 var ellipsestext = "...";
-var moretext = '<i class="fas fa-arrow-circle-right"></i>'
-var lesstext = '<i class="fas fa-arrow-circle-left"></i>';
+var moretext = '<k class="fas fa-arrow-circle-right"></k>'
+var lesstext = '<k class="fas fa-arrow-circle-left"></k>';
 $('.subhead p').each(function () {
     var content = $(this).html();
     if (content.length > showChar) {
