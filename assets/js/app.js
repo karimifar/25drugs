@@ -54,7 +54,7 @@ content.forEach(function(drug){
 	if(drug.shortTitle.length>35){
 		drug.shortTitle = drug.shortTitle.substr(0,25)+"..."
 	}
-	var navItem = $("<a class='nav-item' id='d-num-"+drug.num+"'><li><span class='drug-number' >"+drug.num+"</span><span class='drug-title'>"+drug.shortTitle+"</span></li></a>");
+	var navItem = $("<div class='nav-item' id='d-num-"+drug.num+"'><li><span class='drug-number' >"+drug.num+"</span><span class='drug-title'>"+drug.shortTitle+"</span></li></div>");
 	$(".navlist ul").append(navItem)
 	navItem.insertBefore("#about-btn")
 	
