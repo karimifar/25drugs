@@ -3,7 +3,7 @@ var content = [
 		num:1,
 		title: "The 40 Year-Old Discovery Behind A Promising New Flu Drug",
 		shortTitle: "Origin Story of a Flu Drug",
-		subhead: "The untold story of Xoflua, which was approved by the FDA in 2018, is about the basic research, without which the drug would have been impossible, and how scientist Robert Krug made the discovery in the 1970s about how flu hijacks a critical process inside cells early on. Other flu treatments, such as Tamiflu, attack the virus after it has replicated in host cells; they work by making it harder for daughter viruses to escape from the host cell. Xofluza, on the other hand, attacks the flu virus at the early stage that Krug's research illuminated, blocking flu before it is able to create daughter viruses. \"It stops the virus cold,\" Krug said. \"It can't do anything.\"",
+		subhead: "The untold story of Xofluza, which was approved by the FDA in 2018, is about the basic research, without which the drug would have been impossible, and how scientist Robert Krug made the discovery in the 1970s about how flu hijacks a critical process inside cells early on. Other flu treatments, such as Tamiflu, attack the virus after it has replicated in host cells; they work by making it harder for daughter viruses to escape from the host cell. Xofluza, on the other hand, attacks the flu virus at the early stage that Krug's research illuminated, blocking flu before it is able to create daughter viruses. \"It stops the virus cold,\" Krug said. \"It can't do anything.\"",
 		illustration: "assets/img/illustrations/rna.gif",
         static: "assets/img/illustrations/rna.png",
         altText: "an illustration of RNA messengers",
