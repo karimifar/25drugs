@@ -585,7 +585,7 @@ $(".facebook").on("click", function(){
 })
 $(".twitter").on("click", function(){
 	// console.log(url)
-	window.open("https://twitter.com/intent/tweet?text=25 Drugs from UT Institutions @TXHealthJournal &url=" + url,
+	window.open("https://twitter.com/intent/tweet?text=25 Drugs from UT Institutions @TXHealthJournal @utsystem &url=" + url,
 	'twitter-share-dialog',
 	'width=600,height=400'
 	);
