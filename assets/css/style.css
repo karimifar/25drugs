@@ -716,3 +716,12 @@ canvas{
     text-align: center;
     font-weight: 100;
 }
+
+.gif-container img{
+    /* user-drag: none;  */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
