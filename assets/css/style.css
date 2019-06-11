@@ -104,7 +104,8 @@ p{
     /* margin-top: 100px; */
 }
 #logo-div img{
-    margin-top: 15px
+    margin-top: 15px;
+    pointer-events: auto ;
 }
 #uts-logo{
     width: 100%;
@@ -620,9 +621,11 @@ canvas{
 }
 #about-uts-logo{
     width: 250px;
-    margin-left: 30px;
+    margin-left: 0px;
 }
-
+#about-thj-logo{
+    margin-left: 35px;
+}
 #tooltip{
     /* background: #ffffffcc; */
     color: #000;
