@@ -129,7 +129,7 @@ var content = [
         num:10,
         title: "The Cutting Edge",
         shortTitle: "The Cutting Edge",
-        subhead: "Ben Dupree peered through the microscope at the beating heart cells, awestruck by the implications. These were his cells, edited in the lab to correct a genetic flaw that had caused his muscles to deteriorate since childhood, forced him into a wheelchair, and perpetuated the prospects of an early death from Duchenne muscular dystrophy (DMD. Yet, here he witnessed a breakthrough that changed the narrative, a realization that after years of despair and depression, a lifesaving treatment for his condition was no longer a far-fetched dream.“It’s unbelievable,” Mr. Dupree, 26, said as he looked at his cells during a recent visit to a UT Southwestern gene-editing lab. “This could save so many lives one day.”",
+        subhead: "Ben Dupree peered through the microscope at the beating heart cells, awestruck by the implications. These were his cells, edited in the lab to correct a genetic flaw that had caused his muscles to deteriorate since childhood, forced him into a wheelchair, and perpetuated the prospects of an early death from Duchenne muscular dystrophy (DMD). Yet, here he witnessed a breakthrough that changed the narrative, a realization that after years of despair and depression, a lifesaving treatment for his condition was no longer a far-fetched dream.“It’s unbelievable,” Mr. Dupree, 26, said as he looked at his cells during a recent visit to a UT Southwestern gene-editing lab. “This could save so many lives one day.”",
         illustration: "assets/img/illustrations/geneedit.gif",
         static: "assets/img/illustrations/geneedit.png",
         altText: "an illustration of a gene getting edited by scissors",
