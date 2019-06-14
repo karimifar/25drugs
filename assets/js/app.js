@@ -224,7 +224,11 @@ function alignHomeslide(){
 	$(".text-anim").toggleClass("invisible")
 }
 alignHomeslide();
-window.addEventListener('resize', alignHomeslide);
+window.addEventListener('resize', function(){
+	var mwidth = document.getElementById("svg-container").offsetWidth
+	var mheight = document.getElementById("svg-container").offsetHeight
+	$("#graphic-container").css("height", mheight)
+});
 
 TweenMax.staggerFrom(".open-anim" , 2, {scale:0.9, opacity:0, ease:Elastic.easeOut, transformOrigin: "50% 50%", delay:1}, 0.15)
 TweenMax.staggerFrom(".text-anim" , 2, {y:20, opacity:0, ease:Power4.easeOut, transformOrigin: "50% 50%", delay:0.1}, 0.25)
