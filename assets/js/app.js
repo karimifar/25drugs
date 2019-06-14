@@ -230,8 +230,8 @@ window.addEventListener('resize', function(){
 	$("#graphic-container").css("height", mheight)
 });
 
-TweenMax.staggerFrom(".open-anim" , 2, {scale:0.9, opacity:0, ease:Elastic.easeOut, transformOrigin: "50% 50%", delay:1}, 0.15)
-TweenMax.staggerFrom(".text-anim" , 2, {y:20, opacity:0, ease:Power4.easeOut, transformOrigin: "50% 50%", delay:0.1}, 0.25)
+// TweenMax.staggerFrom(".open-anim" , 2, {scale:0.9, opacity:0, ease:Elastic.easeOut, transformOrigin: "50% 50%", delay:1}, 0.15)
+TweenMax.staggerFrom(".text-anim" , 2, {y:20, opacity:0, ease:Power4.easeOut, transformOrigin: "50% 50%", delay:0.3}, 0.25)
 
 // see more function for subheads
 var showChar = 200;
