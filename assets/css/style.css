@@ -522,6 +522,9 @@ canvas{
 .links .inst-logo{
     width: 150px;
 }
+#sectionBonus .links .inst-logo{
+    width: 200px;
+}
 .inst-logo img{
     width: 100%;
 }

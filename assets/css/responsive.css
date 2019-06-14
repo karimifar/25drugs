@@ -93,6 +93,10 @@
         width: 140px;
     }
 
+    #sectionBonus .links .inst-logo{
+        width: 180px;
+    }
+
     .d-info-col .num h1{
         font-size: 32px;
         padding: 7px;
