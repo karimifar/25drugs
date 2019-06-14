@@ -56,6 +56,7 @@
     crossorigin="anonymous"></script>
 
     <!-- fullpage.js -->
+    <script type="text/javascript" src="assets/js/TweenMax.min.js"></script>
     <script type="text/javascript" src="assets/js/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="assets/js/fullpage.js"></script>
     <script type="text/javascript" src="assets/js/pathseg.js"></script>
@@ -84,17 +85,17 @@
             </div>
             <div id="home-wrap">
                 
-                <div class="title">
+                <div class="title text-anim invisible">
                     <h1>
                     25 <br>DRUGS
                     </h1>
                     
                 </div>
-                <div class="intro">
+                <div class="intro text-anim invisible">
                     <p>
                         We explore some of the drugs (new, old, in development, and still rather theoretical) that are or may soon be saving and improving the lives of Texans.
                     </p>
-                    <div class="social-share">
+                    <div class="social-share text-anim invisible">
                         <k class="twitter socialBtn fab fa-twitter"></k>
                         <k class="facebook socialBtn fab fa-facebook-square"></k>
                     </div>
@@ -103,16 +104,16 @@
                 
                 <div class="home-logos">
                     <div id="logo-div">
-                        <a href="https://utsystem.edu" target="_blank"><img alt="University of Texas System logo" id="uts-logo" src="assets/img/uts-logo.png"></a>
-                        <img alt="Texas Health Journal logo" id="thj-logo" src="assets/img/thj-white.png">
+                        <a href="https://utsystem.edu" target="_blank"><img class="text-anim invisible" alt="University of Texas System logo" id="uts-logo" src="assets/img/uts-logo.png"></a>
+                        <img class="text-anim invisible" alt="Texas Health Journal logo" id="thj-logo" src="assets/img/thj-white.png">
                     </div>
                     
                 </div>
                 
             </div>
             <div class="graphicCol">
-                <div class="graphic-container" id="graphic-container">
-                    <div class="svgAndCanvas" id="svg-container">
+                <div class="graphic-container invisible open-anim" id="graphic-container">
+                    <div class="svgAndCanvas open-anim" id="svg-container">
                         <svg version="1.1" id="pill" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                             viewBox="0 0 1116 730" style="enable-background:new 0 0 1116 730;" xml:space="preserve">
                         <style type="text/css">
@@ -225,12 +226,12 @@
                     </div>
                     
                 
-                    <div class="svgAndCanvas" id="home-matter">
+                    <div class="svgAndCanvas open-anim" id="home-matter">
                         
                     </div>
                     <div id="legend">
-                        <p class="leg-title">Drugs Featured From:</p>
-                        <table>
+                        <p class="leg-title open-anim">Drugs Featured From:</p>
+                        <table class="open-anim">
                             <tr class="legend-row inst-legend-0">
                                 <td><div class="color"></div></td>
                                 <td>MD Anderson</td>
@@ -282,7 +283,7 @@
                         </table>
                     </div>
                 </div>
-                <div id="scrollAnim">
+                <div class="invisible open-anim" id="scrollAnim">
                     <a><span></span><p>Scroll Down</p></a>
                 </div>
 

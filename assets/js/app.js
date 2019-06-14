@@ -214,16 +214,20 @@ $(".nav-item").on("click", function(){
 
 
 
-
 //seting the height of the graphic so that it's centered vertically
 function alignHomeslide(){
 	var mwidth = document.getElementById("svg-container").offsetWidth
 	var mheight = document.getElementById("svg-container").offsetHeight
 	$("#graphic-container").css("height", mheight)
+	$("#graphic-container").toggleClass("invisible")
+	$("#scrollAnim").toggleClass("invisible")
+	$(".text-anim").toggleClass("invisible")
 }
 alignHomeslide();
 window.addEventListener('resize', alignHomeslide);
 
+TweenMax.staggerFrom(".open-anim" , 2, {scale:0.9, opacity:0, ease:Elastic.easeOut, transformOrigin: "50% 50%", delay:1}, 0.15)
+TweenMax.staggerFrom(".text-anim" , 2, {y:20, opacity:0, ease:Power4.easeOut, transformOrigin: "50% 50%", delay:0.1}, 0.25)
 
 // see more function for subheads
 var showChar = 200;
@@ -289,26 +293,6 @@ var render1 = Render.create({
         background: 'none',
 		wireframeBackground: '#111',
 		wireframes: false,
-
-        // hasBounds: false,
-        // enabled: false,
-        
-        // showSleeping: true,
-        // showDebug: true,
-        // showBroadphase: false,
-        // showBounds: false,
-        // showVelocity: false,
-        // showCollisions: false,
-        // showSeparations: false,
-        // showAxes: false,
-        // showPositions: false,
-        // showAngleIndicator: false,
-        // showIds: false,
-        // showShadows: false,
-        // showVertexNumbers: false,
-        // showConvexHulls: false,
-        // showInternalEdges: false,
-        // showMousePosition: false
     }
 }
 );
@@ -347,7 +331,6 @@ for(var i=0; i<content.length; i++){
 		content: content[i]
 	}));
 	World.add(engine1.world, circlesArr[i]);
-	// console.log("YAY", circlesArr)
 }
 
 
