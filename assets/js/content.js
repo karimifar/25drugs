@@ -51,7 +51,7 @@ var content = [
         altText: "an illustration of Flourine and Carbon molecules",
         instLogo: "assets/img/inst-logos/utsa.png",
         institution: "UT San Antonio",
-        link: "https://phys.org/news/2018-09-chemists-historic-fluorine-discovery.html",
+        link: "https://utsystem.edu/sites/texas-health-journal/not-so-forever-chemical",
         matter:false,
         instCode: 9,
     },
