@@ -200,8 +200,8 @@ $(".nav-item").on("click", function(){
 	setTimeout(function(){
 		$("#sidebar").toggleClass("mob-expanded expanded")
 		$("#nav-btn").toggleClass("opened")
-		$("#nav-btn i").toggleClass("fa-times")
-		$("#nav-btn i").toggleClass("fa-bars")
+		$("#nav-btn k").toggleClass("fa-times")
+		$("#nav-btn k").toggleClass("fa-bars")
 	},200)
 	
 })

@@ -121,14 +121,19 @@ p{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
     display: none;
     opacity: 1;
     padding: 10px;
     padding-top: 0;
 }
 
+#nav-btn .fa-bars{
+    background-color: #000000aa;
+    padding: 5px;
+    border-radius: 5px;
+}
 .sidebar{
     z-index: 20;
     height: 100vh;
