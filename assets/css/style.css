@@ -714,6 +714,8 @@ canvas{
 }
 
 #uts-bar{
+    position: absolute;
+    top:0;
     width: 100%;
     background: #444;
     padding: 10px 10%;
