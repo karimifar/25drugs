@@ -228,6 +228,7 @@ function alignHomeslide(){
 
 window.addEventListener('resize', function(){
 	var mheight = document.getElementById("home-matter").offsetHeight
+	$("#graphic-container").css("height", mheight)
 	$("svg").css("height", mheight)
 });
 
