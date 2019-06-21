@@ -535,7 +535,7 @@ function loadImage(image){
   }
 
 function fetchImage(url){
-	return new Promise((resolve, reject) => {
+	return new Promise(function(resolve, reject){
 	const image = new Image();
 	image.src = url;
 	image.onload = resolve;
