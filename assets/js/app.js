@@ -215,19 +215,20 @@ $(".nav-item").on("click", function(){
 
 
 //seting the height of the graphic so that it's centered vertically
+
+$("#graphic-container").toggleClass("invisible")
+$("#scrollAnim").toggleClass("invisible")
+$(".text-anim").toggleClass("invisible")
+
 function alignHomeslide(){
-	var mwidth = document.getElementById("svg-container").offsetWidth
-	var mheight = document.getElementById("svg-container").offsetHeight
+	var mheight = document.getElementById("home-matter").offsetHeight
 	$("#graphic-container").css("height", mheight)
-	$("#graphic-container").toggleClass("invisible")
-	$("#scrollAnim").toggleClass("invisible")
-	$(".text-anim").toggleClass("invisible")
+	$("svg").css("height", mheight)
 }
-alignHomeslide();
+
 window.addEventListener('resize', function(){
-	var mwidth = document.getElementById("svg-container").offsetWidth
-	var mheight = document.getElementById("svg-container").offsetHeight
-	$("#graphic-container").css("height", mheight)
+	var mheight = document.getElementById("home-matter").offsetHeight
+	$("svg").css("height", mheight)
 });
 
 // TweenMax.staggerFrom(".open-anim" , 2, {scale:0.9, opacity:0, ease:Elastic.easeOut, transformOrigin: "50% 50%", delay:1}, 0.15)
@@ -490,7 +491,7 @@ window.setInterval(applyForce, 500);
 
 
 
-
+alignHomeslide();
 
 
 
