@@ -112,7 +112,7 @@
     #graphic-container{
         width:90%;
         max-width: 700px;
-        min-width: unset;
+        min-width: 0;
     }
     #home-wrap{
         flex-direction: row;
@@ -183,7 +183,7 @@
         /* background: red; */
         width: 80%;
         margin:  0 auto;
-        min-width: unset;
+        min-width: 0;
         max-width: 400px;
         padding-right: 0;
         display: flex;
