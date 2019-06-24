@@ -497,8 +497,22 @@ canvas{
     height: 60px;
     border-radius: 30px;
     border: 2px solid #fff;
+    display: inline-block;
 }
-
+.d-info-col .num k{
+    color: white;
+    opacity: 0.5;
+    margin-left: 5px;
+    padding: 5px;
+    vertical-align: top;
+    transition: all 0.2s ease-in-out;
+}
+.d-info-col .num k:hover{
+    opacity: 1;
+    cursor: pointer;
+    margin-top: -3px;
+    
+}
 .subhead{
     height: fit-content;
     transition: all 0.2s ease-in-out;

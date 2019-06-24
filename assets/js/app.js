@@ -1,5 +1,5 @@
 
-// var console = { log: function() {} };
+var console = { log: function() {} };
 
 
 var isMobile = false; //initiate as false
@@ -33,7 +33,7 @@ content.forEach(function(drug){
 	// 	graphicContain.append(matterDiv)
 	// }
 	var infoCol= $("<div class='d-info-col'>")
-	var drugNum = $("<div class='num'><h1 style='border-color:"+colors11[drug.instCode]+"'>"+drug.num+"</h1><div>")
+	var drugNum = $("<div class='num'><h1 style='border-color:"+colors11[drug.instCode]+"'>"+drug.num+"</h1><k title='Back to top' class='fas fa-arrow-circle-up' style='color:"+colors11[drug.instCode]+"'></k><div>")
 	var title = $("<div class='title'><h1>"+drug.title+"</h1></div>");
 	var subhead = $("<div class='subhead'><p>"+drug.subhead+"</p></div>")
 	var links = $("<div class='links'><div class='link'><a  aria-label='read more about "+drug.shortTitle+ "' href='"+drug.link+"' target='_blank'><k class='fas fa-link'></k> Read More</a></div><div class='inst-logo'><img alt='"+drug.institution+" logo'" +"src='"+drug.instLogo+"'></div></div>")
@@ -78,6 +78,10 @@ $(".nav-item").on("click", function(){
 		destNum = parseInt(navId.split("-")[2])+1
 	}
 	fullpage_api.moveTo(destNum);
+})
+
+$(".d-info-col .num k").on("click", function(){
+	fullpage_api.moveTo(1);
 })
 
 var myFullpage = new fullpage('#fullpage', {
