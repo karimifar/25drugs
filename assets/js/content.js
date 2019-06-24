@@ -64,7 +64,7 @@ var content = [
         static: "assets/img/illustrations/Lungs.png",
         altText: "an illustration lungs breathing",
 		instLogo: "assets/img/inst-logos/tyler.png",
-		institution: "UT Tyler",
+		institution: "UT Health Science Center Tyler",
 		link: "https://www.utsystem.edu/sites/texas-health-journal/healing-damaged-lung",
         matter:false,
         instCode: 11,
