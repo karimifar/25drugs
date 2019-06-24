@@ -32,7 +32,7 @@
     }
 
     #graphic-container{
-        width:66%;
+        width:55%;
         min-width: 800px;
     }
     
@@ -148,7 +148,7 @@
     #legend{
         top:unset;
         right:unset;
-        left: -40px;
+        left: -55px;
         bottom: 40%;
     }
     #sectionBonus .num h1{
@@ -336,6 +336,7 @@
     #home-wrap{
         flex-direction: column;
         padding: 10px 20px;
+        padding-top:50px;
     }
 
     #home-wrap .intro{

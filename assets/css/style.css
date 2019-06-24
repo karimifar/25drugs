@@ -393,7 +393,7 @@ canvas{
 #legend{
     position: absolute;
     top:80px;
-    right:-70px;
+    right:-100px;
     z-index: 99;
     color: white;
     font-family: "benton-sans", sans-serif;
